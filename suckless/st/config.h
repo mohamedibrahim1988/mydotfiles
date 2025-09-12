@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Iosevka:pixelsize=14:antialias=true:autohint=true";
 static char *font2[] = {"Courier New:size=12:antialias=true:autohint=true",
                         "FontAwesome:size=12:antialias=true:autohint=true"};
 static int borderpx = 4;
@@ -108,33 +108,34 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.95;
-float alphaOffset = 0.1;
+float alpha = 0.5;
+float alphaOffset = 0.5;
 float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#0d0f18", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+    "#282828",
+	"#D20F39",
+	"#40A02B",
+	"#DF8E1D",
+	"#1E66F5",
+	"#EA76CB",
+	"#179299",
+	"#ACB0BE",
+	"#6C6F85",
+	"#D20F39",
+	"#40A02B",
+	"#DF8E1D",
+	"#1E66F5",
+	"#EA76CB",
+	"#179299",
+	"#BCC0CC",
+
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#add8e6", /* 256 -> cursor */
+	"#DC8A78", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"#0d0f18", /* 258 -> bg */
+	"#1b1b26", /* 258 -> bg */
 	"#e1e1e1", /* 259 -> fg */
 };
 
@@ -143,11 +144,11 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
+unsigned int defaultfg = 259;
+unsigned int defaultbg = 258;
 unsigned int defaultcs = 256;
 unsigned int defaultrcs = 257;
-unsigned int background = 259;
+unsigned int background = 258;
 
 /*
  * Default shape of cursor
