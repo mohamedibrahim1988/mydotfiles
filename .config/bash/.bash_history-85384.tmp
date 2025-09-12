@@ -1,0 +1,2000 @@
+pkill eww
+eww -c $HOME/.config/eww open example
+nvim eww.scss
+pkill eww
+eww -c $HOME/.config/eww open bar
+nvim eww.scss 
+cp ../eww-bak/date/ .
+cp -r ../eww-bak/date/ .
+ll
+mkdir bar
+mv eww.* bar
+nvim eww.yuck
+pkill eww
+eww -c $HOME/.config/eww open bar
+cd bar/
+mv eww.yuck bar.yuck
+mv eww.scss bar.scss
+cd ..
+nvim eww.scss
+cd bar/
+nvim bar.yuck 
+pkill eww
+eww -c $HOME/.config/eww open bar
+..
+nvim eww.yuck 
+nvim variables.yuck
+nvim eww.scss 
+nvim eww.scss
+pkill eww
+eww -c $HOME/.config/eww open bar
+cd bar/
+nvim bar.yuck 
+nvim bar.scss 
+nvim bar.yuck 
+pkill eww
+eww -c $HOME/.config/eww open bar
+eww -c $HOME/.config/eww open date
+cd ..
+ll
+nvim eww.yuck 
+eww -c $HOME/.config/eww close date
+cd date/
+ll
+nvim date.yuck 
+cd ..
+nvim eww.scss 
+cd date/
+nvim date.scss 
+pkill eww
+eww -c $HOME/.config/eww open date
+eww -c $HOME/.config/eww close date
+eww -c $HOME/.config/eww open bar
+nvim date.scss 
+pkill eww
+eww -c $HOME/.config/eww open bar
+nvim date.yuck 
+nvim date.scss 
+nvim date.yuck 
+nvim date.scss 
+pkill eww
+eww -c $HOME/.config/eww open bar
+nvim date.scss 
+cd ..
+mkdir scripts
+nvim variables.yuck 
+nvim eww.yuck 
+cd bar/
+nvim bar.yuck 
+pkill eww 
+eww -c $HOME/.config/eww open bar
+nvim bar.yuck 
+pkill eww 
+eww -c $HOME/.config/eww open bar
+nvim bar.yuck 
+cd ..
+cd audio/
+ll
+nvim audio_revealer.yuck 
+search amixer
+cd ..
+ll
+nvim variables.yuck 
+cd bar/
+ll
+nvim bar.yuck 
+pkill eww
+eww -c $HOME/.config/eww open bar
+nvim bar.yuck 
+pkill eww 
+eww -c $HOME/.config/eww open bar
+eww -c $HOME/.config/eww close bar
+eww -c $HOME/.config/eww open bar
+nvim bar.yuck 
+nvim bar.scss 
+cd ..
+ll
+cd audio/
+ll
+nvim audio_revealer.yuck 
+cd ..
+cd bar/
+ll
+nvim bar.yuck 
+nvim bar.scss 
+nvim ../variables.yuck 
+nvim bar.yuck 
+nvim ../audio/audio_revealer.yuck 
+cp -R ~/volume/ ..
+cd ..
+nvim eww.yuck 
+nvim eww.scss 
+cd volume/
+ll
+mx volume.sh
+./volume.sh 
+nvim volume.sh 
+eww -c $HOME/.config/eww open volume
+eww -c $HOME/.config/eww close volume
+eww -c $HOME/.config/eww open volume.sh
+eww -c $HOME/.config/eww open --toggle volume
+nvim volume.yuck 
+cd ..
+cd -
+./volume.sh 
+nvim ./volume.sh
+..
+cd bar/
+ll
+nvim bar.yuck 
+pkill eww
+eww -c $HOME/.config/eww open bar
+nvim bar.yuck 
+pkill eww 
+eww -c $HOME/.config/eww open bar
+cd ..
+nvim eww.scss 
+nvim colors.scss 
+eww -c $HOME/.config/eww open volume 
+eww -c $HOME/.config/eww close volume 
+nvim volume/
+eww -c $HOME/.config/eww open volume 
+eww -c $HOME/.config/eww close volume 
+nvim volume/volume.scss 
+vim eww.yuck 
+vim eww.scss 
+eww -c $HOME/.config/eww open volume 
+eww -c $HOME/.config/eww close volume 
+eww -c $HOME/.config/eww open volume 
+cd volume/
+./volume.sh 
+./volume.sh
+xprop
+nvim ~/.config/bspwm/src/config/picom.conf 
+nvim ~/.config/bspwm/src/config/picom-animations.conf 
+cd
+ll
+mx mode 
+./mode toggle
+./mode switch
+./mode restore
+./mode toggle
+./mode switch
+cd .cache/bspwm/
+nvim bar 
+./mode toggle
+cd
+./mode toggle
+xprop
+eww -c $HOME/.config/eww close volume 
+eww -c $HOME/.config/eww open volume 
+eww -c $HOME/.config/eww close volume 
+eww -c $HOME/.config/eww --toggle volume 
+cd /home/mohamed/.config/eww
+cd volume/
+ll
+./volume.sh 
+cd ..
+cp -R eww eww-bak1
+cd /home/mohamed/.config/eww
+ll
+nvim eww.yuck 
+cd bar
+nvim eww.yuck 
+nvim bar.yuck 
+cd ..
+ll
+rm -R audio/
+rm -R volume/
+rm scripts/
+rm -R scripts/
+ll
+nvim colors.scss 
+pkill eww 
+cd bar/
+ll
+nvim bar.yuck 
+ll
+nvim bar.scss 
+cd ..
+ll
+nvim eww.scss 
+cd bar/
+ll
+nvim volume.yuck
+nvim bar.yuck 
+pkill eww 
+eww -c $HOME/.config/eww open bar
+nvim bar.yuck 
+pkill eww 
+eww -c $HOME/.config/eww open bar
+ll
+nvim bar.yuck 
+pkill eww 
+eww -c $HOME/.config/eww open bar
+nvim volume.yuck 
+eww -c $HOME/.config/eww open bar
+eww -c $HOME/.config/eww close bar
+eww -c $HOME/.config/eww open bar
+pkill eww
+eww -c $HOME/.config/eww open bar
+nvim volume.yuck 
+nvim volume.scss 
+nvim bar.yuck 
+nvim bar.scss 
+pkill eww
+eww -c $HOME/.config/eww open bar
+nvim volume.yuck 
+pkill eww
+eww -c $HOME/.config/eww open bar
+nvim volume.yuck 
+pkill eww
+eww -c $HOME/.config/eww open bar
+nvim volume.yuck 
+pavucontrol 
+pkill eww
+eww -c $HOME/.config/eww open bar
+man bspc subscribe
+cd 
+mv mode ~/.config/bspwm/src/
+mode switch true
+mode switch false
+bspc subscribe node_state fullscreen
+bspc subscribe node_state
+bspc config automatic_scheme spiral
+bspc config automatic_scheme longest_side
+bspc config automatic_scheme
+bspc subscribe node --state
+bspc subscribe node --state fullscreen
+Volume 
+Volume --get
+Volume --up
+cd /home/mohamed/.config/bspwm/src/
+nvim Volume 
+Volume --show
+pkill eww
+eww -c $HOME/.config/eww open bar
+pkill eww
+eww -c $HOME/.config/eww open bar
+pkill eww
+eww -c $HOME/.config/eww open bar
+Volume --toggle-mute
+nvim ~/.config/bspwm/src/Volume 
+pkill eww
+eww -c $HOME/.config/eww open bar
+fc-list | grep Jet
+fc-list | grep 'JetBrainsMonoNL NFP Medium'
+fc-list | grep 'JetBrainsMonoNL NFP '
+fc-list | grep 'JetBrainsMonoNL NFP Bold'
+fc-list | grep 'JetBrainsMonoNL NFP SemiBold'
+fc-list | grep FontA
+Term --htop
+cd /home/mohamed/.config/bspwm/src/
+nvim Term 
+Term --htop
+sudo rmmod mt7601u 
+sudo modprobe mt7601u
+cd /home/mohamed/.config/eww
+ll
+nmtui-connect 
+eww -c $HOME/.config/eww deamon
+eww -c $HOME/.config/eww daemon
+htpo
+htop
+eww -c $HOME/.config/eww open volume 
+eww -c $HOME/.config/eww open bar
+cd audio/
+ll
+..
+cd volume/
+ll
+nvim volume.yuck 
+ll
+cd ..
+cd
+./mode toggle
+cd .config/eww-bak1/volume/
+ll
+nvim volume.yuck 
+ll
+nvim volume.scss 
+cp volume.scss ~/.config/eww/bar/
+ll
+nvim gruvbox-colors.scss 
+l
+ll
+cd ..
+cd audio/
+ll
+nvim audio_revealer.yuck 
+cd ../..
+rm eww/
+-R rm eww/
+nvim 
+mv eww-bak1 eww
+pkill eww 
+eww -c $HOME/.config/eww open bar
+cd eww/
+ll
+nvim eww.yuck 
+ll
+cd eww-bak1/
+ll
+cd ..
+mv eww-bak1/ ../
+..
+rm -R eww
+mv eww-bak1/ eww
+ll
+cd eww
+ll
+eww -c $HOME/.config/eww open bar
+eww -c $HOME/.config/eww close bar
+pkill eww 
+eww -c $HOME/.config/eww open bar
+nvim bar/bar.yuck 
+nvim eww.yuck 
+nvim eww.scss 
+ll
+cd audio/
+ll
+mv audio_revealer.yuck ../bar/
+..
+ll
+rm audio/
+rm -R audio/
+ll
+cd scripts/
+ll
+cd audio/
+ll
+cp audio_control.sh ../../bar/
+cd ..
+ll
+rm -R scripts/
+cd bar/
+ll
+mkdir scripts
+cp audio_control.sh scripts/
+ll
+rm audio_control.sh 
+ll
+cd ..
+ll
+cd  bar/
+ll
+mv audio_revealer.yuck volume.yuck
+ll
+nvim bar.scss 
+nvim bar.yuck 
+pkill eww 
+eww -c $HOME/.config/eww open bar
+nvim bar.yuck 
+nvim volume.yuck 
+pkill eww 
+eww -c $HOME/.config/eww open bar
+nvim volume.yuck 
+nvim bar.yuck 
+pkill eww
+eww -c $HOME/.config/eww open bar
+cd /home/mohamed/.config/bspwm/
+nvim bspwmrc
+ll
+vf src/
+cd src/
+ll
+Volume --get
+Volume --inc
+Volume --dec
+xtitle -s | stdbuf -oL -eL uniq | cat
+xdo above -t $rootid $windowid
+yep xtitle
+cd /home/mohamed/.config/eww
+ll
+nvim bar/volume.yuck 
+nvim date/date.yuck 
+cd date/
+ll
+cd ..
+cd bar/
+nvim bar.yuck 
+ll
+..
+ll
+rm -R volume/ volume2.yuck 
+ll
+nvim eww.yuck 
+nvim eww.scss 
+ll
+nvim variables.yuck 
+nvim bar/bar.scss 
+mode toggle
+pkill bspc
+mode toggle
+mode switch true
+mode switch fale
+nvim ~/.cache/bspwm/bar 
+mode switch false
+mode switch true
+nvim src/mode 
+nvim ~/.cache/bspwm/bar 
+mode toggle
+nvim src/mode 
+eww -c $HOME/.config/eww daemon
+eww -c $HOME/.config/eww open bar
+mode toggle
+mode restore
+mode toggle
+cd /home/mohamed/.config/bspwm/
+ll
+nvim bspwmrc
+mode toggle
+cd /home/mohamed/.config/bspwm/src/config/
+ll
+nvim sxhkdrc 
+bspc node -t fullscreen
+bspc node -t "~"fullscreen
+eww -c $HOME/.config/eww open --toggle bar
+nvim sxhkdrc 
+cd /home/mohamed/.config/bspwm/src/config/
+nvim sxhkdrc 
+eww -c $HOME/.config/eww close bar
+htop
+eww -c $HOME/.config/eww close bar
+eww -c $HOME/.config/eww close
+pkill eww
+htop
+eww -c $HOME/.config/eww open bar
+:q
+htop
+eww -c $HOME/.config/eww --toggle bar
+eww -c $HOME/.config/eww toggle bar
+mna eww
+man eww
+eww --help
+eww -c $HOME/.config/eww opem toggle bar
+eww -c $HOME/.config/eww open-many bar
+eww -c $HOME/.config/eww open-many --toggle bar
+cd /home/mohamed/.config/sxhkd/
+ll
+nvim sxhkdrc 
+pkill -USR1 -x sxhkd
+eww -c $HOME/.config/eww open --toggle bar
+cd /home/mohamed/.config/bspwm/
+ll
+nvim bspwmrc
+bspc subscribe node_state
+bspc subscribe node_state | while read -r _ _ _ _ state flag; do     if [ "$state" != "fullscreen" ]; then         continue;     fi;     if [ "$flag" == on ]; then         eww -c $HOME/.config/eww close-all;     else         eww -c $HOME/.config/eww open bar;     fi; done &
+bspc query -N -n "eww"
+bspc node --state ~fullscreen
+nvim full.sh
+mx full.sh 
+./full.sh 
+nvim full.sh
+./full.sh 
+nvim full.sh
+./full.sh 
+pkill eww
+./full.sh 
+nvim full.sh
+./full.sh 
+nvim full.sh
+./full.sh 
+sudo rmmod mt7601u 
+sudo modprobe mt7601u
+eww/
+nvim bar/bar.yuck 
+cd /home/mohamed/.config/bspwm/
+ll
+nvim bspwmrc
+nvim src/mode 
+htop 
+picom-toggle.sh 
+eww -c ~/.config/eww open --toggle bar
+eww -c ~/.config/eww close-all
+pkill eww
+eww -c ~/.config/eww open --toggle bar
+pkill eww
+eww -c ~/.config/eww open bar
+cd /home/mohamed/.config/eww
+nvim eww.yuck 
+nvim bar/bar.yuck 
+eww -c ~/.config/eww open --toggle bar
+eww -c ~/.config/eww open --toggle bar && bspc node -t "~"fullscreen
+eww -c ~/.config/eww open --toggle bar | bspc node -t "~"fullscreen
+eww -c ~/.config/eww open --toggle bar ; bspc node -t "~"fullscreen
+eww -c ~/.config/eww open --toggle bar
+bspc node -t "~"fullscreen
+bspc node -t "~"fullscreen ; eww -c ~/.config/eww open --toggle bar
+bspc node -t "~"fullscreen & eww -c ~/.config/eww open --toggle bar
+bspc node -t "~"fullscreen && eww -c ~/.config/eww open --toggle bar
+bspc subscribe node
+bspc subscribe node stat
+bspc subscribe node state
+bspc node -t "~"fullscreen && mode toggle
+mode toggle && bspc node -t "~"fullscreen
+nvim bar/bar.yuck 
+pkill eww
+eww -c ~/.config/eww open --toggle bar
+nvim bar/bar.yuck 
+eww -c ~/.config/eww open --toggle window
+nvim bar/bar.yuck 
+pkill eww 
+eww -c ~/.config/eww open --restore bar
+eww -c ~/.config/eww open --restart bar
+eww -c ~/.config/eww log
+eww -c ~/.config/eww logs
+nvim bar/bar.yuck 
+eww -c ~/.config/eww logs
+cd /home/mohamed/.config/bspwm/
+nvim bspwmrc
+rm ~/full.sh 
+htop
+cd /home/mohamed/.config/bspwm/
+nvim bspwmrc
+eww -c ~/.config/eww daemon
+cd /home/mohamed/.config/bspwm/
+nvim bspwmrc
+htop
+cd /home/mohamed/.config/bspwm/
+nvim src/autostart.sh 
+bspc node -t ~fullscreen
+cd /home/mohamed/.config/bspwm/
+nvim bspwmrc-bk 
+rm bspwmrc-bk 
+nvim bspwmrc 
+cd /home/mohamed/.config/bspwm/src/
+nivm mode 
+nvim mode 
+mode toggle
+nvim mode 
+mode toggle
+nvim mode 
+pkill eww
+htop eww
+htop
+cd /home/mohamed/.config/bspwm/
+nvim bspwmrc 
+cd /home/mohamed/.config/eww
+nvim bar/bar.yuck 
+nvim bar/bar.scss 
+pkill eww
+cd /home/mohamed/.config/bspwm/
+nvim bspwmrc 
+pkill sxhkd 
+sxhkd 
+pkill bspwm
+cd /home/mohamed/.config/bspwm/
+nvim bspwmrc 
+sudo rmmod mt7601u 
+sudo modprobe mt7601u
+nmtui-connect 
+sudo rmmod mt7601u 
+sudo modprobe mt7601u
+nmtui-connect 
+cd src/dotfiles-bspwm/
+ll
+cd config/bspwm/ryan/src/eww/
+ll
+nmtui-connect 
+sudo modprobe mt7601u
+nmtui-connect 
+sudo rmmod mt7601u 
+sudo modprobe mt7601u
+nmtui-connect 
+ll
+cd bar/
+ll
+nvim bar.yuck 
+cd ~/src/dotfiles-master/
+ll
+cd bspwm/eww/calendar/
+ll
+nvim calendar.yuck 
+pkill eww
+pkill eww 
+eww -c ~/.config/eww open bar
+eww -c ~/.config/eww-testing close-all
+eww -c ~/.config/eww-testing open
+eww -c ~/.config/eww-testing open test
+pkill ew
+pkill eww
+eww -c ~/.config/eww-testing open test
+eww -c ~/.config/eww-testing close test
+eww -c ~/.config/eww-testing open test
+pavucontrol 
+pkill eww
+eww -c ~/.config/eww-testing open test
+cd src/
+ll
+cd tokyo-main/
+ll
+cd ..
+ll
+cd opt/
+ll
+cd ..
+opt
+..
+ll
+cd ~/Downloads/
+ll
+rm -R bspwm/
+rm -Rf bspwm/
+ll
+rm xenlism-grub-1080p-Debian.tar.xz 
+ex dotfiles-bspwm.zip 
+cd dotfiles-bspwm/
+ll
+cd cfg/
+ll
+mv -R ~/.config/eww ~/.config/eww-bak2
+mv ~/.config/eww ~/.config/eww-bak2
+pkill eww
+cp -R eww/ ~/.config/eww
+cd /home/mohamed/.config/eww
+ll
+eww daemon
+ll
+cd scripts/
+ll
+nvim getDate 
+ll
+cd ..
+ll
+nvim definitions/_variables.yuck 
+eww daemon
+eww open bar
+ll
+cd bar/
+ll
+nvim bar.yuck 
+eww -c ~/.config/eww open bar
+mode toggle
+ll
+nvim bar.yuck 
+eww -c ~/.config/eww open bar
+cd /home/mohamed/.config/
+mkdir eww-testing
+cd eww-testing/
+eww -c ~/.config/eww close bar
+eww -c ~/.config/eww-testing/ open test
+pavucontrol 
+tmux
+cd Downloads/
+cd dotfiles-bspwm/cfg/eww/
+ll
+cd ..
+cp ~/Downloads/dotfiles-bspwm/cfg/eww/scripts/getDate ~/.config/eww/bar/scripts/
+cp ~/Downloads/dotfiles-bspwm/cfg/eww/bar/widgets/_calendar.yuck ~/.config/eww/bar/
+cd /home/mohamed/.config/eww/bar/scripts/
+ll
+mx getDate 
+./getDate 
+month=$(date +%m)
+month=$((month-1))
+pkill eww
+eww -c ~/.config/eww open bar
+cd /home/mohamed/.config/eww/bar/
+ll
+cd ..
+ll
+nvim variables.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+ll
+eww -c ~/.config/eww open bar
+mode restoew
+mode restore
+cd /home/mohamed/.config/
+cd eww
+ll
+nvim eww.yuck 
+eww -c ~/.config/eww open bar
+eww -c ~/.config/eww logs
+cd bar/
+nvim bar.scss 
+cd ..
+ll
+nvim _colors.scss 
+nvim eww.scss 
+cd bar/
+ll
+nvim bar.yuck 
+eww open --toggle powermenu
+ll
+cd widgets/
+ll
+nvim _powermenu.yuck 
+cd ..
+pkill eww
+eww -c ~/.config/eww daemon
+nvim ../controls/controls.yuck 
+..
+nvim eww.yuck 
+pkill eww
+eww -c ~/.config/eww daemon
+eww -c ~/.config/eww open bar
+eww close powermenu
+cd bar
+nvim bar.scss 
+nivm bar.yuck 
+nvim bar.yuck 
+cd ..
+ll
+nvim 
+nvim eww.scss 
+cd bar/
+ll
+nvim bar.scss 
+nvim bar.yuck 
+nvim bar.scss 
+cd ..
+ll
+nvim eww.yuck 
+pkill ewww
+pkill eww
+eww -c ~/.config/eww open bar
+nvim eww.yuck 
+eww -c ~/.config/eww close-all
+eww -c ~/.config/eww open-meny bar
+eww -c ~/.config/eww open-many bar
+ll
+nvim _colors.scss 
+pkill eww 
+eww -c ~/.config/eww open-many bar
+eww -c ~/.config/eww close-all
+eww -c ~/.config/eww open-many bar
+nvim eww.scss 
+nvim eww.yuck 
+nvim eww.scss 
+mv _colors.scss colors.scss 
+nvim eww.yuck 
+nvim eww.scss 
+pkill eww
+cd ..
+rm -Rf eww
+mv eww-bak2 eww
+cd eww
+ll
+cd bar/
+nvim bar.yuck 
+nvim bar.scss 
+..
+ll
+rm -rf date/
+pkill eww 
+eww -c ~/.config/eww open-many bar
+nvim bar/bar.yuck 
+eww -c ~/.config/eww open-many bar
+pkill eww 
+eww -c ~/.config/eww open-many bar
+nvim eww.yuck 
+nvim eww.scss 
+nvim colors.scss 
+nvim bar/bar.yuck 
+pkill eww
+eww -c ~/.config/eww open-many bar
+nvim bar/bar.scss 
+vim bar/bar.yuck 
+cd Downloads/dotfiles-bspwm/cfg/eww/scripts/
+ll
+./getCalendarMonth 
+nvim getCalendarMonth 
+date +%m
+nvim getCalendarMonth 
+bspc config top_padding 34
+cd /home/mohamed/.config/eww/bar/
+nvim bar.yuck 
+nvim bar.scss 
+nvim bar.yuck 
+cd /home/mohamed/.config/bspwm/
+nvim bspwmrc 
+cd Downloads/dotfiles-bspwm/cfg/eww
+ll
+cd controls/
+ll
+./toggle.sh 
+nvim ./toggle.sh 
+ll
+nvim controls.yuck 
+..
+ll
+nvim bar/
+cd ..
+cd cd eww/scripts/
+cd eww/scripts/
+ll
+./getCpu 
+cd ..
+nvim bar/bar.yuck 
+nvim bar/bar.scss 
+nvim bar/widgets/_powermenu.yuck 
+cd /home/mohamed/.config/eww/bar/
+ll
+cd scripts/
+ll
+nvim ../bar.yuck 
+rm getDate 
+cd ..
+nvim bar.yuck 
+cd ../eww/bar/
+ll
+nvim volume.yuck 
+cd /home/mohamed/.config/eww-testing/
+nvim eww.scss 
+cd -
+nvim volume.yuck 
+nivm bar.yuck 
+nivm bar.scss 
+nvim bar.scss 
+nvim eww.yuck 
+ll
+rm eww.yuck 
+nvim eww.yuck 
+pkill eww 
+nvim eww.scss 
+cd ..
+rm -R eww-testing/
+eww -c ~/.config/eww open-many bar
+sudo rmmod mt7601u 
+sudo modprobe mt7601u
+fc-list | grep Nerd
+pkill eww 
+eww -c ~/.config/eww open-many bar
+eww -c ~/.config/eww close bar
+eww -c ~/.config/eww open  bar
+./volume.sh get_vol
+./volume.sh --get_vol
+man xtitle 
+xtitle -i
+xtitle -t
+xtitle -t | stdbuf -oL -eL uniq | cat
+xtitle -t | stdbuf -oL -eL uniq
+sudo apt autoremove xtitle
+cd src/
+git clone https://github.com/baskerville/xtitle.git
+cd xtitle/
+sudo make
+sudo make install
+xtitle -V
+xtitle -v
+bspc config active_border_color "#364A73"
+bspc config focused_border_color "#364A73"
+cd /home/mohamed/.config/bspwm/src/
+ll
+ScreenLocker 
+cd /home/mohamed/.config/eww/bar/
+ll
+nvim _powermenu.yuck 
+nvim bar.scss 
+pkill eww
+eww -c ~/.config/eww open-many bar
+nvim bar.scss 
+eww -c ~/.config/eww close powermenu powermenu-clickhandler
+pkill eww
+eww -c ~/.config/eww close powermenu powermenu-clickhandler
+eww -c ~/.config/eww open powermenu powermenu-clickhandler
+eww -c ~/.config/eww open-many powermenu powermenu-clickhandler
+nvim _powermenu.yuck 
+eww -c ~/.config/eww open-many powermenu powermenu-clickhandler
+eww -c ~/.config/eww open-manypowermenu-clickhandler
+eww -c ~/.config/eww open-many powermenu-clickhandler
+eww -c ~/.config/eww open-many powermenu
+nvim bar.yuck 
+nvim bar.scss 
+nvim _powermenu.yuck 
+pkill eww
+eww -c ~/.config/eww open-many powermenu
+pkill eww
+eww -c ~/.config/eww open-many bar
+nvim bar.scss 
+nvim ../eww.scss 
+pkill eww
+eww -c ~/.config/eww open-many bar
+nvim _powermenu.scss 
+nvim ../eww.scss 
+nvim bar.scss 
+rm _powermenu.scss 
+pkill eww 
+eww -c ~/.config/eww open-many bar
+ll
+nvim bar.yuck 
+ll
+mkdir widgets
+ll
+mv volume.yuck _calendar.yuck widgets/
+mv _powermenu.yuck widgets/
+nvim bar.yuck 
+ll
+pkill eww
+eww -c ~/.config/eww open-many bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open-many bar
+nvim bar.yuck 
+nvim bar.scss 
+nvim widgets/_powermenu.yuck 
+cd /home/mohamed/.config/eww-bak/
+ll
+cd powermenu/
+ll
+nvim powermenu.yuck
+nvim powermenu.scss 
+nvim powermenu.yuck 
+..
+ll
+cd bar/
+ll
+nvim bar.yuck 
+..
+cd powermenu/
+nvim powermenu.scss 
+nvim powermenu.yuck 
+..
+nvim bar/bar.yuck 
+nvim bar/bar.scss 
+nvim powermenu/powermenu.scss 
+ll
+cd ~/Downloads/dotfiles-bspwm/cfg/bspwm/
+ll
+cd scripts/
+ll
+cd ..
+cd ~/src/dotfiles-bspwm/config/bspwm/ryan/src/
+ll
+..
+cd scripts/
+ll
+nvim lock 
+ll
+..
+ll
+cd wall
+cd walls/
+..
+nsxiv walls/
+mv walls/ /media/mohamed/Data/
+xwallpaper --zoom '/media/mohamed/Data/walls/ryan-9.png'
+xwallpaper --zoom '/media/mohamed/Data/walls/ryan-8.png'
+ll
+cd src/
+ll
+cd eww/
+ll
+cd date/
+ll
+nvim date.scss 
+..
+ll
+cd assets/
+ll
+nsxiv default-pfp.png 
+nsxiv fallback.png 
+cd ../scripts/
+ll
+nvim windowtitle 
+./windowtitle 
+nvim windowtitle 
+./windowtitle 
+nvim windowtitle 
+./windowtitle 
+cp ./windowtitle ~/.config/eww/bar/scripts/
+ll
+./cpu
+./cpu.sh 
+nivm cpu.sh 
+nvimm cpu.sh 
+nvim cpu.sh 
+./ram.sh 
+./user.sh 
+./volume.sh 
+nvim volume.sh 
+./volume.sh getvolume
+nvim volume.sh 
+cd -
+ll
+nvim workspaces 
+nvim dripshot 
+nvim detaileww 
+./detaileww --wm
+./detaileww --name
+nvim popup 
+nvim updates 
+nvim sauceshot 
+./disk.sh 
+cd music/
+ll
+nivm songart.sh 
+nvim songart.sh 
+ll
+nvim control.sh 
+nvim songdata.sh 
+./songdata.sh 
+ncmpcpp 
+./songdata.sh 
+ncmpcpp 
+mv ~/Downloads/workspaces.scss widgets/workspaces.scss
+ll
+cd widgets/
+ll
+..
+cd ..
+ll
+cd bar/scripts/
+ll
+pkill eww
+eww -c ~/.config/eww open-many bar
+pkill eww
+eww -c ~/.config/eww open-many bar
+pkill eww
+eww -c ~/.config/eww open-many bar
+pkill eww
+eww -c ~/.config/eww open-many bar
+pkill eww 
+eww -c ~/.config/eww open-many bar
+eww -c ~/.config/eww saemon
+eww -c ~/.config/eww daemon
+pkill eww
+eww -c ~/.config/eww daemon
+eww -c ~/.config/eww open-many bar
+eww -c ~/.config/eww close-all bar
+eww -c ~/.config/eww close bar
+iwgetid -r
+cd /home/mohamed/.config/bspwm/
+ll
+nvim bspwmrc 
+cd /home/mohamed/.config/eww/bar/
+ll
+cd widgets/
+mv ~/Downloads/workspaces.yuck 
+mv ~/Downloads/workspaces.yuck .
+ll
+cd ..
+nvim bar.yuck 
+nvim bar.scss 
+pkill eww
+eww -c ~/.config/eww open  bar
+nvim bar.scss 
+pkill eww
+eww -c ~/.config/eww open  bar
+nvim bar.scss 
+nvim ../eww.scss
+cd widgets/
+nvim workspaces.scss 
+nvim workspaces.yuck 
+nvim volume.yuck 
+pkill eww
+eww -c ~/.config/eww open  bar
+eww logs
+../
+nvim widgets/volume.yuck 
+eww logs
+cp ~/Downloads/executable_workspaces scripts/workspaces
+pkill eww
+eww -c ~/.config/eww open  bar
+eww logs
+cd scripts/
+ll
+mx workspaces 
+pkill eww 
+eww -c ~/.config/eww open  bar
+ll
+nvim workspaces 
+pkill eww 
+eww -c ~/.config/eww open  bar
+nvim workspaces 
+pkill eww
+eww -c ~/.config/eww open  bar
+cd ..
+nvim widgets/workspaces.scss 
+nvim widgets/workspaces.yuck 
+nvim ~/.config/bspwm/bspwmrc 
+nvim bar.yuck 
+nvim bar.scss 
+eww logs
+nvim bar.scss 
+eww logs
+pkill eww
+eww -c ~/.config/eww open  bar
+eww logs
+eww -c ~/.config/eww open  bar
+eww -c ~/.config/eww close  bar
+eww -c ~/.config/eww open  bar
+nvim bar.yuck 
+nvim bar.scss 
+nvim bar.yuck 
+nvim ../colors.scss 
+nvim bar.yuck 
+pkill eww
+nvim ~/.config/bspwm/bspwmrc 
+nvim bar.yuck 
+pkill eww
+pkill eww
+cd /home/mohamed/.config/bspwm
+nvim src/autostart.sh 
+cd /home/mohamed/.config/
+mv eww eww-bak2
+mkdir eww
+cd ewww
+cd eww
+ll
+touch eww.yuck
+touch eww.scss
+mkdir -p widgets/yuck
+mkdir -p widgets/scss
+nvim eww.yuck 
+nvim eww.yuck
+ll
+mkdir bar
+cd bar 
+touch bar.scss bar.yuck
+..
+nvim eww.scss eww.yuck 
+cd bar
+nvim bar.yuck 
+eww -c ~/.config/eww open bar
+cd
+cd /home/mohamed/.config/eww
+cp ../eww-bak2/variables.yuck .
+eww -c ~/.config/eww open bar
+nvim eww.yuck 
+nvim eww.scss
+eww -c ~/.config/eww open bar
+nvim bar/bar.yuck 
+nvim ~/.config/bspwm/bspwmrc 
+nvim bar/bar.yuck 
+cd /home/mohamed/.config/eww
+eww -c ~/.config/eww open bar
+nvim bar/bar.yuck 
+cd bar/
+ll
+nvim bar.yuck
+eww -c ~/.config/eww open-many --toggle powermenu-clickhandler powermenu
+pkill eww
+eww -c ~/.config/eww open bar
+pkill eww
+eww -c ~/.config/eww open bar
+eww logs
+eww daemon
+sudo rmmod mt7601u 
+sudo make install
+sudo modprobe mt7601u
+nmtui
+pkill eww
+eww -c ~/.config/eww open bar
+pkill eww
+eww -c ~/.config/eww open bar
+pkill eww
+eww -c ~/.config/eww open bar
+xprop
+nvidia-settings -a 'AllowFlipping=0'
+pkill picom 
+xprop
+nvim ~/.config/bspwm/src/config/picom.conf 
+cd /home/mohamed/.config/eww
+ll
+nvim colors.scss 
+nvim bar/bar.scss 
+nvim bar/bar.yuck 
+nvim eww.yuck 
+pkill eww 
+eww daemon
+eww -c ~/.config/eww open bar
+nvim eww.scss 
+pkill eww 
+eww -c ~/.config/eww open bar
+nvim scss/powermenu.scss 
+nvim yuck/bar.yuck 
+nvim scss/bar.scss 
+pkill picom 
+picom -c ~/.config/bspwm/src/config/picom.conf 
+man picom
+picom -b ~/.config/bspwm/src/config/picom.conf 
+picom --config ~/.config/bspwm/src/config/picom.conf 
+eww -c ~/.config/eww open bar
+pkill picom 
+picom --config ~/.config/bspwm/src/config/picom.conf 
+ll
+cd Downloads/
+ll
+mx unhidewindow 
+./unhidewindow 
+cp unhidewindow ~/.config/bspwm/src/
+unhidewindow 
+cd /home/mohamed/.config/bspwm/src/config/
+ll
+nvim sxhkdrc 
+bspc node @/ -R 90
+eww -c ~/.config/eww open bar
+cd /home/mohamed/.config/bspwm/src/
+ll
+mx toggle_bar 
+toggle_bar 
+nvim toggle_bar 
+toggle_bar 
+nvim toggle_bar 
+toggle_bar 
+nvim autostart.sh 
+cd /home/mohamed/.config/bspwm/src/config/
+nvim sxhkdrc 
+cd volume/
+nvim volume.s
+nvim volume.ss
+nvim volume.sh
+..
+rm -R volume
+ll
+mx volume_dunst 
+nvim volume_dunst 
+./volume_dunst mute
+./volume_dunst down
+nvim volume_dunst 
+./volume_dunst get_volume
+./volume_dunst
+ll
+nvim volume_dunst 
+dunstify "Muted  " -i $icon_name -t 1000 -r 5555 -u low -h string:synchronous:audio-volume
+nvim volume_dunst 
+./volume_dunst mute
+nvim volume_dunst 
+./volume_dunst mute
+./volume_dunst up
+nvim volume_dunst 
+./volume_dunst down
+nvim volume_dunst 
+./volume_dunst down
+nvim volume_dunst 
+./volume_dunst down
+./volume_dunst up
+nvim ~/.config/bspwm/src/Volume 
+cp volume_dunst ~/.config/bspwm/src/Volume
+cp volume_dunst ~/.config/bspwm/src/
+cd /home/mohamed/.config/bspwm/src/config/
+nvim sxhkdrc 
+volume_dunst up
+cd /home/mohamed/.config/bspwm/src/config/
+nvim sxhkdrc 
+pkill -USR1 -x sxhkd
+volume_dunst down
+volume_dunst up
+mpv --player-operation-mode=pseudo-gui
+ID=$(bspc query -N -n); bspc node $ID -n $(bspc query -N -n .leaf.\!window)
+ll
+mv mpd-notify ~/.local/bin/
+man magick
+cd /home/mohamed/.config/
+cd 
+cd src/dotfiles-bspwm/
+..
+cd dotfiles-master/
+nvim archcraft-bspwm-main/files/scripts/bspwinmask 
+rm archcraft-bspwm-main/files/scripts/bspwinmask 
+cd /home/mohamed/.config/eww
+nvim colors.scss 
+cd /home/mohamed/.config/bspwm/src/config/
+nvim sxhkdrc 
+ll
+lsa
+ll
+cd 
+ll
+mv volume_dunst ~/.local/bin/
+mx mpd-notify 
+nvim mpd-notify 
+./mpd-notify 
+ncmpcpp 
+./mpd-notify 
+cd /home/mohamed/.config/systemd/
+nvim mpd-notify.service 
+sudo cp mpd-notify.service /usr/lib/systemd/user/
+ll
+mv mpd-notify.service user/
+systemctl --user start mpd-notify.service 
+ll
+cd user/
+ll
+mpc play
+mpc next
+ncmpcpp 
+nvim ~/.local/bin/mpd-notify 
+nvim ~/.config/ncmpcpp/config 
+ll
+cd /home/mohamed/.config/ncmpcpp/
+ll
+cd scripts/
+ll
+nvim ncmpcpp-art 
+./ncmpcpp-art 
+cd
+nvim ~/.config/bspwm/src/config/
+mx xcolor-pick 
+./xcolor-pick 
+man convert
+yep gpick
+./xcolor-pick 
+nvim xcolor-pick 
+./xcolor-pick 
+mv xcolor-pick ~/.local/bin/
+cd Downloads/
+ll
+rm unhidewindow executable_workspaces dotfiles-bspwm.zip 
+nvim dotfiles-bspwm/cfg/eww/scripts/getWinTitle 
+nvim dotfiles-bspwm/cfg/eww/scripts/getCpu 
+./dotfiles-bspwm/cfg/eww/scripts/getCpu 
+./dotfiles-bspwm/cfg/eww/scripts/getCpu
+cd dotfiles-bspwm/cfg/eww/scripts/
+./getCpu 
+ll
+nvim getVolume 
+
+nvim getVolume 
+./getVolume is_muted
+ll
+cd ..
+ll
+cd bar/
+ll
+nvim bar.yuck 
+cd 
+cd /home/mohamed/.config/eww/
+ll
+nvim yuck/bar.yuck 
+ll
+nvim eww.scss 
+nvim scss/calendar.scss 
+ll
+cd /home/mohamed/.config/eww-bak
+ll
+cd actions/
+ll
+nvim actions.scss 
+nvim actions.yuck 
+cd ~/src
+ll
+cd dotfiles-bspwm/config/bspwm/ryan/src/eww/bar/
+ll
+nvim bar.yuck 
+cd ..
+..
+cd ..
+cd dotfiles-master/bspwm/eww/
+ll
+nvim eww.yuck 
+cd ..
+ll
+cd ..
+ll
+cd bspwm/
+ll
+cd ..
+ll
+volume_dunst get_volume
+nvim ~/.local/bin/media-control 
+volume_dunst is_muted
+cd /home/mohamed/.config/eww
+mkdir scripts
+cd scripts/
+ll
+touch vol.sh
+mx vol.sh 
+nvim vol.sh 
+./vol.sh 
+nvim vol.sh 
+./vol.sh --get
+./vol.sh --mute
+nvim vol.sh 
+./vol get_volume
+ll
+nvim vol.sh 
+..
+cd scripts/
+./vol.sh --get
+cd ../scripts/
+./vol.sh --get
+./vol.sh --icon
+cd Downloads/
+ll
+cd dotfiles-bspwm/cfg/eww/bar/widgets/
+ll
+..
+nivm bar.yuck 
+nvim bar.yuck 
+..
+cd
+cd ~/src/dotfiles-bspwm/config/bspwm/ryan/src/eww/bar/
+ll
+nvim bar.yuck 
+cal
+man cal
+cd /home/mohamed/.config/eww/scripts/
+nvim vol.sh 
+./vol.sh get_volume
+nvim vol.sh 
+./vol.sh --mute
+nvim vol.sh 
+./vol.sh --icon
+nvim vol.sh 
+./vol.sh --icon
+nvim vol.sh 
+./vol.sh --icon
+nvim vol.sh 
+./vol.sh 
+nvim ./vol.sh
+./vol.sh --icon
+nvim ./vol.sh
+pkill eww 
+eww -c ~/.config/eww open bar
+pkill eww 
+eww -c ~/.config/eww open bar
+eww logs
+pkill eww 
+eww -c ~/.config/eww open bar
+eww logs
+cd /home/mohamed/.config/eww/scripts/
+nvim ./vol.sh
+./vol.sh 
+nvim ./vol.sh
+nvim ../variables.yuck 
+:q
+pkill eww 
+eww logs
+eww -c ~/.config/eww open bar
+cd /home/mohamed/.config/eww/scss/
+pkill eww 
+eww -c ~/.config/eww open bar
+pkill eww 
+eww -c ~/.config/eww open bar
+cd /home/mohamed/.config/eww
+xev -event keyboard
+cd yuck/
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim ../variables.yuck 
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+nvim bar.yuck 
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+pkill eww
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+eww -c ~/.config/eww open bar
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+eww -c ~/.config/eww open bar
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+ll
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+pkill eww
+eww -c ~/.config/eww open bar
+nvim bar.yuck 
+rm vol 
+nvim bar.yuck 
+cd ..
+cd scss/
+nvim calendar.scss 
+pkill bspwm
+cd /home/mohamed/.config/eww/scripts/
+ll
+nvim vol.sh 
+cd ..
+cd eww-bak/bar/
+ll
+nvim bar.yuck 
+cd /home/mohamed/.config/eww-bak2/bar/widgets/
+ll
+..
+nvim bar.yuck 
+cd /home/mohamed/.config/bspwm/
+ll
+nvim bspwmrc 
+cd src/
+nvim .
+pkill picom 
+cd /home/mohamed/.config/picom/
+ll
+picom-toggle.sh 
+picom-toggle.sh 
+picom -b
+cd /home/mohamed/.config/bash/
+nvim xinitrc 
+cd Sources/suckless/dwm
+mark 
+nvim config.def.h 
+sudo make install 
+cd /home/mohamed/.config/eww
+nvim scripts/
+ll
+cd yuck/
+ll
+nvim powermenu.yuck 
+eww -c ~/.config/eww close powermenu powermenu-clickhandler
+eww -c ~/.config/eww open powermenu powermenu-clickhandler
+eww -c ~/.config/eww open-meny powermenu powermenu-clickhandler
+eww -c ~/.config/eww open-many powermenu powermenu-clickhandler
+eww daemon
+eww -c ~/.config/eww open-many powermenu powermenu-clickhandler
+nvim powermenu.yuck 
+bash ~/.config/bspwm/src/ScreenLocker
+nvim  ~/.config/bspwm/src/ScreenLocker
+bash ~/.config/bspwm/src/ScreenLocker -r
+nvim  ~/.config/bspwm/src/ScreenLocker
+cd /home/mohamed/.config/sxhkd/
+nvim sxhkdrc 
+cd /home/mohamed/.config/alacritty/
+nvim alacritty.toml 
+cd /home/mohamed/.config/ncmpcpp/
+ll
+ncmpcpp 
+systemctl --user enable mpd-notify.service 
+mpc stop
+mpc play
+cd /home/mohamed/.config/systemd/
+ll
+systemctl --user start mpd-notify.service 
+mpc prev 
+alacritty 
+cd ~/src/
+cd ~/Downloads/
+man alacritty
+cd /home/mohamed/.config/bspwm/src/
+nvim Term 
+sp Bspwm-ScratchPad 
+nvim Bspwm-ScratchPad 
+alacritty --help
+cd ~/.local/share/dwm/
+nvim autostart.sh 
+cd /home/mohamed/.config/bash/
+ll
+mx alacritty.bash 
+ll
+nvim alacritty.bash 
+nvim config.def.h 
+cd /home/mohamed/.config/alacritty/
+cd /home/mohamed/.config/ncmpcpp/
+ll
+cd scripts/
+ll
+nvim album-art 
+nvim ncmpcpp-art 
+./ncmpcpp-art 
+cd /home/mohamed/.config/alacritty/
+ll
+nvim alacritty.toml 
+xwallpaper --zoom ryan-8.png 
+xwallpaper --zoom ryan-6.png 
+cd /home/mohamed/.config/bash/
+nvim xinitrc 
+sudo rmmod mt7601u 
+sudo modprobe mt7601u
+nmtui-connect 
+ll
+st
+sudo make install 
+xprop
+picom --config ~/.config/bspwm/src/config/picom.conf 
+cd /home/mohamed/.config/eww-bak2/bar/widgets/
+ll
+cd ..
+cd
+cd Downloads/dotfiles-bspwm/cfg/eww/bar/widgets/
+ll
+..
+ll
+..
+cd ..
+cd
+cd ~/src/dotfiles-bspwm/config/bspwm/ryan/src/eww/scripts/
+ll
+nvim windowtitle 
+xtitle -s | stdbuf -oL -eL uniq | cat
+xprop
+cd ~/Sources/suckless/st/
+ll
+nvim config.h 
+sudo make install
+st
+nvim config.h 
+sudo make install
+st
+nvim config.h 
+sudo make install
+st
+nvim st.h
+nvim x.c
+nvim config.h 
+sudo make install
+st
+nvim config.h 
+sudo make install
+st
+nvim config.h 
+cp config.h config.h.bak
+vimdiff config.h config.h.bak 
+rm config.h.bak 
+sudo make install
+st
+nvim config.h 
+sudo make install
+st
+nvim config.h 
+sudo make install
+nvim config.h 
+sudo make install
+st
+nvim config.h 
+sudo make install
+nvim config.h 
+nvim x.c
+nvim config.h
+sudo make install
+st
+nvim config.h
+cd /home/mohamed/.config/bspwm/src/
+nvim autostart.sh 
+nvim config/picom.conf 
+xprop 
+nvim config/picom.conf 
+picom-toggle.sh 
+picom --experimental-backends
+picom --experimental-backends --config ~/.config/bspwm/src/config/picom.conf 
+nvim config/picom.conf 
+picom --config ~/.config/bspwm/src/config/picom.conf 
+nvim config/picom.conf 
+picom --config ~/.config/bspwm/src/config/picom.conf 
+nvim autostart.sh 
+picom-toggle.sh 
+picom -b --config ~/.config/bspwm/src/config/picom.conf 
+man picom
+nvim config/picom.conf 
+picom -b --config ~/.config/bspwm/src/config/picom.conf 
+nvim config/picom.conf 
+nvim config/picom-animations.conf 
+cd config/
+rm picom-animations.conf 
+nvim picom.conf 
+picom -b --config ~/.config/bspwm/src/config/picom.conf 
+nvim picom.conf 
+picom -b --config ~/.config/bspwm/src/config/picom.conf 
+sudo apt autoremove picom 
+picom-toggle.sh 
+cd 
+cd Downloads/dotfiles-bspwm/
+ll
+cd cfg/picom/
+ll
+nvim picom.conf 
+cd ..
+cd ~/sr
+cd ~/src/
+git clone https://github.com/r0-zero/picom.git
+cd picom/
+ll
+meson setup --buildtype=release build
+yep libconfig-dev libdbus-1-dev libegl-dev libev-dev libgl-dev libepoxy-dev libpcre2-dev libpixman-1-dev libx11-xcb-dev libxcb1-dev libxcb-composite0-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-glx0-dev libxcb-image0-dev libxcb-present-dev libxcb-randr0-dev libxcb-render0-dev libxcb-render-util0-dev libxcb-shape0-dev libxcb-util-dev libxcb-xfixes0-dev libxext-dev meson ninja-build uthash-dev
+meson setup --buildtype=release build
+ninja -C build
+ninja -C build install
+cp ~/.config/picom/picom.conf ~/.config/bspwm/src/config/
+cp ~/.config/picom/picom-animations.conf ~/.config/bspwm/src/config/
+picom -b --config ~/.config/bspwm/src/config/picom.conf 
+htop
+cd src/config/
+ll
+nvim picom.conf 
+xdotool search --onlyvisible --class eww-
+pkill eww
+eww -c ~/.config/eww open bar
+xprop
+fzf-nvim 
+cd /home/mohamed/.config/eww/scripts/
+./kb_layouts set us
+cd Downloads/
+ll
+mx kb_layouts 
+ll
+nvim kb_layouts 
+./kb_layouts get
+./kb_layouts set ara
+./kb_layouts set 
+./kb_layouts get
+nvim ~/.local/bin/change_kbd.sh 
+change_kbd.sh 
+cd /home/mohamed/.config/eww/
+ll
+cd yuck/
+ll
+nvim keyboard.yuck
+..
+nvim eww.yuck 
+nvim yuck/bar.yuck 
+pkill eww
+eww -c ~/.config/eww bar
+eww -c ~/.config/eww open bar
+nvim yuck/keyboard.yuck 
+nvim eww.scss 
+cd scss/
+ll
+nvim keyboard.scss
+pkill eww
+eww -c ~/.config/eww open bar
+cp ~/Downloads/kb_layouts ../scripts/
+cd ../scripts/
+ll
+nvim kb_layouts 
+./kb_layouts get
+./kb_layouts set es
+./kb_layouts get
+./kb_layouts set us
+nvimfzf-nvim 
+nvim
+nvim kb_layouts v
+cd ..
+xwallpaper --zoom '/media/mohamed/Data/walls/ryan-1.jpg'
+nvim ~/.config/bspwm/src/config/picom.conf 
+nvim yuck/keyboard.yuck 
+nvim ../eww-bak2/eww.yuck 
+nvim ../eww-bak2/bar/bar.yuck 
+nvim yuck/keyboard.yuck 
+cd scripts/
+./kb_layouts set us
+./kb_layouts set es
+..
+cd src/config/
+ll
+nvim picom.conf 
+pkill eww
+eww daemon
+cd /home/mohamed/.config/eww
+nvim yuck/keyboard.yuck 
+eww daemon
+eww -c ~/.config/eww open bar
+cd Downloads/
+ll
+cd dotfiles-bspwm/
+ll
+cd bin/
+ll
+nvim themer 
+nvim lessborder 
+xwallpaper --zoom ryan-6.png 
+xwallpaper --zoom /media/mohamed/Data/walls/ryan-6.png 
+ncmpcpp 
+cd /home/mohamed/.config/bspwm/
+nvim src/autostart.sh 
+htop
+eww -c ~/.config/eww open bar
+nvim src/autostart.sh 
+cd src/
+ll
+nvim toggle_bar 
+toggle_bar 
+cd src/
+nvim autostart.sh 
+pkill eww
+htop
+cd /home/mohamed/.config/eww
+nvim yuck/bar.yuck 
+xprop
+xwallpaper --zoom /media/mohamed/Data/walls/ryan-6.png 
+xwallpaper --zoom /media/mohamed/Data/walls/ryan-2.jpg 
+xwallpaper --zoom /media/mohamed/Data/walls/ryan-3.png 
+xwallpaper --zoom /media/mohamed/Data/walls/ryan-4.png 
+xwallpaper --zoom /media/mohamed/Data/walls/ryan-5.webp 
+xwallpaper --zoom /media/mohamed/Data/walls/ryan-6.png 
+xwallpaper --zoom /media/mohamed/Data/walls/ryan-7.png 
+xwallpaper --zoom /media/mohamed/Data/walls/ryan-9.png 
+xwallpaper --zoom /media/mohamed/Data/walls/ryan-2.jpg 
+fzf-nvim 
+cd src/
+ll
+fzf-nvim 
+cd /home/mohamed/.config/eww/scripts/
+./kb_layouts get
+cd src/config/
+nvim picom.conf 
+picom --config ~/.config/bspwm/src/config/picom.conf 
+nvim picom.conf 
+picom --config ~/.config/bspwm/src/config/picom.conf 
+nvim picom.conf 
+picom --config ~/.config/bspwm/src/config/picom.conf 
+ll
+nvim picom-animations.conf 
+rm picom-*
+cp picom.conf ~/.config/picom/
+cd /home/mohamed/.config/picom/
+ll
+rm picom-animations.conf 
+picom --config ~/.config/bspwm/src/config/picom.conf &
+cd /home/mohamed/.config/bash/
+nvim xinitrc 
+cd src/
+cd config/
+cp picom.conf picom-bak
+picom -b --config ~/.config/bspwm/src/config/picom.conf 
+pkill picom 
+picom --config ~/.config/bspwm/src/config/picom.conf 
+xprop
+cd /home/mohamed/.config/picom/
+ll
+rm picom*
+cp ~/.config/bspwm/src/config/picom.conf .
+picom-toggle.sh 
+cd /home/mohamed/.config/picom/
+nvim picom.conf 
+cd ~/src/
+cd dotfiles-master/bspwm/src/config/
+ll
+cp picom* ~/.config/picom/
+man picom
+cd src/picom/
+ll
+man/ 
+ll
+..
+ll
+./run_tests.sh 
+./run_one_test.sh 
+xprop
+../st
+nvim config.h
+sudo make install
+nvim config.h
+sudo make install
+nvim config.h
+sudo make install
+xprop
+nvim config.h
+sudo make install
+cd /home/mohamed/.config/picom/
+ll
+fzf-file-widget 
+nvim picom.conf 
+cd /home/mohamed/.config/alacritty/
+nvim alacritty.toml 
+sudo rmmod mt7601u 
+sudo modprobe mt7601u
+cd src/picom/
+ll
+cd src/
+ll
+cd ..
+ll
+cd build/
+ll
+cd man/
+ll
+cd ..
+nvim build.ninja 
+nmtui-connect 
+man pico
+pico
+sudo mandb picom.1.asciidoc 
+cp picom.1.asciidoc /usr/share/man/man1/
+sudo cp picom.1.asciidoc /usr/share/man/man1/
+sudo mandb
+man picom.1 
+cd /usr/share/man/man1/
+ls
+cd /usr/local/share/man/man1/
+ls
+asciidoctor
+yep asciidoctor
+meson setup --buildtype=release build
+..
+meson setup --buildtype=release build
+nninja reconfigure
+ninja reconfigure
+meson setup --reconfigure
+meson setup --reconfigure man
+meson setup --reconfigure build
+ninja -C build man
+ninja -C build install
+cd meson/
+ll
+nvim install.sh 
+ll
+cd ..
+ll
+cd man/
+ll
+meson setup --buildtype=release build
+meson setup build
+asciidoctor -b manpage picom.1.asciidoc
+sudo cp picom.1 /usr/share/man/man1/
+man picom
+asciidoctor -b manpage picom-trans.1.asciidoc 
+man ./picom-trans.1.1 
+asciidoctor picom-trans.1.asciidoc 
+asciidoctor -b manpage -D with_docs=true picom-trans.1.asciidoc
+asciidoctor -b manpage -d picom-trans.1.asciidoc
+asciidoctor -b manpage -D picom-trans.1.asciidoc
+asciidoctor -b manpage picom-trans.1.asciidoc
+sudo mandb picom-trans.1.1
+sudo cp picom-trans.1.1 /usr/share/man/man1/
+man picom-trans.1
+man ./picom-trans.1.1 
+..
+man picom-trans.1 
+cd /home/mohamed/.config/picom/
+ll
+vim xinitrc 
+xev -event keyboard
+cd /home/mohamed/.config/bspwm/src/config/
+nvim sxhkdrc 
+cd /home/mohamed/.config/bspwm/src/config/
+nvim sxhkdrc 
+pkill picom 
+picom --config ~/.config/bspwm/src/config/picom.conf &
+cd /home/mohamed/.config/ncmpcpp/
+nvim config 
+cd scripts/
+ll
+cd 
+cd Downloads/dotfiles-bspwm/
+ll
+cd ..
+cd ~/src/
+cd dotfiles-bspwm/
+nvim config/ncmpcpp/config
+nvim ~/.local/bin/mpd-notify 
+ncmpcpp 
+cd /home/mohamed/.config/ncmpcpp/
+cd 
+cd /home/mohamed/.config/ncmpcpp/
+cd lyrics/
+ll
+nvim Adele\ -\ Someone\ Like\ You.txt 
+ncmpcpp 
+ll /usr/share/fonts/opentype/
+ll /usr/share/fonts/opentype/freefont/
+sudo mkdir  /usr/share/fonts/opentype/SF-Pro
+sudo cp *.otf  /usr/share/fonts/opentype/SF-Pro/
+ll /usr/share/fonts/opentype/SF-Pro/
+sudo fc-cache -fv
+fc-list | grep SF
+rm *.eot
+rm *.woff
+rm *.woff2
+rm *.css

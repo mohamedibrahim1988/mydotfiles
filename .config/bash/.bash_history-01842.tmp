@@ -1,0 +1,2000 @@
+cd ..
+sudo make install
+anbox check-features
+wget https://build.anbox.io/android-images/2018/07/19/android_amd64.img
+..
+cd scripts/
+ll
+nvim anbox-bridge.sh 
+mkdirg /var/lib/anbox
+sudo mkdirg /var/lib/anbox
+sudo mkdir /var/lib/anbox
+cd /var/lib/anbox/
+ll
+sudo cp ~/Downloads/android_amd64.img android.img
+ll
+alias dt
+alias du
+du
+cd -
+sudo ./anbox-bridge.sh 
+sudo ./anbox-bridge.sh start
+vim anbox-bridge.sh 
+apt-file search iptables
+yep iptables
+sudo ./anbox-bridge.sh start
+sudo anbox container-manager --daemon --privileged --data-path=/var/lib/anbox
+sudo nvim /lib/systemd/system/anbox-container-manager.service
+sudo ln -s /lib/systemd/system/anbox-container-manager.service /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl status anbox-container-manager.servic
+sudo systemctl status anbox-container-manager.service 
+sudo systemctl start anbox-container-manager.service 
+ll
+vim /lib/systemd/system/anbox-container-manager.service 
+vim /lib/systemd/system/NetworkManager.service 
+ll /etc/systemd/system/
+sudo systemctl status anbox-container-manager.service
+sudo systemctl enable anbox-container-manager.service
+powermenu.sh 
+cd .local/bin/
+ll
+ll /var/lib/anbox/android.img 
+lsmod | grep -e ashmem_linux -e binder_linux
+sudo ls /usr/src/anbox-ashmem-1
+ls /dev/binder
+/usr/local/src/anbox/scripts/anbox-bridge.sh
+anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity
+anbox  session-manager
+sudo systemctl status anbox-container-manager.service
+sudo systemctl enable anbox-container-manager.service
+cd /var/lib/anbox/
+ll
+cd /usr/local/src/
+sudo chown -R $USER:$USER anbox/
+la
+ll
+ls
+ls -la
+cd anbox/scripts/
+ll
+sudo systemctl enable anbox-container-manager.service
+cd
+sudo vim /lib/systemd/system/anbox-container-manager.service
+sudo nvim /lib/systemd/system/anbox-container-manager.service
+ll
+cd src/anbox-modules/
+ll
+nvim INSTALL.sh 
+cd 
+sudo nvim /lib/systemd/system/anbox-container-manager.service
+sudo systemctl status anbox-container-manager.service 
+sudo systemctl start anbox-container-manager.service 
+sudo systemctl enable anbox-container-manager.service 
+sudo systemctl status anbox-container-manager.service 
+ll /usr/share/dbus-1/services
+anbox 
+anbox session-manager
+git clone https://aur.archlinux.org/linux-xanmod-anbox.git
+cd linux-xanmod-anbox/
+ll
+vim PKGBUILD 
+cd..
+rm -rf linux-xanmod-anbox/
+systemctl status anbox-container-manager.service 
+anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity
+anbox 
+anbox lanuch
+anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity
+sudo nvim /lib/systemd/system/anbox-container-manager.service 
+/usr/bin/anbox session-manager
+which anbox 
+/usr/bin/locol/anbox session-manager
+/usr/bin/local/anbox session-manager
+/usr/local/bin/anbox session-manager
+cd src/anbox
+ll
+cd src/anbox/application/
+ll
+cd ..
+cd..
+cd build/
+ll
+cd src/
+ll
+ll /etc/modules-load.d/anbox.conf
+cd ...
+up 2
+cd scripts/
+ll
+./anbox-bridge.sh 
+nvim start-container.sh 
+./start-container.sh 
+vim container-manager.sh 
+anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity
+anbox 
+anbox  session-manager
+./anbox-bridge.sh 
+./anbox-bridge.sh start
+anbox  session-manager
+anbox 
+sudo /usr/local/src/anbox/scripts/anbox-bridge.sh start
+sudo anbox container-manager --daemon --privileged --data-path=/var/lib/anbox
+anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity
+dbus-launch anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity
+dbus-send anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity
+anbox  check-features
+anbox session-manager
+anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --container-network-gateway=192.168.250.1 --container-network-address=192.168.250.2
+sudo anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --container-network-gateway=192.168.250.1 --container-network-address=192.168.250.2
+sudo systemctl stop anbox-container-manager.service 
+sudo anbox container-manager --daemon --privileged --data-path=/var/lib/anbox --container-network-gateway=192.168.250.1 --container-network-address=192.168.250.2
+cd ..
+cd anbox/build/
+sudo make uninstall
+cd ..
+..
+rm -rf anbox
+rm -rf anbox-modules/
+cd ~/Downloads/
+ll
+mx UNINSTALL.sh 
+./UNINSTALL.sh 
+lsmod | grep -e ashmem_linux -e binder_linux
+powermenu.sh 
+man yarnpkg 
+which mpv 
+/usr/bin/mpv 
+mpv
+mpv %
+mpv f%
+mpv http://drk.yasarpro.com:80/play/movie.php?mac=00:1A:79:E8:93:8F&stream=183981.mkv&play_token=Io8psitzuX&type=series
+mpv http://drk.yasarpro.com:80/play/movie.php?mac=00:1A:79:E8:93:8F&stream=183981.mkv
+sudo rm -rf /var/lib/anbox/
+sudo rm /lib/systemd/system/anbox-container-manager.service 
+sudo rm /etc/systemd/system/anbox-container-manager.service 
+lsmod | grep -e ashmem_linux -e binder_linux
+search yarn
+apt-file search yarn
+apt-file search yarn | fzf
+nmp -search
+npm search PiTV
+python3
+nodejs -v
+yep yarn
+node -v
+apt install yarnpkg
+sudo apt install yarnpkg
+cd src/
+git clone https://github.com/ozankaraali/PiTV/
+cd PiTV/
+ll
+yarnpkg 
+yarnpkg make
+ll
+nvim README.md 
+ll
+yarn make
+ll
+yarnpkg --help
+yarnpkg install
+yarnpkg make
+nvim /home/mohamed/src/PiTV/node_modules/@electron-forge/maker-base/dist/Maker.js
+nvim /home/mohamed/src/PiTV/node_modules/@electron-forge/
+yarnpkg make dep
+yarnpkg make depbuild
+nvim /home/mohamed/src/PiTV/node_modules/@electron-forge/
+cd /home/mohamed/src/PiTV/node_modules/@electron-forge/
+ll
+rm maker-rpm/
+rm -rf maker-rpm/
+cd -
+yarnpkg make
+npm install --global yarn
+sudo npm install --global yarn
+yarn make
+ll
+cd ..
+rm -rf PiTV/
+ll
+dpkg -i pitv_1.1.2_amd64.deb 
+sudo dpkg -i pitv_1.1.2_amd64.deb 
+pitv 
+pitv --help
+pitv
+ll
+pcmanfm 
+pitv
+dpkg --help 
+sudo apt autoremove pitv
+ll
+rm pitv_1.1.2_amd64.deb 
+sudo dpkg -i iptvnator_0.16.0_amd64.deb 
+iptvnator 
+iptvnator --help
+powermenu.sh 
+la
+nvim .nvidia-settings-rc 
+nvim /etc/default/grub
+yep hwinfo
+sudo hwinfo 
+sudo hwinfo --framebuffer
+nvidia-smi 
+nvidia-settings 
+sudo hwinfo --framebuffer
+xrandr 
+sudo reboot
+sudo hwinfo --framebuffer
+sudo nvim /etc/default/grub
+sudo update-grub2 
+sudo reboot
+sudo nvim /etc/default/grub
+sudo update-grub
+sudo update-grub2
+sudo reboot 
+sudo ./install.sh 
+sudo nvim /etc/default/grub
+sudo reboot
+cd src/
+ll
+ex m64py-0.3.0.tar.gz 
+ll
+cd m64py-0.3.0/
+ll
+nvim README.rst 
+python -m pip install -r requirements.txt --user
+python3 -m pip install -r requirements.txt --user
+ll
+nvim requirements.txt 
+..
+sudo apt install libsdl2-dev qttools6-dev-tools pyqt6-dev-tools python3-pyqt6
+sudo apt install qttools6-dev-tools
+sudo apt search qttools6-dev-tools
+ll
+cd m64py-0.3.0/
+ll
+python -m pip install -r requirements.txt --user
+python3 -m pip install -r requirements.txt --user
+search m63py
+ll
+.cd bin/
+cd bin/
+ll
+./m64py 
+search pyqt6
+python3 setup.py build
+ll
+cd ..
+python3 setup.py build
+nvim setup.py 
+cd ..
+cd m64py-0.3.0/
+ll
+nvim requirements.txt 
+pip install PyQt6
+pip install --user PyQt6
+yep python3-full
+pip install PyQt6
+sudo pip install PyQt6
+yep python3-pyqt6
+..
+python3 -m venv projects
+ll
+cd projects/
+ll
+source bin/activate
+pip list
+pip install --user PyQt6
+pip install PyQt6cd
+cd..
+cd m64py-0.3.0/
+l
+ll
+nvim README.rst 
+python -m pip install -r requirements.txt
+nvim README.rst 
+python -m pip install . --user
+python -m pip install setup.py 
+ll
+nvim setup.py 
+python3 setup.py build
+python3 setup.py
+python3 setup.py --help
+python3 setup.py install
+m64py 
+python3 setup.py build
+cd ../projects/
+ll
+cd bin/
+ll
+cd ..
+ll
+bash
+ll
+cd ..
+python3 --help
+source projects/bin/activate
+cd m64py-0.3.0/
+ll
+python -m install .
+nvim README.rst 
+python -m pip install -r requirements.txt
+python -m pip install
+python -m pip install setup.py
+python -m pip build setup.py
+python -m pip install setup.py
+la
+cd /
+ll lib/x86_64-linux-gnu/mupen64plus/
+sudo cp libmupen64plus.so.2.0.0 /usr/lib/
+sudo cp libmupen64plus.so.2.0.0 /usr/lib/x86_64-linux-gnu/mupen64plus/
+searcg flycast
+search flycast
+search mupen64
+search mupen64plus
+cd src/
+l
+mdkir mupen64plus
+mkdir mupen64plus
+mv mupen64plus-bundle-linux64-2.6.0.tar.gz mupen64plus
+cd mupen64plus/
+ex mupen64plus-bundle-linux64-2.6.0.tar.gz 
+ll
+cd mupen64plus-bundle-linux64-2.6.0/
+ll
+./mupen64plus 
+nvim install.sh 
+ll
+cd ..
+rm -rf mupen64plus-bundle-linux64-2.6.0
+rm -rf mupen64plus-bundle-linux64-2.6.0.tar.gz 
+ll
+ex mupen64plus-core-src-2.6.0.tar.gz 
+ll
+cd mupen64plus-core-src-2.6.0/
+ll
+cd projects/unix/
+ll
+make all
+nvim Makefile 
+cd ..
+ll
+nvim INSTALL 
+cd projects/unix/
+ll
+./Makefile 
+./Makefile cd
+cd
+cd -
+make
+make all
+nvim Makefile 
+search sdl
+sudo apt install mupen64plus
+sudo apt install mupen64plus-data
+sudo apt autoremove  mupen64plus-data
+search mupen64plus
+make all
+search libglu
+yep libglu1-mesa-dev
+make all
+ll
+man nvim
+nvim +444 Makefile 
+make all
+nvim +856 Makefile 
+apt-file search asm_defines.o
+apt-file search asm_defines
+yep libtgowt-dev
+make all
+apt-file search nasm
+yep nasm
+make all
+ll
+nvim Makefile 
+ll
+cd ..
+ll
+cd ..
+ll
+cd src/
+ll
+cd ..
+ll
+cd projects/unix/
+ll
+./libmupen64plus.so.2
+sudo make install
+cd /usr/local/share/
+./mupen64plus/
+ll
+cd..
+cd
+cd 
+cd src/mupen64plus/mupen64plus-core-src-2.6.0/projects/unix/
+ll
+nvim Makefile 
+search mupen64plus-ui-console
+yep mupen64plus-ui-console
+sudo make uninstall
+yep mupen64plus-ui-console
+mupen64plus 
+nvim Makefile 
+cd ~/src
+rm -rf mupen64plus/
+ll
+cd /home/mohamed/.config/mupen64plus/
+ll
+nvim mupen64plus.cfg 
+ll
+cd /media/mohamed/Data/Game_N64/
+ll
+ex Mario\ Kart\ 64\ \(USA\).zip 
+ll
+pcmanfm 
+cd /home/mohamed/.config/mupen64plus/
+ll
+nvim mupen64plus.cfg 
+ll
+nvim mupen64plus.cfg 
+cd ..
+ll
+m64py
+yep pyqt6-dev-tools python3-pyqt6
+yep libsdl2-dev
+cd src/m64py-0.3.0/
+l
+ll
+python3 setup.py build
+nvim +108 /usr/lib/python3/dist-packages/setuptools/config/pyprojecttoml.py
+search qttools6-dev-tools
+search qttools6-tools
+search qt6-tools-dev-tools
+yep qt6-tools-dev-tools
+python3 setup.py build
+python3 -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt --user
+nvim requirements.txt 
+yep python3-pyqt6
+nvim requirements.txt 
+yep python3-pysdl2
+nvim requirements.txt 
+yep pysdl2
+search pysdl2
+yep python3-sdl2
+pip setup.py build
+python3 setup.py build
+python3 setup.py install
+pip3 setup.py build
+pip3 setup.py install
+pip3 search m64py
+python3 search m64py
+python3 install setup.py 
+python3 build setup.py 
+python -m pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
+python3 cd ..
+cd ..
+cd m64py-0.3.0/
+ll
+cd bin/
+ll
+./m64py 
+cd ..
+pip3 setup.py build
+python3 setup.py build
+pip3 install pysdl2
+python3 setup.py build
+nvim /usr/lib/python3/dist-packages/setuptools/config/pyprojecttoml.py 
+ll
+nvim pyproject.toml 
+yep python3-pyqt6
+yep pyqt6-dev-tools
+yep qttools6-dev-tools
+yep qttools5-dev-tools
+yep qt6-tools-dev-tools
+yep qt6-tools-dev
+python3 setup.py build
+python3 setup.py install
+ll
+sudo python3 setup.py install
+m64py 
+cd ..
+ll
+rm -rf projects/
+ll
+cd m64py-0.3.0/
+ll
+du
+pcmanfm 
+man mupen64plus 
+cd
+m64py 
+cd src/
+ll
+ex mupen64plus-core-src-2.6.0.tar.gz 
+cd mupen64plus-core-src-2.6.0/
+ll
+cd projects/unix/
+ll
+make all
+sudo make install
+ll
+m64py 
+ll
+nvim Makefile 
+cd /usr/lib/x86_64-linux-gnu/mupen64plus/
+ll
+cd /
+cd
+m64py 
+sudo apt autoremove mupen64plus-ui-console 
+m64py 
+cd src/
+ll
+cd mupen64plus-core-src-2.6.0/
+ll
+cd projects/unix/
+ll
+sudo make uninstall
+cd ..
+..
+cd ..
+git clone https://github.com/mupen64plus/mupen64plus-ui-console.git
+cd mupen64plus-ui-console/
+ll
+cd projects/unix/
+make all
+nvim Makefile 
+cd ..
+cd mupen64plus-core-src-2.6.0/
+cd projects/unix/
+ll
+make all
+sudo make install 
+cd ..
+cd
+cd src/mupen64plus-ui-console/
+ll
+cd projects/unix/
+ll
+make all
+sudo make install
+m64py 
+cd ../..
+git clone https://github.com/mupen64plus/mupen64plus-input-sdl.git
+cd mupen64plus-input-sdl/
+cd projects/unix/
+ll
+make all
+sudo make install
+ll /usr/local/lib/mupen64plus
+up 3
+git clone https://github.com/mupen64plus/mupen64plus-rsp-cxd4.git
+cd mupen64plus-rsp-cxd4/
+cd projects/unix/
+ll
+make all
+sudo make install
+up 3
+git clone https://github.com/mupen64plus/mupen64plus-video-glide64mk2.git
+cd mupen64plus-video-glide64mk2/projects/unix/
+make all
+ll
+sudo make install
+up 3
+ll
+ll /usr/local/lib/mupen64plus
+git clone https://github.com/mupen64plus/mupen64plus-video-rice
+cd mupen64plus-video-rice/projects/unix/
+make all
+ll
+sudo make install
+up 3
+git clone https://github.com/mupen64plus/mupen64plus-audio-sdl
+cd mupen64plus-audio-sdl/
+ll
+cd projects/unix/
+make all
+sudo make install
+up 3
+ll
+git clone https://github.com/mupen64plus/mupen64plus-video-glide64
+cd mupen64plus-video-glide64/projects/unix/
+ll
+make all
+sudo make install
+up 3
+git clone https://github.com/mupen64plus/mupen64plus-video-arachnoid
+cd mupen64plus-video-arachnoid/projects/unix/
+make all
+sudo make install
+ll /usr/local/lib/
+ll /usr/local/lib/mupen64plus/
+cd ..
+cd /usr/local/lib/mupen64plus/
+ll
+cd ..
+ll
+cd -
+cd ~/src/mupen64plus-core-src-2.6.0/
+cd projects/unix/
+sudo make install
+ll /usr/local/include/mupen64plus/
+nvim /usr/local/include/mupen64plus/m64p_config.h 
+cd /home/mohamed/.config/mupen64plus/
+ll
+nvim mupen64plus.cfg 
+convert mariokart64-000.jpg mariokart64-000.png 
+mupen64plus 
+man mupen64plus 
+cd /home/mohamed/.config/mupen64plus/
+ll
+nvim mupen64plus.cfg 
+nvim /usr/share/applications/mpv.desktop 
+cd ~/.local/share/applications/Other/userapp-mupen64plus-TG2MA3.desktop
+cd ~/.local/share/applications/Other/
+cd ~/.local/share/applications/
+ll
+rm userapp-mupen64plus-*
+ll /usr/share/applications/Games/mupen64plus.desktop
+cd /usr/share/applications/Games/
+cd /usr/share/applications/
+ll
+mupen64plus Mario\ Kart\ 64\ \(USA\).n64 
+mupen64plus "Mario Kart 64 (USA).n64" 
+m64py 
+nvim ~/.local/share/applications/mupen64plus.desktop
+rm ~/.local/share/applications/mupen64plus.desktop
+rm ~/.local/share/applications/Mupen64Plus.desktop 
+rm ~/.local/share/applications/userapp-mupen64plus\ u%-RGP892.desktop 
+mupen64plus "Mario Kart 64 (USA).n64"
+man mupen64plus 
+mupen64plus --windowed "Mario Kart 64 (USA).n64" 
+mupen64plus Mario\ Kart\ 64\ \(USA\).n64
+m64py Mario\ Kart\ 64\ \(USA\).n64 
+sudo shutdown + 60
+sudo shutdown +60
+ll
+l
+logo-ls -laX
+logo-ls -1aX
+df
+duT
+duT .yarnrc 
+du -sh
+du -sh --time
+du -sh --time *
+kj
+la
+ll
+cd /home/mohamed/.config/bash/
+nvim aliases 
+mupen64plus Mario\ Kart\ 64\ \(USA\).n64 
+man mupen64plus 
+mupen64plus --run
+mupen64plus
+ll
+mupen64plus -h
+mupen64plus --fullscreen
+mupen64plus --fullscreen Mario\ Kart\ 64\ \(USA\).n64 
+mupen64plus --fullscreen 'Mario Kart 64 (USA).n64' 
+m64py Mario\ Kart\ 64\ \(USA\).n64 
+nvim /usr/local/lib/python3.11/dist-packages/m64py-0.3.0-py3.11.egg/m64py/ui/inputbutton.py
+m64py 
+sudo m64py 
+m64py 
+ll
+./mupen64plus /media/mohamed/Data/Game_N64/
+./mupen64plus /media/mohamed/Data/Game_N64/Mario\ Kart\ 64\ \(USA\).n64 
+./mupen64plus /media/mohamed/Data/Game_N64/Mario\ Kart\ 64\ \(USA\).n64
+ll
+./mupen64plus 
+sh mupen64plus 
+bash -c mupen64plus 
+./mupen64plus -v
+la
+./mupen64plus 
+./install.sh 
+ll
+nvim install.sh 
+sudo ./install.sh 
+nvim install.sh 
+ll
+sudo ./install.sh
+ll /usr/local/
+ll /usr/local/games/
+ll /usr/local/include/mupen64plus/
+sudo ./uninstall.sh 
+..
+ll
+mupen64plus Mario\ Kart\ 64\ \(USA\).n64 
+m64py 
+sudo make install
+cd projects/unix/
+sudo ./uninstall.sh 
+ll
+sudo make install 
+apt-file search libspeexdsp
+yep libspeexdsp-dev
+sudo make install
+up 3
+ll
+..
+ll
+cd mupen64plus-ui-console/mupen64plus-input-sdl/
+sudo make install
+cd projects/unix/
+sudo make install
+up 3
+ll
+cd mupen64plus-rsp-cxd4/projects/unix/
+sudo make install
+cd -
+cd mupen64plus-video-arachnoid/projects/unix/
+sudo make install
+cd -
+cd mupen64plus-video-glide64/projects/unix/
+sudo make install
+cd -
+cd mupen64plus-video-glide64mk2/projects/unix/
+sudo make install
+cd -
+cd mupen64plus-video-rice/projects/unix/
+sudo make install
+m64py 
+man m64py 
+m64py --help
+m64py -
+m64py -v
+mupen64plus Mario\ Kart\ 64\ \(USA\).n64 
+mupen64plus -v
+mupen64plus --help
+nvim ~/.config/mupen64plus/mupen64plus.cfg 
+mupen64plus Mario\ Kart\ 64\ \(USA\).n64 
+m64py 
+./mupen64plus-gui 
+apt-file search libQt5Widgets.so.5
+yep libqt5widgets5
+./mupen64plus-gui 
+yep libQt5Widgets.so.5
+yep libQt5Widgets.so
+yep libQt5Widgets
+apt-file search libQt5Widgets.so.5
+yep libqt5widgets5
+cd /home/mohamed/.config/mupen64plus/
+ll
+nvim mupen64plus.cfg 
+cd ~/src/mupen64plus-ui-console/
+ll
+ex mupen64plus-bundle-linux32-2.0.tar.gz 
+nmcli radio wifi off 
+nmcli radio wifi on 
+ll /usr/local/bin/mupen64plus
+cd /usr/local/bin/
+ll
+cd /usr/local/lib/mupen64plus/
+ll
+cd /usr/local/share/mupen64plus/
+ll
+nvim InputAutoCfg.ini 
+mkdirg build
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..
+nvim ../CMakeLists.txt 
+cmake --version 
+nvim ../CMakeLists.txt 
+cmake -G Ninja -DCMAKE_BUILD_TYPE=Release ..
+search simple64
+cd ..
+rm -rf simple64-gui-main/
+rm -rf simple64-gui-main.zip 
+ex RMG-master.zip 
+cd RMG-master/
+ll
+./Source/Script/Build.sh Release
+nvim CMakeLists.txt 
+nvim Build/Release/CMakeFiles/CMakeError.log 
+ll
+./Source/Script/Build.sh Release
+./Source/Script/Build.sh
+cd ..
+rm -rf RMG-master*
+search mupen64plus-qt
+yep mupen64plus-qt
+ll
+mx RMG-Portable-Linux64-v0.7.9.AppImage 
+./RMG-Portable-Linux64-v0.7.9.AppImage 
+du RMG-Portable-Linux64-v0.7.9.AppImage 
+df RMG-Portable-Linux64-v0.7.9.AppImage 
+duT RMG-Portable-Linux64-v0.7.9.AppImage 
+du RMG-Portable-Linux64-v0.7.9.AppImage 
+search qt6-base-dev
+search libquazip1-qt6-dev 
+./RMG-Portable-Linux64-v0.7.9.AppImage 
+mx RMG-Portable-Linux64-v0.7.9.AppImage 
+./RMG-Portable-Linux64-v0.7.9.AppImage 
+./RMG-Portable-Linux64-v0.7.9.AppImage
+ex mupen64plus-qt-master.zip 
+cd mupen64plus-qt-master/
+ll
+cmake .
+yep libquazip1-qt6-dev
+cmake .
+make
+ll
+./mupen64plus-qt
+sudo make install
+cd..
+man mupen64plus-qt 
+mupen64plus-qt --help
+mupen64plus --cheats 'list'
+cd /home/mohamed/.config/m64py/
+ll
+nvim m64py.conf 
+ll
+nvim m64py.conf 
+..
+ll
+cd mupen64plus/
+ll
+nvim mupen64plus-qt.conf 
+nvim mupen64plus.cfg 
+ll
+cd ~/.local/share/mupen64plus
+ll
+cd..
+cd mupen64plus-qt/
+ll
+cd cache_v2/3a67d9986f54eb282924fca4cd5f6dff/
+ll
+nsxiv boxart-front.jpg 
+cd ..
+ll
+cd ..
+ll
+mupen64plus-qt 
+mupen64plus-qt Mario\ Kart\ 64\ \(USA\).n64 
+mupen64plus-qt 
+sudo mupen64plus-qt 
+mupen64plus-qt 
+m64py 
+mupen64plus-qt 
+m64py 
+mupen64plus --cheats 'Mario Kart 64 (USA).n64' 
+mupen64plus --cheats 'list' 
+man mupen64plus 
+mupen64plus --cheats
+mupen64plus-at --chaets
+mupen64plus-qt --chaets
+cd /home/mohamed/.config/mupen64plus/
+nvim mupen64plus.cfg 
+cd .config/m64py/
+ll
+nvim m64py.conf 
+m64py --cheats
+man m64py
+m64py --help
+m64py 
+nm-online 
+nmcli device connect 
+nmcli device connect wlx0022c0275615 
+sudo nmcli device connect wlx0022c0275615 
+man nmcli
+man nmcli-examples 
+nmcli connection add autoconnect 
+nmcli connection add autoconnect yes 
+nmcli connection add autoconnect yes type wifi
+nmcli connection show
+nmcli connection up 24\ home 
+sudo modprobe mt76x0u 
+nmcli device connect wlx0022c0275615 
+nmcli device checkpoint wlx0022c0275615 
+nmcli device checkpoint 'wlx0022c0275615'
+nmcli device checkpoint --timeout 10 wlx0022c0275615 
+nmcli connection add type 
+nmcli connection add type wifi ifname wlx0022c0275615 mode 
+nmcli device wifi list 
+sudo modprobe mt76x0u 
+lsmod 
+lsmod | grep network
+lsmod | grep Network
+lsmod | grep wifi
+lsmod | most
+sudo modprobe mt7601u
+apt-file search mt7601u
+search firmware-misc-nonfree
+ll /lib/firmware/mt7601u.bin
+sudo modprobe /lib/firmware/mt7601u.bin
+ll /lib/modules/6.1.0-37-amd64/
+cd /lib/modules/6.1.0-37-amd64/
+cd build/include/config/MT7601U 
+sudo rmmod mt7601u 
+sudo modprobe /lib/firmware/mt7601u.bin
+sudo modprobe mt7601u 
+sudo reboot 
+cd .local/share/RMG/
+ll
+cd ..
+rmdir RMG/
+rmdir -r RMG/
+man rmdir
+rmdir -p RMG/
+rm -rf RMG/
+../state/
+la
+rm -rf wireplumber/
+nvim lesshst 
+cd nvim/
+ll
+cd swap/
+ls
+ll
+cd ..
+cd ~/.config/
+ll
+la -T kitchen
+la -T Kitchen
+logo-ls -T Kitchen
+logo-ls -l -T Kitchen
+logo-ls -l
+logo-ls -x1
+logo-ls -X1
+logo-ls -U1
+cd .
+cd 
+logo-la -A
+logo-ls -A
+logo-ls -a
+logo-ls -A
+logo-ls -g
+logo-ls -G
+logo-ls -lG
+nvim journal.log 
+systemctl status wpa_supplicant.service 
+systemctl disable wpa_supplicant.service 
+systemctl status wpa_supplicant.service 
+systemctl 
+systemctl stop wpa_supplicant.service 
+systemctl status wpa_supplicant.service 
+jqf
+man fzf 
+fzf --disabled --print-query \
+fzf --disabled --print-query --preview "jq -C {q} $1"
+tzf .config/bash/bashrc 
+tzf ~/.config/bash/bashrc 
+jqf ~/.config/bash/bashrc 
+jqf ~/.config/bash/
+sudo rmmod mt7601u 
+sudo modprobe mt7601u 
+nmcli connection show 
+nmtui-connect 
+nmcli connection reload
+sudo nmcli connection reload
+nmcli connection show 
+nmcli agent all 
+sudo nmcli agent all
+sudo nmcli device show 
+sudo nmcli device up wlx0022c0275615 
+sudo nmcli device disconnect wlx0022c0275615 
+sudo nmcli device connect wlx0022c0275615 
+sudo nmcli device wifi connect 
+sudo nmcli device wifi connect '24 home'
+sudo nmcli device wifi list 
+sudo rmmod mt7601u 
+sudo modprobe mt7601u 
+nmcli device wifi list 
+echo $NV
+echo $NVIM_APPNAME
+cd /home/mohamed/.config/
+ll
+l
+ls
+ls -la
+ls -a
+logo-ls -a
+cd RMG/
+ls
+nvim mupen64plus.cfg 
+ll
+..
+rm -r RMG/
+ll
+cd libfm/
+l
+nvim dir-settings.conf 
+nvim libfm.conf 
+..
+l
+la
+man logo-ls
+la -r
+la -S
+man logo-ls
+mkdirg defualts-nvim/
+ll
+nvim init.lua 
+NVIM_APPNAME=defualts-nvim nvim
+nvim init.lua 
+NVIM_APPNAME=defualts-nvim nvim
+cd /home/mohamed/.config/bash/
+nvim inputrc 
+bash
+cd /home/mohamed/.local/
+cd /home/mohamed/.config/bash
+nvim inputrc 
+nvim functions 
+nvim functions
+jqf 
+jqf .yarnrc 
+jqf ~/.config/bash/bashrc alias
+jqf ~/.config/bash/bashrc
+cd /home/mohamed/.config/bash
+nvim bashrc 
+jqf ~/.config/bash/aliases 
+jq -C alias
+jq -C 
+jq -C {q} alias
+ll
+nvim .yarnrc 
+jq -C {q} .yarn/
+jq -C {q} .yarn/ yarn
+jq -C {q} .yarnrc
+jqf .yarnrc 
+fzf --preview "jq"
+fzf --preview "jq -C"
+cd /home/mohamed/.config/bash/
+nvim functions 
+bash
+dev
+htop | bash
+dev
+nvims 
+nvims
+v ~/.config/bash/bashrc 
+alias v
+v ~/.config/bash/bashrc 
+cd /home/mohamed/.config/defualts-nvim/
+NVIM_APPNAME=defualts-nvim init.lua 
+NVIM_APPNAME=defualts-nvim nvim init.lua 
+..
+cd nvim-bak/
+ll
+fzf-man
+fzf-man 
+st -e fzf-man
+st -e "fzf-man"
+st -e "bash -c fzf-man"
+st -e "sh -c fzf-man"
+man st
+st -e htop
+st -e fzf-man()
+st -e "fzf-man()"
+st -e bash -c "fzf-man"
+touch fzf-man.sh
+nvim fzf-man.sh 
+mx fzf-man.sh 
+st -e bash -c "fzf-man.sh"
+st -e bash -c "fzf-man.sh $0"
+st -e bash -c "fzf-man.sh $@"
+st --class="toto" -e bash -c "fzf-man.sh"
+st --class -e bash -c "fzf-man.sh"
+st --class -e "bash -c fzf-man.sh"
+st -e "bash -c fzf-man.sh"
+st -e fzf-man.sh 
+nvim fzf-man.sh 
+st -e fzf-man.sh 
+mv fzf-man.sh ~/.local/bin/
+bash
+cd .local/bin/
+ll
+st -e fzf-man.sh 
+st -e fzf-man.sh
+nvims 
+nvim functions 
+nvims aliases 
+..
+ll
+mv defualts-nvim/ nvim-bak/
+cd bash/
+ll
+nvim functions 
+nvim inputrc 
+nvim aliases 
+v functions 
+nvim functions 
+cd /home/mohamed/.config/bash/
+nvim functions 
+bash
+nvims 
+vim functions 
+bash
+nvims
+nvim functions 
+nvims
+nvim functions 
+bash
+librewolf 
+pkill librewolf 
+fzf-cd
+fzf-cd-to-file 
+..
+fzf-cd-to-file 
+ll
+cd
+fzf-cd-to-file 
+fzf-cd-to-file "bashrc"
+fzf-cd-to-file
+..
+xs 
+cd
+fzf-cd-to-file
+fzf-find-files 
+cd ..
+cd
+fzf-find-files 
+fzf-cd-to-file
+dirname 
+dirname .yarnrc 
+dirname .config/gtk-2.0/gtkrc 
+man dirname 
+fzf-cd-to-file
+dirname --help
+dirname ~/.local/bin/wallpaper.sh 
+bash
+fzf-cd-to-file
+..
+fzf-cd-to-file
+nvim --cmd edit ~/.config/bash/bashrc 
+nvim --cmd new ~/.config/bash/bashrc 
+nvim --help
+nvim +edit ~/.local/bin/wallpaper.sh 
+fzf-cd-to-file
+fzf-find-nvim 
+fzf-cd-and-edit 
+source functions 
+fzf-cd-and-edit 
+cd
+fzf-cd-and-edit 
+fzf-cd-to-file 
+nvim ~/.local/bin/fzf-man.sh 
+fzf-man.sh 
+fzf-man.sh ls
+fzf-man.sh
+nvim ~/.local/bin/fzf-man.sh 
+fzf-man.sh
+fzf-man.sh ls
+fzf-man
+fzf-man ls
+fzf-man.sh ls
+rm ~/.local/bin/fzf-man.sh 
+eval fzf-man
+st -e "bach -c eval fzf-man"
+st -e "eval fzf-man"
+st -e "fzf-man"
+cd /home/mohamed/.config/bash
+nvim functions 
+bash
+vim functions 
+nvim functions 
+bash
+nvim functions 
+bash
+nvim --help
+nvim functions 
+bash
+nvim functions 
+bash
+nvim functions 
+bash
+nvim functions 
+bash
+nvim functions 
+bash
+vim functions 
+bash
+nvim functions 
+bash
+fzf-cd-to-file 
+nvim functions 
+bash
+fzf-cd-to-file 
+nvim functions 
+bash
+nvim functions 
+bash
+bash
+fzf-cd 
+cd 
+fzf-cd 
+man fzf
+cd /home/mohamed/.config/bash/
+nvim functions 
+bash
+fzf-find-files 
+ll
+ex aliases 
+cd ~/src/
+ll
+rm -r dwm-6.5
+ex dwm-6.5.tar.gz 
+ll
+cd /home/mohamed/.config/bash
+nvim functions 
+bash
+nvim functions 
+bash
+fzf-nvim 
+yep bat
+fzf-nvim 
+cd
+fzf-nvim 
+which batcat 
+sudo ln -sf /usr/bin/batcat /usr/bin/bat
+bat
+bat autostart.sh 
+fzf-nvim 
+..
+fzf-nvim 
+fzf-file-widget 
+fzf-file-widget .config/bash/bashrc 
+nvim .config/bash/bashrc 
+fzf-nvim 
+nvim functions 
+nvim inputrc 
+ls
+la
+cd .local/state/nvim/undo/
+ll
+cd 
+cd .vim/undodir/
+ll
+..
+cd ..
+rm -rf .vim/
+ll
+cd .vim/undodir/
+ll
+cd ..
+cd 
+rm -rf .vim/
+ll
+cd .vim/undodir/
+ll
+nvim %home%mohamed%.config%nvim-bak%init.lua 
+cd ..
+cd
+rm -rf .vim/
+ll
+cd ~/.local/state/nvim-bak/undo/
+la
+lt
+ls -la
+sudo rmmod mt7601u 
+sudo modprobe mt7601u 
+exit
+nvim .yarn/bin/
+cd /home/mohamed/.config/nvim
+nvim init.lua 
+nvim lua/core/options.lua 
+rm -rf ~/.config/PiTV/
+cd .config/nvim-bak/
+ll
+nvim init.lua 
+ls
+nvim options.lua 
+v init.lua 
+v init.lua
+v ~/.config/bash/bashrc 
+nvim ~/.config/bash/bashrc
+cd ~/.local/share/nvim/lazy/lualine.nvim/lua/lualine/
+ll
+nvim highlight.lua 
+fzf-nvim 
+cd
+cd /home/mohamed/.config/nvim/lua/plugins/
+nvim lualine.lua 
+cd -
+cd ~/.local/share/nvim/lazy/lualine.nvim/lua/lualine/
+nvim .
+..
+up 3
+cd lazy/
+la
+cd ..
+ll
+cd mason/
+ll
+cd ,,
+cd ..
+cd lazy-rocks/
+;;
+ll
+cd image.nvim/
+ll
+cd ,,
+cd ..
+ll
+cd lazy
+nvim-web-devicons/lua/nvim-web-devicons/default/icons_by_filename.lua 
+nvim nvim-web-devicons/lua/nvim-web-devicons/default/icons_by_filename.lua 
+cd nvim-web-devicons/
+ll
+v lua/nvim-web-devicons/filetypes.lua 
+v lua/nvim-web-devicons/icons-default.lua 
+vlua/nvim-web-devicons/light/icons_by_file_extension.lua 
+nvim ~/.config/nvim-bak/plugin/statusline.lua 
+cd ~/.local/share/nvim/lazy/lualine.nvim/lua/lualine/
+v component.lua 
+la
+ls
+ll
+v ~/.config/bash/bashrc 
+v ~/.config/nvim-bak/init.lua 
+cd src/dwm-6.5/
+ll
+cd ..
+ll
+cd fleix-dwm/dwm-flexipatch/
+ll
+cd..
+ll
+cd UtkarshVerma/
+nvims Makefile 
+cd ..
+cd 
+search bashls
+search bash-language
+search lua-language
+search pylsp
+yep python3-pylsp
+pylsp 
+black --help
+man black
+search shfmt
+yep shfmt
+nvim .config/nvim/lua/plugins/lsp.lua 
+fzf-nvim 
+nvims
+nvims ~/.config/nvim-bak/init.lua 
+ll
+cd /home/mohamed/.config/nvim-bak/
+nvims init.lua 
+nvims init.lua
+nvims
+mkdir plugin
+nvims init.lua 
+cd 
+ll
+cd src/
+ll
+cd neovim/
+la
+nvims 
+cd 
+cd /home/mohamed/.config/nvim-bak/
+nvims init.lua 
+cd 
+cd ~/src/neovim/
+nvims 
+cd
+nvims 
+cd /home/mohamed/.config/nvim-bak/
+ll
+mkdir lua/core
+cd lua/core/
+ll
+cd ..
+..
+mv options.lua lua/core/
+mv keymaps.lua lua/core/
+mv functions.lua lua/core/
+nvim init.lua 
+ll
+nvims 
+..
+nvims
+cd
+cd src/neovim/
+nvims
+nvims .
+ll
+cd ..
+ll
+cd ncmpcpp-0.10.1/
+la
+nvims .
+cd ..
+ll
+cd xdg-ninja/
+ls
+la
+cd ..
+ll
+cd bicon/
+la
+nvims . 
+cd ..
+cd
+cd /home/mohamed/.config/nvim-bak
+cd plugin/
+l
+ll
+v statusline.lua 
+cd ..
+cd 
+nvim statusline2.lua
+mv statusline2.lua ~/.config/nvim-bak/plugin/
+cd /home/mohamed/.config/nvim-bak/plugin/
+ll
+mv statusline.lua ~/
+mv statusline2.lua statusline.lua
+nvims statusline.lua 
+mv ~/statusline.lua .
+v statusline.lua 
+ll
+v statusline.lua 
+v ~/src/neovim/
+cd ..
+cd plugin/
+v statusline.lua 
+cd ..
+ll
+v init.lua 
+cd plugin/
+v floatterm.lua 
+cd ..
+v init.lua 
+v lua/core/keymaps.lua 
+v plugin/floatterm.lua 
+v lua/core/tabs.lua 
+v lua/core/tabs.lua
+v lua/core/keymaps.lua 
+v init.lua 
+which bash-language-server 
+v init.lua 
+vim plugin/lsp.lua 
+vim plugin/lsp.lua
+v ~/src/Mupen64Plus/m64py-0.3.0/setup.py 
+search black
+yep black
+v ~/src/Mupen64Plus/m64py-0.3.0/setup.py 
+vim ~/src/Mupen64Plus/m64py-0.3.0/setup.py
+cd /home/mohamed/.config/nvim
+nvim lua/plugins/conform.lua 
+vim ~/src/Mupen64Plus/m64py-0.3.0/setup.py
+cd ~/src/Mupen64Plus/m64py-0.3.0/
+v setup.py 
+v setup.py
+cd ..
+cd 
+cd ~/.config/nvim-bak/
+cd plugin/
+ll
+mv lsp.lua ../lua/plugins
+cd ..
+cd lua/
+ll
+mkdir plugins/
+mv plugins lsp.lua
+mkdir plugins/
+mv lsp.lua plugins/
+cd ..
+nvim init.lua 
+v init.lua 
+v ~/src/Mupen64Plus/m64py-0.3.0/setup.py
+cd lua/plugins/
+ll
+v lsp.lua 
+v ~/src/Mupen64Plus/m64py-0.3.0/setup.py
+cd ~/src/
+mv lua_ls/ ~/.local/bin/
+cd ~/.local/bin/
+ll
+mv lua_ls/ ~/.local/share/lua-lang-server
+n -s ~/.local/share/lua-lang-server/bin/lua-language-server ~/.local/bin/lua-language-server
+ln -s ~/.local/share/lua-lang-server/bin/lua-language-server ~/.local/bin/lua-language-server
+lua-language-server 
+cd
+cd ~/.config/nvim-bak/lua/plugins/
+v lsp.lua 
+v lsp.lua
+nvim init.lua 
+nvim lsp.lua 
+search sylua
+npm search stylua
+npm install @johnnymorganz/stylua 
+ll
+cd node_modules/@johnnymorganz/stylua/
+ll
+..
+ll
+cd stylua/
+ll
+cd ..
+npm remove @johnnymorganz/stylua
+la
+pcmanfm 
+npx @johnnymorganz/stylua-bin --help
+la
+ll
+cd 
+la
+npm install -g @johnnymorganz/stylua-bin
+sudo npm install -g @johnnymorganz/stylua-bin
+cd .config/nvim-bak/lua/plugins/
+v lsp.lua 
+v ~/.local/bin/wallpaper.sh 
+v lsp.lua
+:q
+ls
+systemctl suspend
+cd /home/mohamed/.config/nvim-bak/plugin/
+ll
+cd ..
+cd lua/plugins/
+v lsp.lua 
+nvim lsp.lua 
+v lsp.lua 
+cd .
+cd 
+la
+ls
+lt
+v ~/.local/bin/change_kbd.sh 
+cd /home/mohamed/.config/nvim-bak/
+ll
+v init.lua 
+cd lua/plugins/
+v lsp.lua 
+cd ..
+mkdir ftplugin
+mv plugin/ ftplugin/
+cd ftplugin/
+ll
+pcmanfm 
+ll
+v floatterm.lua 
+cd ..
+mv ftplugin/ plugin/
+v plugin/statusline.lua 
+v lua/plugins/lsp.lua 
+cd ..
+cd nvim/
+ll
+v init.lua 
+nvim init.lua 
+ll
+cd lua/core/
+ll
+vim options.lua 
+vim snippets.lua 
+cd ..
+ll
+cd plugins/
+ll
+vim nvterm.lua 
+:q
+ll
+cd ..
+cd
+cd /home/mohamed/.config/nvim-bak/
+v lua/
+cd ..
+rm -rf nvim-bak/
+which stylua 
+ll
+v user-dirs.
+cd /home/mohamed/.config/bash/
+vim inputrc 
+fzf-nvim 
+nvim bashrc 
+vim aliases 
+vim functions 
+ll
+cd ~/.local/share/
+ll
+rm -rf lua-lang-server/
+ll
+rm -rf nvim-bak/
+ll
+rm -rf def*
+ll
+cd ../bin/
+ll
+rm lua-language-server 
+nvim picom-toggle.sh 
+cd /home/mohamed/.config/nvim/lua/plugins/
+ll
+nvim lsp.lua 
+ll
+nvim autocompletion.lua 
+vim lsp.lua 
+vim telescope.lua 
+cd ~/src/Mupen64Plus/m64py-0.3.0/
+nvim setup.cfg 
+nvim setup.py 
+./music
+man bicon
+man bicon.bin
+sudo rmmod mt7601u 
+sudo modprobe mt7601u 
+man bicon
+setfont tar-12b
+nmtui-connect 
+ll
+bicon
+ncmpcpp 
+ll
+nvim flac 
+mx music
+./music
+nvim music
+./music
+nvim music
+./music
+nvim music
+./music
+nvim music
+./music
+nvim flac music
+ll /etc
+man man
+man fd
+man sort
+fzf-nvim
+fzf-man 
+fd /media/mohamed/Movies/Songs -t mp3
+fd /media/mohamed/Movies/Songs -t *.mp3
+fd /media/mohamed/Movies/Songs -t "*.mp3"
+man fd
+man bash
+fd /media/mohamed/Movies/Songs/ -t f -e mp3 | fzf
+fd /media/mohamed/Movies/Songs/ -t f -e 8.mp3 | fzf
+fd /media/mohamed/Movies/Songs/ -t f -e *.mp3 | fzf
+fd /media/mohamed/Movies/Songs/ -t f -e 'mp3' | fzf
+fd /media/mohamed/Movies/Songs/ -t f -e '*.mp3' | fzf
+fd -t f -e mp3 /media/mohamed/Movies/Songs/ | fzf
+fd -t f '.*\.mp3$' /media/mohamed/Movies/Songs/ | fzf
+fd -e '.*\.mp3$' /media/mohamed/Movies/Songs/ | fzf
+fd '.*\.mp3$' /media/mohamed/Movies/Songs/ | fzf
+fd -e'.*\.mp3$' /media/mohamed/Movies/Songs/ | fzf
+fd -e'*.mp3' /media/mohamed/Movies/Songs/ | fzf
+fd -e '*.mp3' /media/mohamed/Movies/Songs/ | fzf
+fd -e '.*\.mp3$' /media/mohamed/Movies/Songs/ | fzf
+fd -e mp3 /media/mohamed/Movies/Songs/ | fzf
+fd -e mp3 -H /media/mohamed/Movies/Songs/ | fzf
+ll
+cd ~/.local/bin/
+ll
+fd -e mp3 -H /media/mohamed/Movies/Songs/ | fzf
+fd -e sh |fzf
+ll
+ll ~/Music
+cd ~/Music/
+ll
+cd
+fd -e mp3 ~/Music
+fd -e mp3 /home/mohamed/Music
+fd -e mp3 /home/mohamed/Music/
+fd -e mp3 . /home/mohamed/Music/
+fd -e mp3 --full-path '/home/mohamed/Music/'
+fd -e mp3 --full-path '/media/mohamed/Movies/Songs/'
+fd -e mp3 . '/media/mohamed/Movies/Songs/'
+fd -e mp3 --full-path '/home/mohamed/Music/'
+fd -e mp3 --full-path '/media/mohamed/Movies/Songs/'
+man fd
+fd -e mp3 -p '/media/mohamed/Movies/Songs/'
+fd '^x.*mp3' '/media/mohamed/Movies/Songs/'
+fd '^x.*mp3' . '/media/mohamed/Movies/Songs/'
+fd '^x.*mp3' Music/
+fd '^x.*mp3$' Music/
+fd '^x*.mp3$' Music/
+fd '^*.mp3$' Music/
+fd '^*.mp3$' '/home/mohamed/Music'
+fd '^*.mp3$' '/media/mohamed/Movies/Songs/'
+fd '^*.mp3$' '/media/mohamed/Movies/Songs/' | fzf
+fd
+fd -e mp3 '/media/mohamed/Movies/Songs/' | fzf
+fd -e 'mp3' '/media/mohamed/Movies/Songs/' | fzf
+fd -e 'mp3' -p'/media/mohamed/Movies/Songs/' | fzf
+fd -e 'mp3' -P '/media/mohamed/Movies/Songs/' | fzf
+fd -e 'mp3' --full-path '/media/mohamed/Movies/Songs/' | fzf
+fd -p '/media/mohamed/Movies/Songs/.(mp3)'
+./music
+cd Sources/suckless/st/
+ll
+nvim config.h
+dmenu_run
+..
+cd dmenu/
+ll
+nvim config.h 
+sudo make install
+dmenu_run
+nvim config.h
+man mpc
+cd ..
+cd st/
+nvim config.h
+cd ..
+cd dmenu/
+ll
+nvim config.h
+cd ..
+cd dwm/
+nvim config.def.h 
+sudo make install
+nvim config.def.h 
+nvim config.def.h
+nvim config.def.h 
+make
+ll
+nvim config.h
+vimdiff config.h ~/src/fleix-dwm/UtkarshVerma/config.h 
+vimdiff config.h ~/src/fleix-dwm/dwm-test/config.h 
+cp config.h config.def.h 
+cd /home/mohamed/.config/nvim/lua/plugins/
+ll
+nvim conform.lua 
+vim functions 
+nvim conform.lua 
+nvim lsp.lua 
+nvim conform.lua 
+cd ..
+cd
+nvim music
+ffplay ~/Music/\#9\ OMFG\ -\ Hell.mp3 
+ffplay -v 0 -nodisp -autoexit ~/Music/\#9\ OMFG\ -\ Hell.mp3 
+man mpDris2 
+man playerctl 
+playerctl -l
+playerctl -a
+playerctl -a play
+playerctl -a stop
+cd src/
+git clone https://github.com/notandy/ympd.git
+cd ympd/
+ll
+mkdirg build
+cmake .. -DCMAKE_INSTALL_PREFIX_PATH=/usr
+make
+search ympd
+ll
+cd CMakeFiles/
+nvim Makefile2
+..
+make
+search openssl
+ll
+cd ..
+rm -rf build/
+mkdirg build
+cmake ..
+make
+nvim CMakeFiles/ympd.dir/build.make
+cd..
+rm -rf ympd/
+search CoverGrid
+search plattenalbum
+search Quimup
+search Ymuse
+yep ymuse
+ymuse 
+ll
+cd
+cd /home/mohamed/.config/ymuse/
+nvim config.json 
+ymuse 
+man ymuse 
+ymuse --help
+ll
+rm flac music
+mpc playlist 
+playlist
+which bash
+man mpv 
+fc-list | grep Cour
+man ffplay 
+ll
+cd .config/mpd/playlists/ 
+ll
+cd ~/.config/
+cd mpd/playlists/ 
+ll
+cd ..
+ll
+cd ..
+cd ymuse/
+ll
+vim config.json 
+cd ~/.local/state/
+ll
+rm -rf def*
+rm -rf nvim-bak/
+ll
+cd ..
+ll
+cd share/
+ll
+cd ~/Music/
+ll
+cd Songs
+ll
+nvim Playlist.m3u 
+bicon
+mx test.lua 
+./test.lua 
+cd test/
+ls
+cd ..
+rm -r test
+./test.lua 
+./test.lua test
+nvim test.lua 
+nvim
+lua
+nvim test.lua 
+lua
+lua test.lua 
+lua
+which lua
+ll /usr/local/bin/lua
+ls /usr/local/bin/lua
+rm test.lua 
+nvim test.lua
+./test.lua
+mx test.lua 
+./test.lua 
+nvim test.lua 
+./test.lua 
+cd Documents/
+ls
+la
+learn lua.txt
+vim learn-lua.txt
+nvim 
+nvim ~/.config/nvim/lua/core/keymaps.lua 
+nvim learn-lua.txt 
+cd /home/mohamed/.config/nvim 
+cd lua/core/
+nvim keymaps.lua 
+cd ~/D
+cd ~/Documents/
+ll
+rm learn-lua.txt 
+cd ..
+sudo shutdown now 
+ls
+exit
+./test.lua 
+lua
+./test.lua 
+nmtui-connect 
+sudo rmmod mt7601u 
+sudo modprobe mt7601u 
+nmtui-connect 
+ll
+nvim test.lua 
+cd /home/mohamed/.config/nvim
+cd lua/core/
+nvim keymaps.lua 
+./test.lua 
+cd Sources/suckless/dwm/
+nvim config.def.h 
+rm config.h
+sudo make
+sudo make install
+nvim config.def.h
+sudo make install
+cd 
+nvim test.lua 
+cd Sources/suckless/dwm
+nvim config.def.h 
+sudo make install 
+nvim config.def.h 
+sudo make install 
+nvim config.def.h 
+sudo make install 
+nvim config.def.h 
+sudo make install 
+nvim config.def.h 
+sudo make install 
+nvim config.def.h 
+sudo make install 
+sudo make
+rm config.h
+sudo make
+ll
+rm config.h
+ll
+cd ~/.local/bin/
+ll
+cd statusbar/
+ll
+nvim sb-memory 
+nvim .
+cd Sources/suckless/dwm/
+nvim config.def.h 
+vim config.def.h 
+sudo make install
+nvim config.def.h 
+sudo make install
+nvim config.def.h 
+sudo make install
+nvim config.def.h 
+sudo rmmod mt7601u 
+sudo modprobe mt7601u 
+nmtui
+ymuse 
+cd 
+cd .local/bin/
+ll
+mx tag 
+cd /media/mohamed/Movies/Songs/arabic/George\ Wassouf/El-Hawa\ Sultan\ 1988/
+ll
+tag Rohi-Yanssmah.mp3 
+mpc update 
+ll
+pcmanfm 
+tag 01-El-hawa-Sultan.mp3 
+tagpending 
+tag -h
+tag -A "El Hawa Sultan" *.mp3
+ymuse 
+mpc update 
+tag 01-El-hawa-Sultan.mp3 
+mpc update 
+ymuse 
+sudo apt-get install kid3-qt
+ls /usr/include/lua5.1/
+cd .local/share/nvim/lazy/LuaSnip/
+ll
+cd deps/
+ls
+cd jsregexp005/
+ll
+cd ..
+cd jsregexp
+ls
+nvim
+ll
+nvim Makefile 
+cd ..
+..
+ll
+cd data/
+ll
+..
+cd lua/
+ll
+cd luasnip/
+ll
+ls
+,,
+cd ,,
+cd ..
+cd deps/jsregexp/
+ll
+nvim Makefile 
+cd ..
+cd jsregexp005/
+ls
+la
+nvim Makefile 
+ll
+cd /
+cd -
+pcmanfm 
+cd ..
+ll
+exit
+nvim
+nvim .config/bash/bashrc 
+nvim
+sudo rmmod mt7601u 
+sudo modprobe mt7601u 
+cd Music/
+ll
+cd .local/share/nvim/lazy
+ls
+cd nvterm
