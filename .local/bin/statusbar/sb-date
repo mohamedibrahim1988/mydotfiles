@@ -1,0 +1,21 @@
+#!/bin/sh
+# Display the current time in HH:MM:SS.
+
+notify() {
+    notify-send --icon=office-calendar \
+        --hint=string:x-canonical-private-synchronous:"$1" "$@"
+}
+case $BLOCK_BUTTON in
+1)
+    notify "This Month" "$(ncal -w |
+        sed "s/\<$(date +'%e' | tr -d ' ')\>/<b><span color='red'>&<\/span><\/b>/")"
+    appointments="$(calcurse -d1 \
+        --format-apt "• <i>%S - %E</i>\n  <span foreground='#0000ff'>%m</span>\n" \
+        --format-event "• <span foreground='#ffa500'>%m</span>\n")"
+    [ -n "$appointments" ] && notify "Appointments" "$appointments"
+    ;;
+2) $TERMINAL -e "$EDITOR" "$0" ;;
+3) setsid --fork $TERMINAL -e calcurse ;;
+esac
+
+printf "^c#a6e22e^ 󰥔 $(date '+%I:%M %p ')"
