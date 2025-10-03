@@ -1,0 +1,159 @@
+# Reload Keybindings
+super + Escape
+	pkill -USR1 -x sxhkd
+# Close App
+super + {_,ctrl + }q
+	bspc node -{c,k}
+
+# Quit/Restart bspwm
+super + shift + {q,r}
+    bspc {quit,wm -r}
+# kill window
+super + shift + x
+    xkill
+
+# Open Terminal (Normal & Floating)
+super + {_,alt + }Return
+	OpenApps --{terminal,floating}
+
+# Terminal Selector (st & alacritty)
+super + alt + t
+	Term --selecterm
+
+# Dmenu launcher
+super + p
+    dmenu_run
+# Apps (browser, editor, filemanager)
+super + {w,e}
+	OpenApps --{browser,filemanager}
+# Terminal apps (nvim, ncmpcpp)
+super + shift + {v,m}
+	OpenApps --{nvim,music}
+# Volume control
+XF86Audio{RaiseVolume,LowerVolume,Mute}
+    volume_dunst {up,down,mute}
+# Music control
+XF86Audio{Next,Prev,Play}
+	mpc {next,prev,toggle}
+	
+# Switch workspace or Send focused Node to another workspace
+super + {_,shift + }{1-9}
+	bspc {desktop -f,node -d} '^{1-9}' '--follow'
+
+# Move floating window
+super + alt + {_,shift + }{Left,Down,Up,Right}
+	~/.config/bspwm/src/move-window {_,edge-}{west,south,north,east}
+# Custom resize
+super + alt + {h,j,k,l}
+    ~/.config/bspwm/src/bspwm_resize {west,south,north,east}
+
+# Switch workspace {prev,next}
+ctrl + alt + {Left,Right}
+	bspc desktop -f {prev.local,next.local}
+
+# Send focused Node to workspace directionally
+super + ctrl + shift + {Left,Right}
+    bspc node -d {prev,next} '--follow'
+
+# Switch to last opened workspace
+super + {comma,period}
+	bspc {node,desktop} -f last
+
+# Change focus of the Node or Swap Nodes
+super + {_,shift + }{h,j,k,l}
+	bspc node --{focus,swap} {west,south,north,east}
+# Flip layout vertically/horizontally
+super + {_,shift + }a
+	bspc node @/ --flip {vertical,horizontal}
+
+# increase/decrease Node
+super + alt + {equal,minus}
+	{ \
+       bspc node -z top_right 20 -20 ; bspc node -z bottom_left -20 20; \
+    ,  bspc node -z top_right -20 20 ; bspc node -z bottom_left 20 -20; \
+    }
+
+# increase/decrease FLOATING node size (zoom in/out)
+super + ctrl + {equal,minus}
+	{ \
+	  xdotool getactivewindow windowmove --relative -- -50 -25 ; xdo resize -w +100 -h +50; \
+	, xdotool getactivewindow windowmove --relative -- +50 +25 ; xdo resize -w -100 -h -50; \
+	}
+# Split horizontal, vertical or cancel
+super + ctrl + {Right,Down,c}
+	bspc node -p {east,south,cancel}
+
+# Preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# Toggle Layout (Tiled/Monocle)
+super + m
+	bspc desktop -l next
+
+# Toggle Fullscreen
+super + f
+    bspc node -t "~"fullscreen
+# Toggle beetwen floating & tiled
+super + shift + f
+    bspc node -t "~"{floating,tiled}
+
+# Pseudo Tiled & tiled mode
+super + shift + space
+    bspc node -t "~"{pseudo_tiled,tiled}
+
+# Set the node flags mark / lock / sticky / private / hidden
+alt + {m,x,s,p,h}
+	bspc node -g {marked,locked,sticky,private,hidden}
+# unhide window with rofi
+super + alt + g
+    ~/.config/bspwm/src/unhidewindow
+# Show hidden nodes one by one
+ctrl + alt + h
+    bspc node {,$(bspc query -N -n .hidden | tail -n1)} -g hidden=off
+# hide/unhide all windows
+super + alt + d 
+    bspc query -N -n .local.window | xargs -I ID bspc node ID -g hidden
+
+# Bring all marked windows to the focused desktop
+super + n ; m
+    bspc query -N -n '.marked' | xargs -I id -n 1 bspc node id -d focused --follow
+
+# Focused desktop window gap
+super + button{4,5}
+  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
+# Node switcher
+super + space
+    rofi \
+        -theme $HOME/.config/rofi/styles/Windows.rasi \
+        -show window -window-thumbnail \
+        -window-hide-active-window true \
+        -kb-accept-entry "!Alt-Tab,Return" \
+        -kb-element-next "Alt-Tab"
+# open launcher rofi
+super + r
+    OpenApps --menu
+# Rofi style
+super + alt + s
+    RofiLauncher --styles
+# Rofi both (styles&colors)
+super + alt + r
+    RofiLauncher --both
+#powermenu
+super + x
+    eww -c ~/.config/eww open-many --toggle powermenu-clickhandler powermenu
+#change keyboard
+alt + Shift_L
+     ~/.config/eww/scripts/kb_layouts cycle ara us
+# open scratchpad
+super + grave
+    scratch scratchpad
+# open scratchpad two
+super + F2
+    Bspwm-ScratchPad
+# Keybindings helps rofi
+super + s
+    KeybindingsHelp
+#RED SHIFT
+alt + e
+    cycle-redshift.sh

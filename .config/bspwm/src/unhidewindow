@@ -1,0 +1,11 @@
+#!/bin/env bash
+# dependency: xtitle
+
+ids=($(bspc query -N -n .hidden.window)) || exit
+options="$(xtitle "${ids[@]}")"
+rofi_run="rofi -dmenu -format i -theme ~/.config/rofi/styles/TermSelector.rasi"
+
+id_index="$(<<<"$options" $rofi_run)"
+if [[ -n "${id_index}" ]]; then
+    bspc node "${ids[${id_index}]}" -g hidden=off -f
+fi

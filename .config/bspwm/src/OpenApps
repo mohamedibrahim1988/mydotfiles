@@ -1,0 +1,46 @@
+#!/bin/sh
+case "$1" in
+--menu)
+    RofiLauncher --launcher
+    ;;
+--terminal)
+    Term --terminal
+    ;;
+--floating)
+    Term --floating
+    ;;
+--netmanager)
+    NetManagerDM
+    ;;
+--screenshot)
+    ScreenShoTer
+    ;;
+--powermenu)
+    PowerMenu
+    ;;
+--keyboard)
+    KeyBoardL
+    ;;
+--nvim)
+    Term --nvim
+    ;;
+--music)
+    Term --music
+    ;;
+--scratch)
+    Bspwm-ScratchPad
+    ;;
+    # Apps
+--filemanager)
+    pcmanfm
+    ;;
+--browser)
+    librewolf
+    ;;
+--soundcontrol)
+    pavucontrol
+    ;;
+*)
+    echo "Invalid Option"
+    ;;
+esac

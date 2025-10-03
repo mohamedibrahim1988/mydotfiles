@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+awk '/^[a-z]/ && last {print $0,"\t",last} {last=""} /^#/{last=$0}' ~/.config/bspwm/src/config/sxhkdrc |
+    column -t -s $'\t' | rofi -dmenu -i -theme "/home/mohamed/.config/rofi/styles/style_011.rasi"

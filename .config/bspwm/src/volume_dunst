@@ -1,0 +1,103 @@
+#!/bin/bash
+
+DIR="$HOME/.config/dunst/icons"
+volume_step=5
+max_volume=100
+
+function get_volume() {
+    pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]{1,3}(?=%)' | head -1
+}
+
+function is_mute() {
+    pactl get-sink-mute @DEFAULT_SINK@ | grep -Po '(?<=Mute: )(yes|no)'
+}
+
+get_icon() {
+    volume=$(get_volume)
+    mute=$(is_mute)
+
+    if [ "$mute" = "yes" ]; then
+        echo " "
+    else
+        if [ "$volume" -eq "0" ]; then
+            echo ""
+        elif [ "$volume" -le "30" ]; then
+            echo ""
+        elif [ "$volume" -le "70" ]; then
+            echo ""
+        else
+            echo ""
+        fi
+    fi
+}
+
+function send_notification {
+
+    overvolume=$(get_volume)
+    [[ $overvolume -gt 100 ]] && volume=100 || volume=$overvolume
+    #Set correct icon
+    if [ "$volume" -eq 0 ]; then
+        icon_name="$DIR/mute.png"
+    elif [[ $volume -lt 35 ]]; then
+        icon_name="$DIR/vlow.png"
+    elif [[ $volume -lt 70 ]]; then
+        icon_name="$DIR/vmid.png"
+    elif [[ $volume -lt 100 ]]; then
+        icon_name="$DIR/vhigh.png"
+    else
+        icon_name="$DIR/vthigh.png"
+    fi
+
+    # Send the notification
+    notify-send "Volume
+$overvolume%" -h int:value:$volume -h int:yawn_type:2 -i "$icon_name" -t 1000 -r 555 -u critical
+}
+
+case $1 in
+up)
+    # Unmutes and increases volume, then displays the notification
+    pactl set-sink-mute @DEFAULT_SINK@ 0
+    volume=$(get_volume)
+    if [ $(("$volume" + "$volume_step")) -gt $max_volume ]; then
+        pactl set-sink-volume @DEFAULT_SINK@ $max_volume%
+    else
+        pactl set-sink-volume @DEFAULT_SINK@ +$volume_step%
+    fi
+    send_notification
+    ;;
+down)
+    # Unmute
+    pactl set-sink-mute @DEFAULT_SINK@ 0 >/dev/null
+
+    pactl set-sink-volume @DEFAULT_SINK@ -$volume_step% >/dev/null
+    send_notification
+    ;;
+mute)
+    # Toggle mute
+    pactl set-sink-mute @DEFAULT_SINK@ toggle >/dev/null
+    if [ "$(is_mute)" = "yes" ]; then
+        icon_name="$DIR/mute.png"
+        notify-send "Mute" -i $icon_name -t 1000 -r 555 -u critical -h int:value:0
+    else
+        send_notification
+    fi
+    ;;
+set-volume)
+    if [ -n "$2" ]; then
+        pactl set-sink-volume @DEFAULT_SINK@ "${2}%"
+    fi
+    ;;
+icon)
+    get_icon
+    ;;
+*)
+    volume=$(get_volume)
+    mute=$(is_mute)
+    icon=$(get_icon)
+    if [[ "$mute" = "yes" ]]; then
+        echo "M"
+    else
+        echo "${volume}"
+    fi
+    ;;
+esac

@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+case "$1" in
+scratchpad)
+    entry="alacritty --class scratchpad -t scratchpad"
+    winname="scratchpad"
+    ;;
+Music)
+    entry="alacritty --class Music -t Music -e ncmpcpp"
+    winname="Music"
+    ;;
+Htop)
+    entry="alacritty -t Htop -e Htop"
+    winname="Htop"
+    ;;
+*)
+    echo "Usage: $0 {scratchpad|Music|Htop}"
+    exit 1
+    ;;
+esac
+
+# Search window by name or class; get first match
+WIN_ID=$(xdotool search --name "$winname" 2>/dev/null | head -n1)
+
+if [ -n "$WIN_ID" ]; then
+    # If visible → hide; if hidden → show
+    if xdotool search --onlyvisible --name "$winname" >/dev/null 2>&1; then
+        xdotool windowunmap "$WIN_ID"
+    else
+        xdotool windowmap "$WIN_ID"
+        xdotool windowactivate "$WIN_ID"
+    fi
+else
+    # Not running yet → start it
+    eval "$entry" &
+fi

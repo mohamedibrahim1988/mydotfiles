@@ -1,0 +1,61 @@
+#!/bin/bash
+
+CFG_TERM="$HOME/.config/rofi/config/.term"
+ROFI_THEME="$HOME/.config/rofi/styles/TermSelector.rasi"
+
+[ -f "$CFG_TERM" ] || echo "alacritty" >"$CFG_TERM"
+
+# Main var
+read -r MY_TERM <"$CFG_TERM"
+
+# Function to choose the terminal using rofi
+choose_terminal() {
+    options="Alacritty st"
+    current_term=$(tr '[:upper:]' '[:lower:]' <"$CFG_TERM")
+
+    index=0
+    selected_index=0
+    for opt in $options; do
+        lc_opt=$(printf "%s" "$opt" | tr '[:upper:]' '[:lower:]')
+        if [ "$lc_opt" = "$current_term" ]; then
+            selected_index=$index
+            break
+        fi
+        index=$((index + 1))
+    done
+
+    chosen=$(printf '%s\n' $options | rofi -theme "$ROFI_THEME" \
+        -mesg "[ Your current terminal is $MY_TERM ]" -dmenu -selected-row "$selected_index")
+
+    if [ -n "$chosen" ]; then
+        echo "$chosen" | tr '[:upper:]' '[:lower:]' >"$CFG_TERM"
+    fi
+}
+
+# Terminal selector
+[ "$1" = "--selecterm" ] && choose_terminal
+
+# Refresh main var (in case it changed)
+read -r MY_TERM <"$CFG_TERM"
+
+# Launch the terminal with appropriate options
+case $MY_TERM in
+"alacritty")
+    case $1 in
+    "--terminal") alacritty ;;
+    "--floating") alacritty --class FloaTerm,FloaTerm ;;
+    "--htop") alacritty --class FloaTerm,FloaTerm -e htop ;;
+    "--nvim") alacritty -e nvim ;;
+    "--music") alacritty --class MusicTerm -e ncmpcpp ;;
+    esac
+    ;;
+"st")
+    case $1 in
+    "--terminal") st ;;
+    "--floating") st -c "FloaTerm" ;;
+    "--nvim") st -e nvim ;;
+    "--music") st -c MusicTerm -e ncmpcpp ;;
+    "--htop") st -n "FloaTerm" -c "FloaTerm" -e htop ;;
+    esac
+    ;;
+esac
