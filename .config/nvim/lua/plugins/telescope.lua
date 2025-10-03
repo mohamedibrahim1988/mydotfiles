@@ -19,15 +19,18 @@ return {
     { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
   },
   config = function()
+    local actions = require 'telescope.actions'
     require('telescope').setup {
       -- You can put your default mappings / updates / etc. in here
       --  All the info you're looking for is in `:help telescope.setup()`
       defaults = {
         mappings = {
           i = {
-            ['<C-k>'] = require('telescope.actions').move_selection_previous, -- move to prev result
-            ['<C-j>'] = require('telescope.actions').move_selection_next, -- move to next result
-            ['<C-l>'] = require('telescope.actions').select_default, -- open file
+            ['<C-k>'] = actions.move_selection_previous, -- move to prev result
+            ['<C-j>'] = actions.move_selection_next, -- move to next result
+            ['<C-l>'] = actions.select_default, -- open file
+            ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
+            ['<C-h>'] = 'which_key',
           },
         },
       },
@@ -67,10 +70,19 @@ return {
     vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
     vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
+    vim.keymap.set('n', '<leader>ps', function()
+      builtin.grep_string { search = vim.fn.input 'Grep > ' }
+    end, { desc = '[S]earch word in Dir use [G]rep' })
+
+    vim.keymap.set({ 'n', 'v' }, '<leader>pw', function()
+      local word = vim.fn.expand '<cword>'
+      builtin.grep_string { search = word }
+    end, { desc = '[S]earch [W]ord under cursor' })
+
     -- Slightly advanced example of overriding default behavior and theme
     vim.keymap.set('n', '<leader>/', function()
       -- You can pass additional configuration to Telescope to change the theme, layout, etc.
-      builtin.current_buffer_fuzzy_find(require('telescope.themes').get_cursor {
+      builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
         winblend = 10,
         previewer = false,
       })
