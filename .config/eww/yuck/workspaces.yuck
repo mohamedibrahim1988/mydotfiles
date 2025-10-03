@@ -1,0 +1,9 @@
+(defwidget workspaces []
+  (box :class "workspacesbox"
+       :orientation "h"
+       :space-evenly false
+       :valign "center"
+    (literal :content "${workspaces}")
+  )
+)
+

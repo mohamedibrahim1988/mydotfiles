@@ -1,0 +1,40 @@
+(defvar date_reveal false)
+(defwidget time []
+  (eventbox
+    :tooltip "Current time"
+    :onhover "${eww} update date_reveal=true"
+    :onhoverlost "${eww} update date_reveal=false"
+    :cursor "pointer"
+    (button 
+        :onclick "eww open --toggle calendar"
+      (box
+        :class "time_box"
+        :space-evenly "false"
+        :orientation "h"
+        :valign "center"
+        :halign "fill"
+        (label :valign "center" :class "time" :text "${hour}:${minutes}" )
+        (label :valign "center" :class "type" :text "${type}" )
+        (revealer
+          :reveal date_reveal
+          :transition "slideright"
+          :duration "350ms"
+          :valign "fill"
+          (label
+            :valign "fill"
+            :class "date"
+            :text "${date}"
+            ))
+))))
+(defwindow calendar
+  :geometry (geometry :x "1650px"
+                      :y "4%" 
+                      :width "250px" 
+                      :height "55px")
+(cal))
+
+(defwidget cal []
+  (box :class "cal-box" :orientation "v"
+    (calendar :class "cal" :day calendar_day :month calendar_month :year calendar_year)
+  )
+)
