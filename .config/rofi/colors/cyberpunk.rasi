@@ -1,0 +1,9 @@
+* {
+    bg:     	#000B1E;
+    bg-alt: 	#0A1528;
+    fg:     	#ffffff;
+    selected:	#0ABDC6;
+    active:  	#00FF00;
+    urgent:  	#FF0000;
+    dark-navy:  #1A1526;
+}

@@ -1,0 +1,120 @@
+configuration {
+	modes: "drun,filebrowser,window";
+    font: "Iosevka Nerd Font 12";
+    show-icons: false;
+	terminal: "alacritty";
+    sort: true;
+    sorting-method: "fzf";
+    disable-history: false;
+    case-smart: true;
+    matching: "fuzzy";
+    window-format: "{c} - {w} - {t:0}";
+    drun-display-format: "{name}";
+    display-window: "";
+    display-drun: "";
+    display-filebrowser: "";
+	me-select-entry: "MouseDPrimary";
+	me-accept-entry: "MousePrimary";
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+@import "../colors/color.rasi"
+
+* {
+    text-color: @fg;
+}
+
+window {
+    transparency:                "real";
+    location : center;
+    width    : 280px;
+    x-offset : 0px;
+    y-offset : 0px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @bg-alt;
+    border-radius: 6px;
+}
+mainbox {
+    spacing:                     10px;
+    padding:                     10px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               12px;
+    background-color:            @bg;
+    text-color:                  @fg;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  @active;
+}
+
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  @active;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           @bg-alt;
+}
+
+
+listview {
+  spacing      : 4px;
+  lines        : 12;
+  columns      : 1;
+  scrollbar    : false;
+  fixed-height : false;
+  dynamic      : true;
+  background-color: @bg;
+}
+
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               12px;
+    background-color:            transparent;
+    cursor:                      pointer;
+}
+
+element normal urgent {
+  text-color: @urgent;
+}
+
+element normal active {
+  text-color: @active;
+}
+
+element alternate active {
+  text-color: @active;
+}
+
+element selected {
+  text-color       : @bg;
+  background-color : @selected;
+}
+
+element selected urgent {
+  background-color: @urgent;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    cursor: pointer;
+}
+

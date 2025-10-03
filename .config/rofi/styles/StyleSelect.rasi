@@ -1,0 +1,80 @@
+// https://github.com/gh0stzk/dotfiles
+
+configuration {
+    modi:                        "drun";
+    show-icons:                  false;
+    drun-display-format:         "{name}";
+	hover-select:				true;
+	me-select-entry:			"";
+	me-accept-entry:			"MousePrimary";
+}
+
+@import "../colors/color.rasi"
+
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       350px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               12px;
+    cursor:                      "default";
+    border-color:                transparent;
+    background-color:            transparent;
+  } 
+mainbox {
+    enabled:                     true;
+    children:                    [ "listview" ];
+    background-color:            @bg-alt;
+}
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       5;
+    spacing:                     0px;
+    padding:                     20px 30px;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element {
+    enabled:                     true;
+    spacing:                     0px;
+    padding:                     0px;
+    border-radius:               20px;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @bg;
+}
+
+
+element-text {
+    vertical-align:              0.0;
+    horizontal-align:            0.5;
+    font: "JetBrainsMono NF Bold 40";
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}

@@ -1,0 +1,20 @@
+
+*{
+  bg    : #20202065;
+  bg-alt    : #2c2c2cb3;
+  fg    : #cecece;
+  active: #98C379;
+  selected : #1A7dff;
+  urgent : #F8868E;
+  gray: 		#787c99;
+  dark-gray: 	#2f3549;
+  light-blue:	#7dcfff;
+  blue: 		#7aa2f7;
+  yellow:		#e0af68;
+  purple:		#bb9af7; 
+  green: 		#9ece6a;
+  peach: 		#ff9e64;
+  teal: 		#aeedd0;
+  mint: 		#42b670;
+  dark-navy: 	#1A1B26;
+}

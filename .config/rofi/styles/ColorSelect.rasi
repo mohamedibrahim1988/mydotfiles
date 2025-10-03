@@ -1,0 +1,95 @@
+
+configuration {
+    modi:                        "drun";
+    show-icons:                  false;
+    drun-display-format:         "{name}";
+	hover-select:				true;
+	me-select-entry:			"";
+	me-accept-entry:			"MousePrimary";
+}
+*{
+    background-color: inherit;
+    text-color:                  @fg;
+}
+
+@import "../colors/color.rasi"
+
+window {
+    transparency:                "real";
+    location : center;
+    width    : 320px;
+    x-offset : 0px;
+    y-offset : 0px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @bg-alt;
+    border-radius: 6px;
+}
+
+mainbox {
+    enabled:                     true;
+    padding:                    10px;
+    background-color:            @bg;
+    children:                    [ "inputbar", "message", "listview" ];
+}
+
+listview {
+  spacing      : 4px;
+  lines        : 12;
+  columns      : 1;
+  scrollbar    : false;
+  fixed-height : false;
+  dynamic      : true;
+  background-color: @bg;
+}
+
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     10px;
+    background-color:            @bg;
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               12px;
+    background-color:            @bg-alt;
+    text-color:                  @fg;
+    children:                    [ "entry" ];
+}
+
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  @active;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           @fg;
+}
+
+
+element {
+    enabled:                     true;
+    spacing:                     2px;
+    padding:                     4px;
+    border-radius:               7px;
+    cursor:                      pointer;
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @bg-alt;
+}
+
+
+element-text {
+    font: "JetBrainsMono NF Bold 18";
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}
