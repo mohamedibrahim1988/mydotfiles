@@ -1,106 +1,99 @@
--- For conciseness
+local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
-local term_opts = { silent = true }
+local function with_desc(desc)
+  return vim.tbl_extend('force', opts, { desc = desc })
+end
 -- Set leader key
 vim.g.mapleader = ' '
 vim.g.maplocalleader = '\\'
 -- Disable the spacebar key's default behavior in Normal and Visual modes
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- delete single character without copying into register
-vim.keymap.set('n', 'x', '"_x', opts)
+keymap.set('n', 'x', '"_x', with_desc 'delete single character')
 
--- Vertical scroll and center
-vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
-vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
+keymap.set('n', '<C-d>', '<C-d>zz', with_desc 'scroll and center')
+keymap.set('n', '<C-u>', '<C-u>zz', with_desc 'scroll and center')
 
--- Find and center
-vim.keymap.set('n', 'n', 'nzzzv', opts)
-vim.keymap.set('n', 'N', 'Nzzzv', opts)
+keymap.set('n', 'n', 'nzzzv', with_desc 'find and center')
+keymap.set('n', 'N', 'Nzzzv', with_desc 'find and center')
 
--- Resize with arrows
-vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)
-vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
-vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
-vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
--- Better window navigation
-vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
-vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
-vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
-vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
--- Buffers
-vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
-vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', opts)
-vim.keymap.set('n', '<leader>bd', ':bdelete!<CR>', opts) -- close buffer
+keymap.set('n', '<C-Up>', ':resize -2<CR>', with_desc 'decrease window heigth')
+keymap.set('n', '<C-Down>', ':resize +2<CR>', with_desc 'increase window heigth')
+keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', with_desc 'decrease window width')
+keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', with_desc 'increase window width')
 
--- Tabs
-vim.keymap.set('n', '<leader>to', ':tabnew<CR>', opts) -- open new tab
-vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', opts) -- close current tab
-vim.keymap.set('n', '<leader>tn', ':tabn<CR>', opts) --  go to next tab
-vim.keymap.set('n', '<leader>tp', ':tabp<CR>', opts) --  go to previous tab
+keymap.set('n', '<C-k>', '<C-w>k', with_desc 'navigate up')
+keymap.set('n', '<C-j>', '<C-w>j', with_desc 'navigation down')
+keymap.set('n', '<C-h>', '<C-w>h', with_desc 'navigation left')
+keymap.set('n', '<C-l>', '<C-w>l', with_desc 'navigation rigth')
 
--- Stay in indent mode
-vim.keymap.set('v', '<', '<gv', opts)
-vim.keymap.set('v', '>', '>gv', opts)
+keymap.set('n', '<Tab>', ':bnext<CR>', with_desc 'buffer next')
+keymap.set('n', '<S-Tab>', ':bprevious<CR>', with_desc 'buffer previous')
+keymap.set('n', '<leader>bd', ':bdelete!<CR>', with_desc 'close buffer')
 
--- Keep last yanked when pasting
-vim.keymap.set('v', 'p', '"_dP', opts)
+keymap.set('n', '<leader>to', ':tabnew<CR>', with_desc 'open new tab')
+keymap.set('n', '<leader>tx', ':tabclose<CR>', with_desc 'close current tab')
+keymap.set('n', '<leader>tn', ':tabn<CR>', with_desc 'go to next tab')
+keymap.set('n', '<leader>tp', ':tabp<CR>', with_desc 'go to previous tab')
 
--- Diagnostic keymaps
-vim.keymap.set('n', '[d', function()
+keymap.set('v', '<', '<gv', with_desc 'remove indent ')
+keymap.set('v', '>', '>gv', with_desc 'tab indent')
+
+keymap.set('v', 'p', '"_dP', with_desc 'paste')
+
+keymap.set('n', '[d', function()
   vim.diagnostic.jump { count = -1, float = true }
-end, { desc = 'Go to previous diagnostic message' })
+end, with_desc 'Go to previous diagnostic message')
 
-vim.keymap.set('n', ']d', function()
+keymap.set('n', ']d', function()
   vim.diagnostic.jump { count = 1, float = true }
-end, { desc = 'Go to next diagnostic message' })
+end, with_desc 'Go to next diagnostic message')
 
-vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+keymap.set('n', '<leader>d', vim.diagnostic.open_float, with_desc 'Open floating diagnostic message')
+keymap.set('n', '<leader>q', vim.diagnostic.setloclist, with_desc 'Open diagnostics list')
 
--- Move text up and down
-vim.keymap.set('n', '<A-k>', ':m .-2<CR>==', opts)
-vim.keymap.set('n', '<A-j>', ':m .+1<CR>==', opts)
--- Move text up and down
-vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", opts)
-vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", opts)
--- Press jk fast to exit insert mode
-vim.keymap.set('i', 'jk', '<ESC>', opts)
-vim.keymap.set('i', 'kj', '<ESC>', opts)
-vim.keymap.set('v', 'jk', '<ESC>', opts)
-vim.keymap.set('v', 'kj', '<ESC>', opts)
--- open file
-vim.keymap.set('n', 'gf', ':hor winc f<CR>', opts)
-vim.keymap.set('n', '<leader>gf', ':vert winc f<CR>', opts)
--- copy filepath to clipboard
-vim.keymap.set('n', 'yf', function()
+keymap.set('n', '<A-k>', ':m .-2<CR>==', with_desc 'Move line up')
+keymap.set('n', '<A-j>', ':m .+1<CR>==', with_desc 'Move line down')
+
+keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", with_desc 'Move selection up')
+keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", with_desc 'Move selection down')
+
+keymap.set('i', 'jk', '<ESC>', with_desc 'exit insert mode')
+keymap.set('i', 'kj', '<ESC>', with_desc 'exit insert mode')
+keymap.set('v', 'jk', '<ESC>', with_desc 'exit insert mode')
+keymap.set('v', 'kj', '<ESC>', with_desc 'exit insert mode')
+
+keymap.set('n', 'gf', ':hor winc f<CR>', with_desc 'Open file under cursor split')
+keymap.set('n', '<leader>gf', ':vert winc f<CR>', with_desc 'Open file under cursor vsplit')
+
+keymap.set('n', 'yf', function()
   vim.fn.setreg('+', vim.fn.expand '%:p')
-end, { silent = true, noremap = true })
--- copy pwd to clipboard
-vim.keymap.set('n', 'yd', function()
+end, with_desc 'copy file path to clipboard')
+
+keymap.set('n', 'yd', function()
   vim.fn.setreg('+', vim.fn.expand '%:p:h')
-end, { silent = true, noremap = true })
--- Better terminal navigation
-vim.keymap.set('t', 'jk', '<C-\\><C-n>', term_opts)
-vim.keymap.set('t', '<C-Left>', '<cmd>wincmd h<CR>', term_opts)
-vim.keymap.set('t', '<C-Down>', '<cmd>wincmd j<CR>', term_opts)
-vim.keymap.set('t', '<C-UP>', '<cmd>wincmd k<CR>', term_opts)
-vim.keymap.set('t', '<C-Right>', '<cmd>wincmd l<CR>', term_opts)
-vim.keymap.set('t', '<S-x>', 'exit<CR>')
-vim.keymap.set({ 't', 'n' }, '<S-x>', '<cmd>bdelete!<CR>')
--- formating
-vim.keymap.set({ 'n', 'v' }, '<leader>cf', function()
+end, with_desc 'copy pwd to clipboard')
+
+keymap.set('t', 'jk', '<C-\\><C-n>', with_desc 'to normal mode')
+keymap.set('t', '<C-Left>', '<cmd>wincmd h<CR>', with_desc 'Move to left window')
+keymap.set('t', '<C-Down>', '<cmd>wincmd j<CR>', with_desc 'Move to down window')
+keymap.set('t', '<C-UP>', '<cmd>wincmd k<CR>', with_desc 'Move to up window')
+keymap.set('t', '<C-Right>', '<cmd>wincmd l<CR>', with_desc 'Move to right window')
+keymap.set('t', '<S-x>', 'exit<CR>', with_desc 'exit terminal')
+keymap.set({ 't', 'n' }, '<S-x>', '<cmd>bdelete!<CR>', with_desc 'exit/delete buffer')
+
+keymap.set({ 'n', 'v' }, '<leader>cf', function()
   require('conform').format {
     lsp_fallback = true,
     async = false,
     timeout_ms = 500,
   }
-end, { desc = 'Format file or range (in visual mode)' })
--- save file without auto-formtting
-vim.keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', opts)
-vim.keymap.set('n', '<localLeader>d', '<cmd>:ColorizerToggle<CR>', { desc = 'Colorizer' })
--- comment/or nocomment
-vim.keymap.set('n', '<localLeader>]', ':normal gcc<CR>', opts)
-vim.keymap.set('v', '<localleader>]', '<Esc>:normal gvgc<CR>', { desc = '[/] Toggle comment block' })
-vim.keymap.set('n', '<leader>gp', ':Gitsigns preview_hunk<CR>', { desc = 'Toggle preview changes' })
-vim.keymap.set('n', '<leader>gt', ':Gitsigns toggle_current_line_blame<CR>', { desc = 'Toggle current changes on this line' })
+end, with_desc 'Format file or range')
+
+keymap.set('n', '<leader>sn', '<cmd>noautocmd w <CR>', with_desc 'save file without auto-formtting')
+keymap.set('n', '<localLeader>d', '<cmd>:ColorizerToggle<CR>', { desc = 'Colorizer' })
+
+keymap.set('n', '<localLeader>]', ':normal gcc<CR>', with_desc())
+keymap.set('v', '<localleader>]', '<Esc>:normal gvgc<CR>', with_desc "[/] Toggle comment block'")
+keymap.set('n', '<leader>gp', ':Gitsigns preview_hunk<CR>', with_desc 'Toggle preview changes')
+keymap.set('n', '<leader>gt', ':Gitsigns toggle_current_line_blame<CR>', with_desc 'Toggle current changes on this line')
