@@ -16,11 +16,11 @@ alias cd..='cd ..'
 
 # List files
 alias l='ls -a -1'
-alias ll='logo-ls -1aX'
-alias la='logo-ls -AshDt'
+alias ll='ls -1aX'
+alias la='ls -AshDt'
 alias ls='ls --color=auto'
-alias lt='logo-ls -1a -h --size -S'
-alias lu='logo-ls -lSrh'
+alias lt='ls -1a -h --size -S'
+alias lu='ls -lSrh'
 
 # Show disk usage
 alias df='df -Tha --total'

@@ -5,9 +5,12 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka:pixelsize=14:antialias=true:autohint=true";
+static char *font = "DejaVu Nerd Font:style=Medium:pixelsize=12:antialias=true:autohint=true";
+static char *font2[] = {"FontAwesome:size=12:antialias=true:autohint=true"};
+/*
 static char *font2[] = {"Courier New:size=12:antialias=true:autohint=true",
                         "FontAwesome:size=12:antialias=true:autohint=true"};
+                        */
 static int borderpx = 4;
 
 /*
