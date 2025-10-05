@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "DejaVu Nerd Font:style=Medium:pixelsize=12:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:style=Medium:pixelsize=14:antialias=true:autohint=true";
 static char *font2[] = {"FontAwesome:size=12:antialias=true:autohint=true"};
 /*
 static char *font2[] = {"Courier New:size=12:antialias=true:autohint=true",
@@ -111,8 +111,8 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.5;
-float alphaOffset = 0.5;
+float alpha = 0.75;
+float alphaOffset = 0.75;
 float alphaUnfocus;
 
 /* Terminal colors (16 first used in escape sequence) */
@@ -139,7 +139,7 @@ static const char *colorname[] = {
 	"#DC8A78", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
 	"#1b1b26", /* 258 -> bg */
-	"#e1e1e1", /* 259 -> fg */
+	"#EBDBB2", /* 259 -> fg */
 };
 
 

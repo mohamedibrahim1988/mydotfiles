@@ -24,7 +24,7 @@
 scale trough {
   all: unset;
   border: none;
-  background: $background;
+  background: $tr;
   min-height: 150px;
   min-width: 20px;
   margin: 4px;
@@ -36,6 +36,6 @@ scale trough {
 }
 .vol_box {
   border-radius: 10px;
-  background: $tr;
+  background: $background;
 }
-.volume-icon { color: $color8;}
+.volume-icon { color: $active;}

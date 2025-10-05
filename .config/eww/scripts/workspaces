@@ -25,7 +25,7 @@ print_workspaces() {
             local class="workspace-occupied"
         else
             local ws="$d"
-            local icon=""
+            local icon=""
             local class="workspace-empty"
         fi
 

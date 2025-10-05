@@ -1,3 +1,12 @@
+.quick_apps {
+  padding: 10px;
+  background: $tr;
+}
+.chang_wall {
+  font-size: 14px;
+  color: $color11;
+  padding: 10px;
+}
 .bx_menu {
   border-top: 3px solid $color1;
   color: $color6;
@@ -22,9 +31,9 @@ font-size: 14px;
 }
 .app_icon {
   padding: 5px;
-  color: $color2;
+  color: $color6;
   border-radius: 7px;
-  background-color: $background;
+  background-color: $color9;
   &:hover{
   background-color: $tr;
   }

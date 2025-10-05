@@ -14,10 +14,18 @@
   (box :class "menu_popup"
        :orientation "v"
        :space-evenly true
+       (chang_wal)
       (menu_apps_row)
       (menu_folders))
     )
-
+(defwidget chang_wal []
+(box :class "chang_wall" 
+:orientation "v"
+:space-evenly true
+(label :class "wallpaper" :text "Change Wallpaper")
+(app_button :icon "󰸉" :name "wallpapers" :command "WallSelect")
+)
+)
 (defwidget menu_apps_row []
   (box :class "quick_apps"
        :orientation "v"
