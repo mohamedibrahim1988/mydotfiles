@@ -1,8 +1,8 @@
 # My first testing Dotfiles
 
-**links:** 
+**links:**
+:thumbsup:
 
-:thanks:
 
 [ikz87](https://github.com/ikz87/dots-2.0/tree/main)
 
