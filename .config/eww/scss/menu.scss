@@ -1,0 +1,41 @@
+.quick_apps {
+  padding: 10px;
+  background: $tr;
+}
+.chang_wall {
+  font-size: 14px;
+  color: $color11;
+  padding: 10px;
+}
+.bx_menu {
+  border-top: 3px solid $color1;
+  color: $color6;
+  &:hover { color: $color1;};
+}
+.btn_menu {
+  background: $background;
+  margin-top: 5px;
+  padding: 0 5px 0 5px;
+}
+.menu_popup {
+  background-color: $background;
+  color: $color14;
+}
+.section_title {
+  color: $color11;
+  font-size: 18px;
+}
+.row {
+  margin: 5px;
+font-size: 14px;
+}
+.app_icon {
+  padding: 5px;
+  color: $color6;
+  border-radius: 7px;
+  background-color: $color9;
+  &:hover{
+  background-color: $tr;
+  }
+}
+

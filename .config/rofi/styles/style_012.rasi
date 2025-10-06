@@ -1,0 +1,92 @@
+/* ROUNDED THEME FOR ROFI */
+/* Author: Newman Sanchez (https://github.com/newmanls) */
+
+* {
+    font:   "Roboto 12";
+
+    background-color:   transparent;
+    text-color:         @fg;
+}
+@import "../colors/color.rasi"
+
+window {
+    location:       north;
+    y-offset:       calc(50% - 176px);
+    width:          380;
+    border-radius:  7px;
+
+    background-color:   @bg;
+}
+
+mainbox {
+    padding:    12px;
+}
+
+inputbar {
+    background-color:   @bg-alt;
+    border-color:       @selected;
+
+    border:         2px;
+    border-radius:  16px;
+
+    padding:    8px 16px;
+    spacing:    8px;
+    children:   [ prompt, entry ];
+}
+
+prompt {
+    text-color: @gray;
+}
+
+entry {
+    placeholder:        "Search";
+    placeholder-color:  @dark-gray;
+}
+
+message {
+    margin:             12px 0 0;
+    border-radius:      16px;
+    border-color:       @bg-alt;
+    background-color:   @bg-alt;
+}
+
+textbox {
+    padding:    8px 24px;
+}
+
+listview {
+    background-color:   transparent;
+
+    margin:     12px 0 0;
+    lines:      8;
+    columns:    1;
+
+    fixed-height: false;
+}
+
+element {
+    padding:        8px 16px;
+    spacing:        8px;
+    border-radius:  16px;
+}
+
+element normal active {
+    text-color: @selected;
+}
+
+element alternate active {
+    text-color: @selected;
+}
+
+element selected normal, element selected active {
+    background-color:   @selected;
+}
+
+element-icon {
+    size:           1em;
+    vertical-align: 0.5;
+}
+
+element-text {
+    text-color: inherit;
+}

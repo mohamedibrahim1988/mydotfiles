@@ -1,0 +1,87 @@
+#!/usr/bin/bash
+
+# edit scripts
+se() {
+    choice="$(find ~/.local/bin -mindepth 1 -printf '%P\n' | fzf)"
+    [ -f "$HOME/.local/bin/$choice" ] && $EDITOR "$HOME/.local/bin/$choice"
+}
+# sudo not required for some system commands
+for command in mount umount shutdown poweroff reboot; do
+    alias $command="sudo $command"
+done
+unset comma
+#function
+ex() {
+    if [ -f "$1" ]; then
+        case "$1" in
+        *.tar.bz2) tar xjf "$1" ;;
+        *.tar.gz) tar xzf "$1" ;;
+        *.bz2) bunzip2 "$1" ;;
+        *.rar) unrar x "$1" ;;
+        *.gz) gunzip "$1" ;;
+        *.tar) tar xf "$1" ;;
+        *.tbz2) tar xjf "$1" ;;
+        *.tgz) tar xvzf "$1" ;;
+        *.zip) unzip "$1" ;;
+        *.Z) uncompress "$1" ;;
+        *.7z) 7za e x "$1" ;;
+        *.deb) ar x "$1" ;;
+        *.tar.xz) tar xf "$1" ;;
+        *.tar.zst) unzstd "$1" ;;
+        *) echo "'$1' cannot be extracted via ex()" ;;
+        esac
+    else
+        echo "'$1' is not a valid file"
+    fi
+}
+# Create and go to the directory
+mkdirg() {
+    mkdir -p "$1"
+    cd "$1"
+}
+# Goes up a specified number of directories  (i.e. up 4)
+up() {
+    local d=""
+    limit=$1
+    for ((i = 1; i <= limit; i++)); do
+        d=$d/..
+    done
+    d=$(echo $d | sed 's/^\///')
+    if [ -z "$d" ]; then
+        d=..
+    fi
+    cd "$d"
+}
+function fzf-man() {
+    MAN="/usr/bin/man"
+    if [ -n "$1" ]; then
+        $MAN "$@"
+        return $?
+    else
+        $MAN -k . | fzf --reverse --preview="echo {1,2} | sed 's/ (/./' | sed -E 's/\)\s*$//' | xargs $MAN" | awk '{print $1 "." $2}' | tr -d '()' | xargs -r $MAN
+        return $?
+    fi
+}
+function fzf-nvim() {
+    # Set the default command to list directories
+    export FZF_DEFAULT_COMMAND="fd -p -i -H -L -t d --exclude '.git'"
+
+    # Use fzf to select a directory
+    local dir=$(fzf --height 40% --reverse --preview "tree -C {}" --query="$1")
+
+    # Change to the selected directory
+    if [[ -n "$dir" ]]; then
+        cd "$dir" || return
+
+        # Set the default command to list files in the selected directory
+        export FZF_DEFAULT_COMMAND="fd -p -i -H -L -t f --exclude '.git'"
+
+        # Use fzf to select a file
+        local file=$(fzf --height 40% --reverse --preview "bat --theme=monokai --color=always {}" --query="$2")
+
+        # Open the selected file with vim
+        if [[ -n "$file" ]]; then
+            vim "$file"
+        fi
+    fi
+}

@@ -1,0 +1,41 @@
+.dockbox {
+  color: $color6;
+  font-size: 14px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+.vol_icon {
+  font-size: 12px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+  color: $color6;
+}
+.vol_value{ 
+    font-size: 12px;
+    margin-bottom: -2px;
+    margin-top: -2px;
+    color: $color1;
+}
+.vol_value_slid{ 
+    font-size: 14px;
+    color: $color8;
+}
+
+scale trough {
+  all: unset;
+  border: none;
+  background: $tr;
+  min-height: 150px;
+  min-width: 20px;
+  margin: 4px;
+  highlight {
+    all: unset;
+    background: $color12;
+    border-radius: 7px;
+  }
+}
+.vol_box {
+  border-radius: 10px;
+  background: $background;
+}
+.volume-icon { color: $active;}

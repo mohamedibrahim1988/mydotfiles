@@ -1,0 +1,85 @@
+(defwindow bar
+  :geometry (geometry :x "0px"
+                      :y "4px"
+                      :width "96%"
+                      :height "30px"
+                      :anchor "center top")
+  :windowtype "dock"
+  :reserve (struts :distance "24px" :side "top")
+  :wm-ignore true
+  (box :class "bar" :orientation "h"
+    (left)
+    (center)
+    (right)
+))
+(defwidget left []
+  (box :class "left"
+       :orientation "h"
+       :space-evenly false
+       :halign "start"
+       (menu_popup)
+       (change_color)
+  )
+)
+(defwidget center []
+  (box :class "center"
+       :halign "center"
+       (workspaces)
+  )
+)
+
+(defwidget right []
+  (box :class "right"
+       :orientation "h"
+       :space-evenly false
+       :halign "end"
+       (powerbutton)
+       (time)
+       (keyboard)
+       (volume)
+  )
+)
+(defwidget menu_popup []
+    (eventbox :class "bx_menu" :cursor "pointer"
+        (box :class "btn_menu" :vexpand false :hexpand false
+          (button :onclick "eww open --toggle menu_popup"
+        "Menu"
+))))
+(defwidget change_color []
+    (eventbox :class "bx_color" :cursor "pointer"
+        (box :class "btn_color" :vexpand false :hexpand false
+          (button :onclick "scripts/change_color.sh"
+        "Themes"
+))))
+
+; Powermenu
+(defwidget powerbutton []
+    (eventbox :class "powerbutton" :cursor "pointer"
+        (box :class "btn_power" :vexpand false :hexpand false
+          (button :onclick "eww -c ~/.config/eww open-many --toggle powermenu-clickhandler powermenu"
+        "⏻"
+))))
+(defwidget dropdown [onclick ?class ?tooltip]
+  (button :tooltip tooltip :class class :onclick onclick "▼")
+)
+(defwidget volume [] 
+ (box :class "dockbox" 
+      :orientation "h"
+      :valign "fill"
+      :halign "center"
+      "|"
+  (eventbox :cursor "pointer"
+   (button :onclick "volume_dunst mute" :class "audio_basic"  
+    (box :orientation "v" :spacing 2 :valign "center" :halign "center" :space-evenly "false"
+     (label :class "vol_icon" :valign "center" :text ICONS)
+     (label :class "vol_value" :valign "center" :text VOLUME)
+    )
+   )
+)
+    (dropdown
+      :orientation "v"
+      :onclick "eww open --toggle volume"
+      :class "vol_control"
+      :valign "fill"
+      :tooltip "Toggle volume control")
+  ))

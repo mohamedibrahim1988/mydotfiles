@@ -1,0 +1,21 @@
+#!/bin/sh
+# Display currently playing music.
+
+case "$BLOCK_BUTTON" in
+    1) musicctl toggle ;;
+    2) "$TERMINAL" -e ncmpcpp ;;
+    3) musicctl stop ;;
+    5) musicctl prev ;;
+    4) musicctl next ;;
+esac
+
+status="$(playerctl --no-messages status)" || exit 1
+case "$status" in
+    Stopped) exit ;;
+    Paused) icon="" ;;
+    Playing) icon="󰝚" ;;
+esac
+
+song="$(playerctl metadata --format="{{title}} - {{artist}}")" || exit 2
+
+echo "$icon $song"

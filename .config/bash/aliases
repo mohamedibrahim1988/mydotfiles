@@ -1,0 +1,41 @@
+#!/usr/bin/bash
+# Use neovim for vim if present.
+[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+# Debian command
+alias update='sudo apt update'
+alias upgrade='sudo apt upgrade'
+alias search='apt search'
+alias yep='sudo apt install'
+alias nop='sudo apt remove'
+
+alias grep='grep --color=auto'
+# Basic navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias cd..='cd ..'
+
+# List files
+alias l='ls -a -1'
+alias ll='ls -1aX'
+alias la='ls -AshDt'
+alias ls='ls --color=auto'
+alias lt='ls -1a -h --size -S'
+alias lu='ls -lSrh'
+
+# Show disk usage
+alias df='df -Tha --total'
+alias du='du -sh * | sort -h'
+alias duT='du -sh --time'
+
+# Remove, copy, and move with confirmation
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -v'
+
+alias mx='chmod a+x'
+alias mkdir='mkdir -p'
+alias ip='ip -color=auto'
+
+alias kj="cd ~/Sources/suckless/dwm"
+alias music='tmux new-session -s $$ "tmux source-file ~/.config/ncmpcpp/tmux_session"'
+_trap_exit() { tmux kill-session -t $$; }

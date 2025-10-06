@@ -1,0 +1,18 @@
+(defvar eww "eww -c $HOME/.config/eww")
+; date
+(defpoll dateval :interval "1s" "date '+%I 󰇙 %M'")
+(defpoll hour :interval "2s" "date '+%I'")
+(defpoll minutes :interval "2s" "date '+%M'")
+(defpoll type :interval "30s" "date '+%p'")
+(defpoll date :interval "1s" "date '+ %a, %b %d'")
+(defpoll calendar_month :interval "10h" "date '+%m'")
+(defpoll calendar_day :interval "10h" "date '+%d'")
+(defpoll calendar_year :interval "10h" "date '+%Y'")
+; Volume
+(defpoll ICONS :interval "1s" "volume_dunst icon")
+(defpoll VOLUME :interval "1s" `volume_dunst`)
+; keyboard
+(defvar us_class "kb_button_active") 
+(defvar ar_class "kb_button_inactive")
+;(deflisten workspace-list "~/.config/eww/scripts/workspaces")
+(deflisten workspaces "~/.config/eww/scripts/workspaces")

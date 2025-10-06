@@ -1,0 +1,145 @@
+* {
+  font: "JetBrainsMono Nerd Font 10";
+
+  background-color : transparent;
+  text-color       : @fg;
+
+  margin  : 0;
+  padding : 0;
+  spacing : 0;
+}
+@import "../colors/color.rasi"
+
+configuration {
+	modi: 						"drun,filebrowser,window";
+	icon-theme: 				"Papirus-Dark";
+	application-fallback-icon: 	"Adwaita";
+    show-icons:                 true;
+	drun-display-format:        "{name}";
+    display-drun:               "Apps";
+    display-filebrowser:        "Files";
+    display-window:             "Windows";
+	window-format:              "{w} · {c} . {t}";
+	disable-history:            true;
+	sidebar-mode: 				false;
+
+	hover-select:				true;
+	me-select-entry:			"";
+	me-accept-entry:			"MousePrimary";
+}
+
+element-icon, element-text, scrollbar {
+  cursor: pointer;
+}
+
+window {
+  location : center;
+  width    : 300px;
+  height   : 500px;
+  y-offset : -4px;
+
+  background-color : @bg;
+  border-radius    : 8px;
+}
+
+mainbox {
+  padding : 24px;
+  spacing : 24px;
+  background-color:            transparent;
+  orientation:                 vertical;
+  children:                    [ "inputbar", "mode-switcher", "listview" ];
+}
+
+inputbar {
+  padding          : 8px;
+  spacing          : 4px;
+  children         : [ icon-search, entry ];
+  border           : 0 0 2px 0 solid;
+  border-color     : @selected;
+  border-radius    : 2px;
+  background-color : @bg-alt;
+}
+mode-switcher{
+    enabled:                     true;
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  @fg;
+}
+
+icon-search, entry, element-icon, element-text {
+  vertical-align: 0.5;
+}
+
+icon-search {
+  expand   : false;
+  filename : "search-symbolic";
+  size     : 24px;
+}
+
+entry {
+  placeholder       : "Search";
+  placeholder-color : @fg;
+}
+
+textbox {
+  padding          : 4px 8px;
+  background-color : @bg;
+}
+button {
+    width:                       75px;
+    padding:                     10px;
+    border-radius:               6px;
+    background-color:            @bg-alt;
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+
+button selected {
+    background-color:            @fg;
+    text-color:                  @bg;
+}
+
+listview {
+  columns       : 1;
+  spacing       : 8px;
+  fixed-height  : true;
+  fixed-columns : true;
+}
+
+element {
+  spacing       : 1em;
+  padding       : 8px;
+  border-radius : 2px;
+}
+
+element normal urgent {
+  text-color: @urgent;
+}
+
+element normal active {
+  text-color: @selected;
+}
+
+element alternate active {
+  text-color: @selected;
+}
+
+element selected active {
+  text-color: @selected;
+}
+
+element selected {
+  background-color: @bg-alt;
+}
+
+element selected urgent {
+  background-color: @urgent;
+}
+
+element-icon {
+  size: 1.5em;
+}
+
+element-text {
+  text-color: inherit;
+}

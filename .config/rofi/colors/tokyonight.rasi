@@ -1,0 +1,21 @@
+
+* {
+gray: 		#787c99;
+dark-gray: 	#2f3549;
+light-blue:	#7dcfff;
+blue: 		#7aa2f7;
+yellow:		#e0af68;
+purple:		#bb9af7; 
+green: 		#9ece6a;
+peach: 		#ff9e64;
+teal: 		#aeedd0;
+mint: 		#42b670;
+dark-navy: 	#1A1B26;
+bg: 	    #24283b;
+bg-alt:     #262626;
+fg:     	#C0CAF5;
+selected: 	#33467C;
+active:    	#414868;
+urgent:    	#F7768E;
+}
+

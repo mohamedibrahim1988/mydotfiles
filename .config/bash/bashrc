@@ -1,0 +1,64 @@
+#!/usr/bin/bash
+# If not running interactively, don't do anything
+case $- in
+*i*) ;;
+*) return ;;
+esac
+
+HISTCONTROL=ignoreboth
+HISTSIZE=1000
+HISTFILESIZE=2000
+shopt -s histappend
+shopt -s checkwinsize
+shopt -s autocd
+export HISTFILE="$HOME/.config/bash/.bash_history"
+export INPUTRC="$XDG_CONFIG_HOME/bash/inputrc"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
+export LESSHISTFILE="$XDG_STATE_HOME"/lesshst
+export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+
+# Default programs:
+export PAGER=most
+export EDITOR="nvim"
+export TERMINAL="st"
+export TERMINAL_PROG="st"
+export BROWSER="librewolf"
+# Prompt
+function parse_git_dirty {
+    [[ $(git status --porcelain 2>/dev/null) ]] && echo "*"
+}
+function parse_git_branch {
+    git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
+}
+
+export PS1="\n\[\e[31m\]\@ \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\n $ "
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.config/bash/dircolors && eval "$(dircolors -b ~/.config/bash/dircolors)" || eval "$(dircolors -b)"
+fi
+
+if [ -f "$HOME"/.config/bash/aliases ]; then
+    . /home/mohamed/.config/bash/aliases
+fi
+if [ -f "$HOME"/.config/bash/functions ]; then
+    . "$HOME"/.config/bash/functions
+fi
+# enable programmable completion features (you don't need to enable
+if ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
+fi
+eval "$(fzf --bash)"
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
+source "$XDG_CONFIG_HOME/fzf-marks/fzf-marks.plugin.bash"
+export FZF_MARKS_COMMAND="fzf --height 30% --reverse -n 1 -d ' : '"
+source "$XDG_CONFIG_HOME/bash/alacritty.bash"

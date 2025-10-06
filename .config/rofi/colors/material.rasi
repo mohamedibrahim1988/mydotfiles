@@ -1,0 +1,20 @@
+
+* {
+urgent: 		#F07178;
+dark-navy: 		#273e5c;
+light-gray:		#EEFFFF;
+fg: 			#B2CCD6;
+dark-gray: 		#546E7A;
+light-blue:		#89DDFF;
+blue: 			#82AAFF;
+selected:		#243c54;
+yellow:			#FFCB6B;
+purple:			#C792EA; 
+active:			#C3E88D;
+peach: 			#F78C6C;
+teal: 			#1e5c1e;
+mint: 			#80ff80;
+bg: 			#141f2e;
+bg-alt:			#3C474D;
+}
+

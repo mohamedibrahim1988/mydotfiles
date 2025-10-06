@@ -1,0 +1,106 @@
+(defwindow menu_popup
+  :monitor 0
+  :stacking "overlay"
+  :windowtype "dialog"
+  :wm-ignore true
+  :geometry (geometry :x "10px"
+                      :y "35px"
+                      :width "360px"
+                      :height "280px"
+                      :anchor "top left")
+  (menu_container)
+  )
+(defwidget menu_container []
+  (box :class "menu_popup"
+       :orientation "v"
+       :space-evenly true
+       (chang_wal)
+      (menu_apps_row)
+      (menu_folders))
+    )
+(defwidget chang_wal []
+(box :class "chang_wall" 
+:orientation "v"
+:space-evenly true
+(label :class "wallpaper" :text "Change Wallpaper")
+(app_button :icon "󰸉" :name "wallpapers" :command "WallSelect")
+)
+)
+(defwidget menu_apps_row []
+  (box :class "quick_apps"
+       :orientation "v"
+       :space-evenly false
+    (label :class "section_title" :text "Applications" :halign "fill")
+    (box :class "apps_grid"
+         :orientation "h"
+         :space-evenly true
+         :spacing 8
+         (box :class "row" :orientation "v" :space-evenly true :spacing 5
+          (app_button :icon "" :name "Calc" :command "qalculate-gtk")
+          (app_button :icon "" :name "Terminal" :command "OpenApps --floating")
+          (app_button :icon "" :name "Wallpapers" :command "nsxiv -t /media/mohamed/Data/walls/"))
+         (box :class "row" :orientation "v" :space-evenly true :spacing 6
+          (app_button :icon "" :name "Music" :command "alacritty --class Music -e ncmpcpp")
+          (app_button :icon "" :name "ScreenShot" :command "OpenApps --screenshot")
+          (app_button :icon "" :name "Notes" :command "Term --nvim"))
+         (box :class "row" :orientation "v" :space-evenly true :spacing 6
+          (app_button :icon "" :name "Librewolf" :command "librewolf")
+          (app_button :icon "" :name "Gpick" :command "gpick")
+          (app_button :icon "" :name "Files" :command "pcmanfm $HOME"))
+    )))
+
+(defwidget app_button [icon name command]
+ (eventbox :class "app_btn" :cursor "pointer" 
+  (button :class "app_icon"
+  :tooltip "open ${name}"
+  :onclick "${command} & eww close menu_popup"
+  "${icon} ${name}"
+  )
+ )
+ )
+(defwidget menu_folders []
+  (box :class "quick_apps"
+       :orientation "v"
+       :space-evenly false
+    (label :class "section_title" :text "Folders" :halign "fill")
+    (box :class "folders_grid"
+         :orientation "v"
+         :space-evenly true
+         :spacing 8
+        (box :class "row" :orientation "h" :space-evenly true :spacing 6
+      (folder_button :icon "" :name "Home" :path "/home/mohamed/")
+      (folder_button :icon "" :name "Movies" :path "/media/mohamed/Movies/Movies/")
+      (folder_button :icon "" :name "Documents" :path "/home/mohamed/Documents"))
+        (box :class "row" :orientation "h" :space-evenly true :spacing 6
+      (folder_button :icon "" :name "Sources" :path "/home/mohamed/Sources")
+      (folder_button :icon "" :name "Downloads" :path "/home/mohamed/Downloads")
+      (folder_button :icon "" :name "Pictures" :path "/home/mohamed/Pictures"))))
+)
+(defwidget folder_button [icon name path]
+ (eventbox :class "folder_btn" :cursor "pointer"
+  (button :class "app_icon"
+  :tooltip "open ${name}"
+  :onclick "pcmanfm '${path}' & eww close menu_popup"
+  "${icon} ${name}"
+  )
+ )
+ )
+(defpoll MEM_USAGE :interval "1s" `scripts/getMem`)
+(defwindow menu_popup2
+  :monitor 0
+  :stacking "overlay"
+  :windowtype "dialog"
+  :wm-ignore true
+  :geometry (geometry :x "400px"
+                      :y "35px"
+                      :width "360px"
+                      :height "80px"
+                      :anchor "top left")
+  (ram)
+  )
+(defwidget ram []
+(box :class "mem_bar" :orientation "h"
+    (label :class "mem_gb" :text MEM_USAGE)
+)
+)
+

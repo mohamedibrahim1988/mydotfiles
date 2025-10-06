@@ -1,0 +1,9 @@
+(include "variables.yuck")
+(include "yuck/powermenu.yuck")
+(include "yuck/bar.yuck")
+(include "yuck/time.yuck")
+(include "yuck/keyboard.yuck")
+(include "yuck/volume_slider.yuck")
+(include "yuck/workspaces.yuck")
+(include "yuck/menu_folders.yuck")
+

@@ -1,0 +1,19 @@
+
+*{
+    all: unset;
+    font-family: FontAwesome, Kawkab Nerd Font;
+}
+.bar {
+    //background-color: inherit;
+    background-color: $background;
+    color: $foreground;
+}
+.bx_color {
+  border-top: 3px solid $color6;
+  color: $color1;
+  &:hover { color: $color6;};
+}
+.btn_color {
+  margin-top: 5px;
+
+}
