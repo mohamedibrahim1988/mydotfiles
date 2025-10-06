@@ -14,3 +14,6 @@
 
 [gh0stzk](https://github.com/gh0stzk/dotfiles/blob/master/config/bspwm/src/config/xsettingsd)
 
+
+[emoji markdown](https://gist.github.com/rxaviers/7360908)
+
