@@ -1,6 +1,6 @@
 # My first testing Dotfiles
 
-**links: ** 
+**links:** 
 
 :thanks:
 
