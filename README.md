@@ -1,6 +1,6 @@
 # My first testing Dotfiles
 **links: ** 
-###thanks
+:thanks:
 [ikz87](https://github.com/ikz87/dots-2.0/tree/main)
 [adi1090x](https://github.com/adi1090x/rofi)
 [XXiaoA](https://github.com/XXiaoA/dotfiles/blob/main/eww/yuck/bar.yuck)
