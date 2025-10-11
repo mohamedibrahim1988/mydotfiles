@@ -8,6 +8,7 @@ esac
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
 HISTFILESIZE=2000
+HISTIGNORE='ll*:la*:cd*:ls*'
 shopt -s histappend
 shopt -s checkwinsize
 shopt -s autocd
@@ -23,6 +24,7 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 
 # Default programs:
+export BAT_THEME=ansi
 export PAGER=most
 export EDITOR="nvim"
 export TERMINAL="st"
@@ -35,7 +37,6 @@ function parse_git_dirty {
 function parse_git_branch {
     git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ (\1$(parse_git_dirty))/"
 }
-
 export PS1="\n\[\e[31m\]\@ \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\n $ "
 
 # enable color support of ls and also add handy aliases
@@ -57,8 +58,12 @@ if ! shopt -oq posix; then
         . /etc/bash_completion
     fi
 fi
-eval "$(fzf --bash)"
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow'
-source "$XDG_CONFIG_HOME/fzf-marks/fzf-marks.plugin.bash"
-export FZF_MARKS_COMMAND="fzf --height 30% --reverse -n 1 -d ' : '"
-source "$XDG_CONFIG_HOME/bash/alacritty.bash"
+source "$XDG_CONFIG_HOME/bash/fzf-command.sh"
+## NNN
+export NNN_PLUG='o:fzopen;c:fzcd;p:preview-tui;r:renamer;C:cdpath;s:setbg'
+export NNN_OPENER=$HOME/.config/nnn/plugins/nuke
+export NNN_BMS='D:~/Documents;P:~/Pictures/;d:~/Downloads/'
+export NNN_FIFO='/tmp/nnn.fifo'
+export NNN_TERMINAL="st"
+export NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+export NNN_COLORS="21365798"

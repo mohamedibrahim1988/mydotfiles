@@ -15,4 +15,4 @@ run picom -b --config "${HOME}"/.config/bspwm/src/config/picom.conf
 run xsettingsd --config="${HOME}"/.config/bspwm/src/config/xsettingsd >/dev/null 2>&1
 xsetroot -cursor_name left_ptr &
 numlockx on &
-xwallpaper --zoom /media/mohamed/Data/walls/ryan-4.png &
+xwallpaper --zoom ~/.local/share/bg &
