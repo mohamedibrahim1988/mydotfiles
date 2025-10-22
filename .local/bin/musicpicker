@@ -1,0 +1,30 @@
+#!/bin/bash
+# Theme Elements
+status=$(mpc current)
+mesg="Songs Music"
+theme="$HOME/.config/rofi/styles/MoviePlay.rasi"
+
+rofi_cmd() {
+    rofi -theme-str 'textbox-prompt-colon {str: "";}' \
+        -dmenu \
+        -p "$status" \
+        -mesg "$mesg" \
+        -multi-select \
+        -theme ${theme}
+}
+files="$(mpc listall | rofi_cmd)"
+
+if [ -z "$files" ]; then
+    exit 0
+fi
+
+# Notify about the files being played
+notify-send "Playing $(echo "$files" | tr '\n' ', ')"
+
+# Insert each file separately
+while IFS= read -r file; do
+    mpc add "$file"
+done <<<"$files"
+
+mpc toggle >/dev/null
+pkill -RTMIN+2 dwmblocks
