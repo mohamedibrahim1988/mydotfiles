@@ -1,85 +1,107 @@
-# Luke's build of st - the simple (suckless) terminal
+# st-sx - simple terminal with sixels
 
-The [suckless terminal (st)](https://st.suckless.org/) with some additional
-features that make it literally the best terminal emulator ever:
+st-sx is a fork of suckless' [st terminal](https://st.suckless.org/) that aims to provide the best sixel support for the st users. It also includes many useful patches such as ligatures and text reflow. And it is the only st fork that supports hyperlinks (OSC 8) and [branch drawing symbols](https://github.com/kovidgoyal/kitty/pull/7681) as well!
 
-## Unique features (using dmenu)
+## Screenshots
 
-+ **follow urls** by pressing `alt-l`
-+ **copy urls** in the same way with `alt-y`
-+ **copy the output of commands** with `alt-o`
+Sixels inside a [tmux](https://github.com/tmux/tmux) session. (apps: [lsix](https://github.com/hackerb9/lsix) and [vv](https://github.com/hackerb9/vv))
 
-## Bindings for
+![sixels](https://github.com/veltza/st-sx/assets/106755522/0ec5f614-07fc-4843-8455-1a0020e0a0e7)
 
-+ **scrollback** with `alt-↑/↓` or `shift` while scrolling the
-+ **zoom/change font size**: Control +/-/* increase/decrease/reset
-+ **copy text** with `control-shift-c`, **paste** is `control-shift-v` or `shift-insert`
+Branch drawing symbols are supported with built-in glyphs. (app/plugin: [vim-flog](https://github.com/rbong/vim-flog))
 
-## Pretty stuff
+![branch-symbols](https://github.com/user-attachments/assets/66c86691-616e-40c7-a4ee-b83848d5d5e6)
 
-+ Compatibility with `Xresources` and `pywal` for dynamic colors.
-+ Default [gruvbox](https://github.com/morhetz/gruvbox) colors otherwise.
-+ Transparency/alpha, which is also adjustable from your `Xresources`.
-+ Default font is system "mono" at 14pt, meaning the font will match your
-  system font.
+## Patches
 
-## Other st patches
+- Alpha focus highlight
+- Anysize simple
+- Blinking cursor
+- Bold is not bright
+- Boxdraw
+- Clipboard
+- CSI 22 23
+- Dynamic cursor color
+- Externalpipe
+- Font2
+- Fullscreen
+- Hidecursor
+- Keyboard select
+- Ligatures
+- Nano shortcuts support
+- Netwmicon
+- Newterm
+- Openurlonclick
+- Relativeborder
+- Scrollback-reflow
+- Sixel
+- Swapmouse
+- Sync
+- Undercurl
+- Vertcenter
+- Visualbell
+- Wide glyphs
+- Workingdir
+- Xresources
 
-+ Boxdraw
-+ Ligatures
-+ font2
-+ updated to latest version 0.8.5
+## Dependencies
 
-## Installation for newbs
-
-You should have xlib header files and libharfbuzz build files installed.
-
-```
-git clone https://github.com/LukeSmithxyz/st
-cd st
-sudo make install
-```
-
-Obviously, `make` is required to build. `fontconfig` is required for the
-default build, since it asks `fontconfig` for your system monospace font. It
-might be obvious, but `libX11` and `libXft` are required as well. Chances are,
-you have all of this installed already.
-
-On OpenBSD, be sure to edit `config.mk` first and remove `-lrt` from the
-`$LIBS` before compiling.
-
-Be sure to have a composite manager (`xcompmgr`, `picom`, etc.) running if you
-want transparency.
-
-## How to configure dynamically with Xresources
-
-For many key variables, this build of `st` will look for X settings set in
-either `~/.Xdefaults` or `~/.Xresources`. You must run `xrdb` on one of these
-files to load the settings.
-
-For example, you can define your desired fonts, transparency or colors:
+Arch:
 
 ```
-*.font:	Liberation Mono:pixelsize=12:antialias=true:autohint=true;
-*.alpha: 0.9
-*.color0: #111
-...
+sudo pacman -S libx11 libxft imlib2 gd
 ```
 
-The `alpha` value (for transparency) goes from `0` (transparent) to `1`
-(opaque). There is an example `Xdefaults` file in this respository.
+FreeBSD:
 
-### Colors
+```
+doas pkg install pkgconf imlib2 libgd
+```
 
-To be clear about the color settings:
+OpenBSD:
 
-- This build will use gruvbox colors by default and as a fallback.
-- If there are Xresources colors defined, those will take priority.
-- But if `wal` has run in your session, its colors will take priority.
+```
+doas pkg_add imlib2 gd
+```
 
-Note that when you run `wal`, it will negate the transparency of existing windows, but new windows will continue with the previously defined transparency.
+Ubuntu/Debian:
 
-## Contact
+```
+sudo apt install libx11-xcb-dev libxft-dev libimlib2-dev libgd-dev libharfbuzz-dev libpcre2-dev
+```
 
-- Luke Smith <luke@lukesmith.xyz>
-- [https://lukesmith.xyz](https://lukesmith.xyz)
+You don't have to install `libharfbuzz-dev`, if you don't use ligatures. Edit config.h and config.mk to disable ligatures.
+
+## Installation
+
+Clone the repo and run `make`:
+
+*Note: If you are building on BSD, you'll need to edit config.mk before running make.*
+
+```
+git clone https://github.com/veltza/st-sx
+cd st-sx
+make
+```
+
+Edit `config.h` and add your favorite fonts, colors, etc. and install:
+
+```
+sudo make clean install
+```
+
+The executable name is `st`.
+
+You can also configure st-sx via Xresources. See xresources-example file.
+
+## Known issues
+
+- Sixels work inside tmux, but...
+  * ...sixels might not be enabled if you install it from the repository. In that case, you have to compile tmux yourself with `./configure --enable-sixel`
+  * ...some sixels don't show up. The maximum size of sixels in tmux is 1 MB. You can increase the size limit by changing `INPUT_BUF_LIMIT` in `tmux/input.c`. Or after the commit [c26d71d](https://github.com/tmux/tmux/commit/c26d71d3e9425fd5a5f3075888b5425fe6219462), you can change the limit via tmux.conf: `set -g input-buffer-size 1048576`
+  * ...sixels may disappear or get stuck. The reason is that the sixel implementation in tmux is not robust yet.
+
+## Thanks
+
+- [suckless.org](https://suckless.org/) and [st](https://st.suckless.org/) contributors
+- Bakkeby and his [st-flexipatch](https://github.com/bakkeby/st-flexipatch)

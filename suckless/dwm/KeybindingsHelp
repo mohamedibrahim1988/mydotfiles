@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+awk '/^[a-z]/ && last {print last,"\t",$0} {last=""} /^-/{last=$0}' ~/Sources/mydotfiles/suckless/dwm/keybinds |
+    column -t -s $'\t' | rofi -dmenu -i -theme "/home/mohamed/.config/rofi/styles/style_011.rasi"

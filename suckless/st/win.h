@@ -21,22 +21,25 @@ enum win_mode {
 	MODE_NUMLOCK     = 1 << 17,
 	MODE_MOUSE       = MODE_MOUSEBTN|MODE_MOUSEMOTION|MODE_MOUSEX10\
 	                  |MODE_MOUSEMANY,
+	MODE_KBDSELECT   = 1 << 18,
+	MODE_CURSORBLINK = 1 << 19,
 };
 
 void xbell(void);
 void xclipcopy(void);
-void xdrawcursor(int, int, Glyph, int, int, Glyph, Line, int);
+void xdrawcursor(int, int, Glyph, int, int, Line);
 void xdrawline(Line, int, int, int);
 void xfinishdraw(void);
 void xloadcols(void);
 int xsetcolorname(int, const char *);
-int xgetcolor(int, unsigned char *, unsigned char *, unsigned char *);
 void xseticontitle(char *);
-void xsettitle(char *);
+void xfreetitlestack(void);
+void xsettitle(char *, int);
+void xpushtitle(void);
 int xsetcursor(int);
 void xsetmode(int, unsigned int);
 void xsetpointermotion(int);
 void xsetsel(char *);
 int xstartdraw(void);
 void xximspot(int, int);
-
+void xdrawglyph(Glyph *, int, int);

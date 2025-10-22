@@ -4,24 +4,28 @@
 
 include config.mk
 
-SRC = st.c x.c boxdraw.c hb.c
+SRC = st.c x.c $(LIGATURES_C) $(SIXEL_C)
 OBJ = $(SRC:.c=.o)
 
-all: options st
+COMMIT = $$(git rev-parse --short HEAD 2>/dev/null)
+PROJECT = st-sx
+DISTNAME = $(PROJECT)-$(VERSION)-$(COMMIT)
 
-options:
-	@echo st build options:
-	@echo "CFLAGS  = $(STCFLAGS)"
-	@echo "LDFLAGS = $(STLDFLAGS)"
-	@echo "CC      = $(CC)"
+STLDFLAGS += -lpcre2-32
+
+all: st
+
+config.h:
+	cp config.def.h config.h
 
 .c.o:
 	$(CC) $(STCFLAGS) -c $<
 
-st.o: config.h st.h win.h
-x.o: arg.h config.h st.h win.h hb.h
-hb.o: st.h
-boxdraw.o: config.h st.h boxdraw_data.h
+hb.o: $(LIGATURES_H)
+sixel.o: sixel.h sixel_hls.h
+sixel_hls.o: sixel_hls.h
+st.o: config.h patch/* sixel.h st.h win.h
+x.o: arg.h config.h patch/* sixel.h st.h win.h $(LIGATURES_H)
 
 $(OBJ): config.h config.mk
 
@@ -29,15 +33,17 @@ st: $(OBJ)
 	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
 
 clean:
-	rm -f st $(OBJ) st-$(VERSION).tar.gz *.rej *.orig *.o
+	rm -f st $(OBJ) $(PROJECT)*.tar.gz
 
 dist: clean
-	mkdir -p st-$(VERSION)
-	cp -R FAQ LEGACY TODO LICENSE Makefile README config.mk\
-		config.h st.info st.1 arg.h st.h win.h $(SRC)\
-		st-$(VERSION)
-	tar -cf - st-$(VERSION) | gzip > st-$(VERSION).tar.gz
-	rm -rf st-$(VERSION)
+	mkdir -p $(DISTNAME)
+	cp -R FAQ LEGACY TODO LICENSE Makefile README README.md\
+		keyboardselect.txt xresources-example st-copyout st.desktop\
+		config.mk config.def.h st.info st.1 arg.h st.h win.h st.c x.c\
+		hb.* sixel.* sixel_hls.* patch\
+		$(DISTNAME)
+	tar -cf - $(DISTNAME) | gzip > $(DISTNAME).tar.gz
+	rm -rf $(DISTNAME)
 
 install: st
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
@@ -51,12 +57,18 @@ install: st
 	sed "s/VERSION/$(VERSION)/g" < st.1 > $(DESTDIR)$(MANPREFIX)/man1/st.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/st.1
 	tic -sx st.info
+	mkdir -p $(DESTDIR)$(PREFIX)/share/applications
+	cp -f st.desktop $(DESTDIR)$(PREFIX)/share/applications
+	mkdir -p $(DESTDIR)$(ICONPREFIX)
+	test -f $(ICONNAME) && test ! -f $(DESTDIR)$(ICONPREFIX)/$(ICONNAME) && cp -f $(ICONNAME) $(DESTDIR)$(ICONPREFIX) || :
 	@echo Please see the README file regarding the terminfo entry of st.
+	rm config.h
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(DESTDIR)$(PREFIX)/bin/st-copyout
-	rm -f $(DESTDIR)$(PREFIX)/bin/st-urlhandler
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
+	rm -f $(DESTDIR)$(PREFIX)/share/applications/st.desktop # desktop-entry patch
+	rm -f $(DESTDIR)$(ICONPREFIX)/$(ICONNAME)
 
-.PHONY: all options clean dist install uninstall
+.PHONY: all clean dist install uninstall

@@ -1,0 +1,105 @@
+- Reload dwm
+super + ctrl + shift + q
+- xkill Apps
+super + Escape
+- Close App
+super + q
+- Quit dwm
+super + shift + q
+- Restart dwm
+super + shift + r
+- powermenu
+super + x
+- Open alacritty Terminal
+super + Return
+- open st
+alt + Return
+- toggle picom
+alt + ctrl + o
+- toggle bar
+super + b
+- increase master
+super + l
+- decrease master
+super + h
+- change focus to prev stack
+super + j
+- change focus to next stack
+super + k
+- Move focus stack to next 
+super + shift + k
+- Move focus stack to prev
+super + shift + j
+- Move focus stack to another
+super + shift + Return
+- increase gaps between all side
+super + alt + u
+- decrease gaps between all side
+super + alt + shift + u
+- increase gaps between left/right side
+super + alt + i
+- decrease gaps between left/right side
+super + alt + shift + i
+- toggle gaps
+super + alt + 0
+- default gaps
+super + alt + shift + 0
+- change between last workspace
+super + Tab
+- Dmenu launcher
+super + p
+- Apps browser
+super + w
+- App Filemanager
+super + e
+- up Volume control
+XF86XK_AudioRaiseVolume
+- down Volume
+XF86XK_AudioLowerVolume
+- mute Volume
+XF86XK_AudioMute
+- prev songe mpc prev
+XF86XK_AudioPrev
+- next songe mpc next
+XF86XK_AudioNext
+- play songe mpc toggle
+XF86XK_AudioPlay
+- stop song
+XF86XK_Search
+- layout tiled mode
+super + t
+- null layout
+super + n
+- toggles to the previous layout mode
+super + space
+- Layout Monocle
+super + m
+- Toggle Fullscreen
+super + f
+- Toggle betwen floating & tiled
+super + shift + f
+- rofi switcher
+super + y
+- open launcher rofi
+super + r
+-change keyboard
+alt + Shift_L
+- open scratchpad
+super + grave
+- open htop scratchpad
+super + a
+- set scratchpad
+super + ctrl + grave
+- remove scratchpad
+super + shift + grave
+- view all windows on screen
+super + 0
+- make focused window appear on all tags.
+super + shift + 0
+- Left Click Mouse
+on tag bar view
+- Right Click Mouse
+on tag bar toggleview
+- Left CLick Mouse + super 
+move focused window to tag
+
