@@ -1,6 +1,6 @@
 configuration {
 	modes: "drun,filebrowser,window";
-    font: "Iosevka Nerd Font 12";
+    font: "JetBrainsMono Nerd Font 12";
     show-icons: false;
 	terminal: "alacritty";
     sort: true;
@@ -29,7 +29,7 @@ configuration {
 window {
     transparency:                "real";
     location : center;
-    width    : 280px;
+    width    : 480px;
     x-offset : 0px;
     y-offset : 0px;
     background-color: @bg;
@@ -73,7 +73,7 @@ entry {
 
 listview {
   spacing      : 4px;
-  lines        : 12;
+  lines        : 6;
   columns      : 1;
   scrollbar    : false;
   fixed-height : false;

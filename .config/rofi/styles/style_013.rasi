@@ -22,7 +22,7 @@ filebrowser {
 * {
     background-color:            transparent;
     text-color: @fg;
-    font: "JetBrainsArabic-Regular 10";
+    font: "JetBrainsMono Nerd Font 10";
 }
 window {
   transparency:		"real";

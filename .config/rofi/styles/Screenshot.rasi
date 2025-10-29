@@ -20,7 +20,7 @@ window {
     padding:                     0px;
     border:                      1px solid;
     border-radius:               0px;
-    border-color:                @selected;
+    border-color:                @bg-alt;
     cursor:                      "default";
     background-color:            @bg;
 }

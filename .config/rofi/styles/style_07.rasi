@@ -8,7 +8,7 @@ configuration {
     display-window:             " Windows";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
-    font: "JetBrainsArabic-Medium 10";
+    font: "JetBrainsMono Nerd Font 10";
 }
 /*****----- Global Properties -----*****/
 @import                          "../colors/color.rasi"

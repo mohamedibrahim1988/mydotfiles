@@ -1,5 +1,5 @@
 #!/bin/bash
-#testing...
+
 # ----Config files-----
 cfgStyle="$HOME/.config/rofi/config/.launcher"
 CFG_COLOR="$HOME/.config/rofi//config/.color_scheme"

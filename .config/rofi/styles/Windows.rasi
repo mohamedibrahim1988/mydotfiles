@@ -77,7 +77,7 @@ element-text {
 	enabled:					 true;
     vertical-align:              0.5;
     horizontal-align:            0.5;
-    font:                        "JetBrainsMono NF Bold 10";
+    font:                        "JetBrainsMono Nerd Font Bold 10";
     padding:                     0px;
     cursor:                      inherit;
     background-color:            transparent;

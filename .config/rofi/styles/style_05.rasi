@@ -8,7 +8,7 @@ configuration {
     display-filebrowser:        "";
 	drun-display-format:        "{name}";
 	window-format:              "{c} · {t}";
-    font:                       "IosevkaArabic Nerd Font 12";
+    font:                       "JetBrainsMono Nerd Font 12";
 }
 
 /*****----- Global Properties -----*****/
