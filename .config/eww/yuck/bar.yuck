@@ -17,14 +17,18 @@
        :orientation "h"
        :space-evenly false
        :halign "start"
+       (music_btn)
+       (movies_btn)
        (menu_popup)
        (change_color)
   )
 )
 (defwidget center []
   (box :class "center"
+       :space-evenly false
        :halign "center"
        (workspaces)
+       (music_compact)
   )
 )
 
@@ -42,14 +46,26 @@
 (defwidget menu_popup []
     (eventbox :class "bx_menu" :cursor "pointer"
         (box :class "btn_menu" :vexpand false :hexpand false
-          (button :onclick "eww open --toggle menu_popup"
-        "Menu"
+          (button :onclick "eww open --toggle menu_popup" :tooltip "Menu"
+        ""
 ))))
 (defwidget change_color []
     (eventbox :class "bx_color" :cursor "pointer"
         (box :class "btn_color" :vexpand false :hexpand false
-          (button :onclick "scripts/change_color.sh"
-        "Themes"
+          (button :onclick "scripts/change_color.sh" :tooltip "Themes"
+        ""
+))))
+(defwidget movies_btn []
+    (eventbox :class "bx_color" :cursor "pointer"
+        (box :class "btn_color" :vexpand false :hexpand false
+          (button :onclick "playmovies" :tooltip "Movies"
+        ""
+))))
+(defwidget music_btn []
+    (eventbox :class "bx_menu" :cursor "pointer"
+        (box :class "btn_menu" :vexpand false :hexpand false
+          (button :onclick "musicplaying.sh" :tooltip "Music"
+        ""
 ))))
 
 ; Powermenu
@@ -57,7 +73,7 @@
     (eventbox :class "powerbutton" :cursor "pointer"
         (box :class "btn_power" :vexpand false :hexpand false
           (button :onclick "eww -c ~/.config/eww open-many --toggle powermenu-clickhandler powermenu"
-        "⏻"
+        "⏻ "
 ))))
 (defwidget dropdown [onclick ?class ?tooltip]
   (button :tooltip tooltip :class class :onclick onclick "▼")

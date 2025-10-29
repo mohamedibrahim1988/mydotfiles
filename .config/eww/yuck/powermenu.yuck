@@ -5,23 +5,23 @@
        :spacing 20
     (button :class "shutdown"
              :onclick "eww close powermenu && systemctl poweroff"
-      (label :text "⏻" :class "content")
+      (label :text "" :class "content")
     )
     (button :class "reboot"
              :onclick "eww close powermenu && st -c PassW -e sudo reboot"
-      (label :text "" :class "content")
+      (label :text "" :class "content")
     )
     (button :class "logout"
             :onclick "bspc quit"
-      (label :text "󰗽" :class "content")
+      (label :text "󰍃" :class "content")
     )
     (button :class "suspend"
             :onclick "eww close powermenu && systemctl suspend"
-      (label :text "󰒲" :class "content")
+      (label :text "" :class "content")
     )
     (button :class "lock"
 		  :onclick "eww close powermenu powermenu-clickhandler && ~/.config/bspwm/src/ScreenLocker"
-      (label :text "󰌾" :class "content")
+      (label :text "󰍁" :class "content")
     )
   )
 )

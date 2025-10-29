@@ -6,4 +6,4 @@
 (include "yuck/volume_slider.yuck")
 (include "yuck/workspaces.yuck")
 (include "yuck/menu_folders.yuck")
-
+(include "yuck/music.yuck")

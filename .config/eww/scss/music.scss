@@ -1,0 +1,24 @@
+.music_compact {
+  background: $tr;
+}
+.music_icon_container{
+  font-size: 18px;
+  color: $color8;
+  margin-left: 5px;
+}
+.song_artist_small{
+ color: $color5; 
+ margin-right: 5px;
+}
+.song_title_small{
+ color: $color12; 
+}
+.control_btn_small {
+  padding-right: 10px;
+  color: $color5;
+}
+.play_pause_btn {
+  padding-right: 10px;
+  color: $color1;
+  &:hover { color: $color2;};
+}

@@ -5,7 +5,7 @@
   :wm-ignore true
   :geometry (geometry :x "10px"
                       :y "35px"
-                      :width "360px"
+                      :width "460px"
                       :height "280px"
                       :anchor "top left")
   (menu_container)
@@ -41,7 +41,7 @@
           (app_button :icon "" :name "Wallpapers" :command "nsxiv -t /media/mohamed/Data/walls/"))
          (box :class "row" :orientation "v" :space-evenly true :spacing 6
           (app_button :icon "" :name "Music" :command "alacritty --class Music -e ncmpcpp")
-          (app_button :icon "" :name "ScreenShot" :command "OpenApps --screenshot")
+          (app_button :icon "" :name "ScreenShot" :command "sleep .5 && OpenApps --screenshot")
           (app_button :icon "" :name "Notes" :command "Term --nvim"))
          (box :class "row" :orientation "v" :space-evenly true :spacing 6
           (app_button :icon "" :name "Librewolf" :command "librewolf")

@@ -16,3 +16,8 @@
 (defvar ar_class "kb_button_inactive")
 ;(deflisten workspace-list "~/.config/eww/scripts/workspaces")
 (deflisten workspaces "~/.config/eww/scripts/workspaces")
+;; Music information polls
+(defpoll MUSIC_TITLE :interval "2s" "scripts/music.sh --title")
+(defpoll MUSIC_ARTIST :interval "60s" "scripts/music.sh --artist")
+(defpoll MUSIC_STATUS :interval "1s" "scripts/music.sh --status")
+

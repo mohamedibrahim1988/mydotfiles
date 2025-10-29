@@ -1,7 +1,7 @@
 
 *{
     all: unset;
-    font-family: FontAwesome, Kawkab Nerd Font;
+    font-family: FontAwesome, JetBrainsMono Nerd Font ;
 }
 .bar {
     //background-color: inherit;
@@ -9,11 +9,30 @@
     color: $foreground;
 }
 .bx_color {
+  font-size: 18px;
   border-top: 3px solid $color6;
   color: $color1;
   &:hover { color: $color6;};
 }
 .btn_color {
   margin-top: 5px;
-
+  padding: 0 8px 0 8px;
+}
+.bx_controel{
+  border: 1px solid #0f0;
+}
+.bx_control{
+  border: 1px solid #f00;
+}
+.control_btn{
+  border-top: 3px solid $color6;
+  color: $color1;
+  &:hover { color: $color6;};
+}
+.control_icon{
+  border-top: 3px solid $color6;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: $color1;
+  &:hover { color: $color6;};
 }
