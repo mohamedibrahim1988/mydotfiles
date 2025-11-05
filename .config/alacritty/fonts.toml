@@ -1,9 +1,9 @@
 [font]
 size = 10.0
-normal.family = "Iosevka Nerd Font"
-bold.family = "Mononoki Nerd Font"
-italic.family = "Mononoki Nerd Font"
-bold_italic.family = "Mononoki Nerd Font"
+normal.family = "JetBrainsMono Nerd Font"
+bold.family = "JetBrainsMono Nerd Font"
+italic.family = "JetBrainsMono Nerd Font"
+bold_italic.family = "JetBrainsMono Nerd Font"
 
 ## When true, Alacritty will use a custom built-in font for box drawing characters and powerline symbols.
 builtin_box_drawing = true
