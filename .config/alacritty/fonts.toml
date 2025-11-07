@@ -1,5 +1,13 @@
 [font]
+<<<<<<< HEAD
 size = 11
+=======
+size = 10.0
+normal.family = "JetBrainsMono Nerd Font"
+bold.family = "JetBrainsMono Nerd Font"
+italic.family = "JetBrainsMono Nerd Font"
+bold_italic.family = "JetBrainsMono Nerd Font"
+>>>>>>> 81f4a69ec035d437be26719f77287b98003f8a90
 
 builtin_box_drawing = true
 
