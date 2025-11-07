@@ -5,14 +5,14 @@ notify() {
 layout=$(setxkbmap -query | awk '/layout:/ {print $2}')
 
 case $BLOCK_BUTTON in
-1) if [ "$layout" = "us" ]; then
+1) if [ "$layout" = "us,ara" ]; then
     setxkbmap -layout ara -variant digits
     sleep 0.5 && notify "Language Arabic"
 elif [ "$layout" = "ara" ]; then
-    setxkbmap -layout us
+    setxkbmap -layout us,ara -option grp:alt_shift_toggle
     sleep 0.5 && notify "Language English"
 fi ;;
-3) setxkbmap -layout us && notify "Language English" ;;
+3) setxkbmap -layout us,ara && notify "Language English" ;;
 
 esac
 

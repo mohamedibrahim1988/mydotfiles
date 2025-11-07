@@ -17,7 +17,7 @@
 #define TRAILING_DELIMITER 0
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X)             \
-	X("", "sb-music", 0, 2)\ 
+	X("", "sb-music", 60, 2)\ 
 	X("", "sb-cpu", 10, 5)\ 
 	X("", "sb-network", 60, 3)\ 
 	X("", "sb-memory", 10, 4) \

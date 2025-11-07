@@ -246,11 +246,11 @@ static const Button buttons[] = {
     {ClkLtSymbol, 0, Button3, setlayout, {.v = &layouts[2]}},
     {ClkWinTitle, 0, Button2, zoom, {0}},
     {ClkStatusText, 0, Button1, sigstatusbar, {.i = 1}},
-    {ClkStatusText, ShiftMask, Button2, sigstatusbar, {.i = 2}},
+    {ClkStatusText, 0, Button2, sigstatusbar, {.i = 2}},
     {ClkStatusText, 0, Button3, sigstatusbar, {.i = 3}},
     {ClkStatusText, 0, Button4, sigstatusbar, {.i = 4}},
     {ClkStatusText, 0, Button5, sigstatusbar, {.i = 5}},
-    {ClkStatusText, 0, Button2, sigstatusbar, {.i = 6}},
+    {ClkStatusText, ShiftMask, Button2, sigstatusbar, {.i = 6}},
     /* placemouse options, choose which feels more natural:
      *    0 - tiled position is relative to mouse cursor
      *    1 - tiled postiion is - view all windows on screen.relative to window center

@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font:style=Regular:size=12:antialias=true:autohint=true";
+static char *font = "JetBrainsMono Nerd Font:style=Medium:size=10:antialias=true:autohint=true";
 static char *font2[] = {"FontAwesome:size=12:antialias=true:autohint=true"};
 
 /* pattern for regex mode,
@@ -255,40 +255,9 @@ unsigned int tabspaces = 8;
  * To disable the unfocused bg opacity, set alphaUnfocused=-1. This will
  * cause alpha to be used for both the focused and unfocused bg opacity.
  */
-float alpha = 0.93;
+float alpha = 1;
 float alphaUnfocused = 0.6;
-
-/* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-	/* 8 normal colors */
-    "#282828",
-    "#cc241d",
-    "#98971a",
-    "#d79921",
-    "#458588",
-    "#b16286",
-    "#689d6a",
-    "#a89984",
-
-    "#928374",
-    "#fb4934",
-    "#b8bb26",
-    "#fabd2f",
-    "#83a598",
-    "#d3869b",
-    "#8ec07c",
-    "#ebdbb2",
-
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#a89984", /* 256 -> cursor */
-	"#928374", /* 257 -> rev cursor */
-	"#ebdbb2",  /* 258 -> foreground */
-	"#282828",   /* 259 -> background */
-	"#282828",   /* 260 -> background unfocused */
-	"#ebdbb2",  /* 261 -> visual bell */
-};
+#include "themes/one_dark.h"
 
 /*
  * Default colors (colorname index)
