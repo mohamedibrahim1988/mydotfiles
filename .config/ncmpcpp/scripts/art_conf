@@ -1,0 +1,6 @@
+#!/bin/bash
+
+wmmaga=$(wmctrl -m | awk '/Name:/ {print $2}')
+if [ "$wmmaga" = "dwm" ]; then
+    kill -36 $(pidof dwmblocks)
+fi
