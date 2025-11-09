@@ -100,6 +100,11 @@ case "$1" in
 --styles)
     choose_launcher_style
     ;;
+--launchar)
+    setxkbmap -layout us,ara -option grp:win_space_toggle
+    launch_launcher
+    setxkbmap -layout us -option grp:win_space_toggle
+    ;;
 --launcher | *)
     launch_launcher
     ;;

@@ -1,4 +1,5 @@
 #!/bin/bash
+setxkbmap -layout us,ara -option grp:win_space_toggle
 # Theme Elements
 status=$(mpc current)
 mesg="Songs Music"
@@ -19,12 +20,13 @@ if [ -z "$files" ]; then
 fi
 
 # Notify about the files being played
-notify-send "Playing $(echo "$files" | tr '\n' ', ')"
+notify-send "Playing $(echo "$files" | sed 's|.*/||;s|\.mp3$||' | tr '\t,' ', ')"
 
 # Insert each file separately
 while IFS= read -r file; do
     mpc add "$file"
 done <<<"$files"
 
+setxkbmap -layout us -option grp:win_space_toggle
 mpc toggle >/dev/null
 pkill -RTMIN+2 dwmblocks

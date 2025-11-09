@@ -9,7 +9,7 @@ case $BLOCK_BUTTON in
     setxkbmap -layout ara -variant digits
     sleep 0.5 && notify "Language Arabic"
 elif [ "$layout" = "ara" ]; then
-    setxkbmap -layout us,ara -option grp:alt_shift_toggle
+    setxkbmap -layout us,ara -option grp:win_space_toggle
     sleep 0.5 && notify "Language English"
 fi ;;
 3) setxkbmap -layout us,ara && notify "Language English" ;;

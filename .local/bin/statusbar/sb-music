@@ -122,7 +122,7 @@ get_music_status() {
 
 case "$BLOCK_BUTTON" in
 1) music_toggle ;;
-2) "$TERMINAL" -e ncmpcpp ;;
+2) $TERMINAL -e ncmpcpp ;;
 3) music_stop ;;
 4) music_prev ;;
 5) music_next ;;
