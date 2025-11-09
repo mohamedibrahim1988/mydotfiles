@@ -11,7 +11,12 @@
          :height 20
       (label :class "music_icon ${MUSIC_STATUS == 'playing' ? 'playing' : 'paused'}"
              :text "${MUSIC_STATUS == 'playing' ? '' : ''}"))
-    
+   (box :class "music_play"
+   :orientation "h"
+   (button :class "music_btn"
+    :tooltip "Music Player"
+    :onclick "Term --music" "󰰙")
+   ) 
     ;; Song info
     (box :class "music_info"
          :orientation "h"

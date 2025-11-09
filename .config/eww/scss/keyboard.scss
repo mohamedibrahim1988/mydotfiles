@@ -5,14 +5,12 @@
     font-weight: bold;
 }
 .kb_button_active {
-    font-size: 12px;
-    margin-bottom: -1px;
-    margin-top: -1px;
+    font-size: 10px;
     color: $color1;
+    background-color: $color1;
 }
 .kb_button_inactive {
     font-size: 12px;
-    margin-top: -1px;
-    margin-bottom: -1px;
     color: $color6;
+    background-color: $color6;
 }

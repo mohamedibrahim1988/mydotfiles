@@ -1,5 +1,5 @@
-(defwidget keyboard [] 
-  (box 
+(defwidget keyboard []
+  (box
     :class "kb_box"
     :orientation "h"
     :valign "fill"
@@ -7,21 +7,22 @@
     "|"
     (box
       :orientation "v"
-      :space-evenly "false"
+      :space-evenly false
       :valign "center"
       :halign "center"
-      (eventbox 
-        :cursor "pointer"
-        (button
-          :class "${us_class}"
-          :onclick "scripts/kb_layouts set us"
-          :valign "center"
-          "US"))
+      (eventbox
+       :cursor "pointer"
+       (button
+        :class "${ar_class}"
+        :onclick "~/.config/eww/scripts/toggle_keyboard.sh set ara"
+        :valign "center"
+        "🇪🇬"))
       (eventbox
         :cursor "pointer"
         (button
-          :class "${ar_class}"
-          :onclick "scripts/kb_layouts set ara"
+          :class "${us_class}"
+          :onclick "~/.config/eww/scripts/toggle_keyboard.sh set us"
           :valign "center"
-          "AR")
-          ))))
+          "🇬🇧"))
+        )))
+

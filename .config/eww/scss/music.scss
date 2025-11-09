@@ -4,7 +4,7 @@
 .music_icon_container{
   font-size: 18px;
   color: $color8;
-  margin-left: 5px;
+  margin-left: 3px;
 }
 .song_artist_small{
  color: $color5; 
@@ -21,4 +21,7 @@
   padding-right: 10px;
   color: $color1;
   &:hover { color: $color2;};
+}
+.music_btn {
+  color: $color2;
 }
