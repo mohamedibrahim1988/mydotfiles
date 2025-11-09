@@ -1,0 +1,20 @@
+#reload sxhkd:
+super + shift + s
+	pkill -USR1 -x sxhkd
+# alacritty
+alt + Return
+   st 
+super + x
+    powermenu.sh
+super + y
+    rofi \
+        -theme $HOME/.config/rofi/styles/Windows.rasi \
+        -show window -window-thumbnail \
+        -window-hide-active-window true \
+        -kb-accept-entry "!Alt-Tab,Return" \
+        -kb-element-next "Alt-Tab"
+super + r
+    ~/.config/rofi/final.sh --launchar
+# Music PLayer
+super + F3
+    mpd_rofi -l
