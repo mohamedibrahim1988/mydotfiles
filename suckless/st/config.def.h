@@ -257,7 +257,7 @@ unsigned int tabspaces = 8;
  */
 float alpha = 1;
 float alphaUnfocused = 0.6;
-#include "themes/nord.h"
+#include "themes/dracula.h"
 
 /*
  * Default colors (colorname index)
