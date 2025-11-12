@@ -257,7 +257,7 @@ unsigned int tabspaces = 8;
  */
 float alpha = 1;
 float alphaUnfocused = 0.6;
-#include "themes/one_dark.h"
+#include "themes/nord.h"
 
 /*
  * Default colors (colorname index)
