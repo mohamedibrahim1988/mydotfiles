@@ -255,9 +255,9 @@ unsigned int tabspaces = 8;
  * To disable the unfocused bg opacity, set alphaUnfocused=-1. This will
  * cause alpha to be used for both the focused and unfocused bg opacity.
  */
-float alpha = 1;
+float alpha = 0.90;
 float alphaUnfocused = 0.6;
-#include "themes/dracula.h"
+#include "themes/nord.h"
 
 /*
  * Default colors (colorname index)
@@ -300,7 +300,7 @@ unsigned int bold_is_not_bright = 1;
  * 0: the cursor color is fixed (default st behavior)
  * 1: the cursor uses reverse colors based on the colors of the text cell
 */
-unsigned int dynamic_cursor_color = 1;
+unsigned int dynamic_cursor_color = 0;
 
 /*
  * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81
