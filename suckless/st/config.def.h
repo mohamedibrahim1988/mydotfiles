@@ -255,7 +255,7 @@ unsigned int tabspaces = 8;
  * To disable the unfocused bg opacity, set alphaUnfocused=-1. This will
  * cause alpha to be used for both the focused and unfocused bg opacity.
  */
-float alpha = 0.90;
+float alpha = 1;
 float alphaUnfocused = 0.6;
 #include "themes/nord.h"
 
