@@ -89,6 +89,7 @@ return {
     local servers = {
       clangd = {},
       bashls = { 'bash', 'sh' },
+      vimls = { 'vim' },
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       lua_ls = {
         settings = {

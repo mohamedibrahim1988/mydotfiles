@@ -1,6 +1,6 @@
-#!/usr/bin/bash
+#!bin/bash
 # Use neovim for vim if present.
-[ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+[ -x "$(command -v nvim)" ] && alias v="nvim" nvimdiff="nvim -d"
 # Debian command
 alias update='sudo apt update'
 alias upgrade='sudo apt upgrade'
@@ -35,7 +35,3 @@ alias rm='rm -v'
 alias mx='chmod a+x'
 alias mkdir='mkdir -p'
 alias ip='ip -color=auto'
-
-alias kj="cd ~/Sources/suckless/dwm"
-alias music='tmux new-session -s $$ "tmux source-file ~/.config/ncmpcpp/tmux_session"'
-_trap_exit() { tmux kill-session -t $$; }

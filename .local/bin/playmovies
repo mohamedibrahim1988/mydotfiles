@@ -4,18 +4,17 @@ setxkbmap -layout us,ara -option grp:win_space_toggle
 movie_dir="/media/mohamed/Movies/Movies"
 rofi_command="rofi -dmenu -theme $HOME/.config/rofi/styles/MoviePlay.rasi"
 
-# Choose subdirectory
-dir_selection=$(find "$movie_dir" -type d | sed "s|$movie_dir/||" | $rofi_command)
-[ -z "$dir_selection" ] && exit
+# Choose movie or subdirectory
+dir_selection=$(rg -g '!.git' -g '!*.srt' -g '!*.jpg' -g '!*.png' -g '!Thumbs.db' --files "$movie_dir" \
+    | sort -u \
+    | sed "s|$movie_dir/||" \
+    | $rofi_command)
 
-# Choose movie
-movie_selection=$(find "$movie_dir/$dir_selection" -type f \( -iname "*.mp4" -o -iname "*.mkv" -o -iname "*.avi" \) |
-    sed 's|.*/||' | $rofi_command)
-[ -z "$movie_selection" ] && exit
+[ -z "$dir_selection" ] && exit
 
 # Play movie
 playing() {
     setxkbmap -layout us -option grp:win_space_toggle
-    mpv "$movie_dir/$dir_selection/$movie_selection"
+    mpv "$movie_dir/$dir_selection"
 }
 playing

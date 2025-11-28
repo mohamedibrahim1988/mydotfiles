@@ -5,7 +5,7 @@
         tmux list-windows -t "$session" -F 'WINDOW:#S:#I #W'
     done
 } | sed 's/^SESSION:/▼ /' | sed 's/^WINDOW:/  ⦿ /' |
-    fzf --reverse |
+    fzy -p "menu list : " |
     awk '{
   if ($1 == "▼") {
     print $2

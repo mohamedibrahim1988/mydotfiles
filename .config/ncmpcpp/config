@@ -34,7 +34,7 @@ playlist_display_mode = "columns"
 colors_enabled 		  = "yes"
 #user_interface       = classic
 user_interface 		  = alternative
-volume_color 		  = "magenta"
+volume_color 		  = "cyan"
 
 ### Window ###
 #song_window_title_format = "Music Player"
@@ -44,31 +44,36 @@ header_visibility 		 = "no"
 titles_visibility 		 = "yes"
 
 ### Progress bar ###
-progressbar_look 			= "▂▂▂"
-progressbar_color 			= "black"
-progressbar_elapsed_color   = "magenta"
+#progressbar_look 			= "▂▂▂"
+progressbar_look = "▒▒░"
+progressbar_color 			= "cyan"
+progressbar_elapsed_color   = "red"
 
 ### Alternative UI ###
-alternative_ui_separator_color 		  = "red"
-alternative_header_first_line_format  = $b$7{%t}|{%f}$/b $/b 
-alternative_header_second_line_format = {$b{$3 %a$9}{ - $2 %b$9}}
+alternative_ui_separator_color 		  = "cyan"
+alternative_header_first_line_format = {$b{$2 %a$9}{ - $6%t$9}}
+alternative_header_second_line_format  = {$b{$2 %f$9}{ | $6%b $9}}
 
 ### Song list ###
-song_status_format		 = "$7%t"
-song_list_format 		 = "  $4%t$9 $7$R%a$9 $2%l$9  "
+song_status_format		 = "$6%t"
+song_list_format 		 = "  $2%t$R$9 $6%a$9 $2%l$9  "
 song_library_format 	 = {{%a - %t} (%b)}|{%f}
-song_columns_list_format = "(40)[blue]{t} (25)[yellow]{a} (6)[cyan]{lr}"
+song_columns_list_format = " (15)[red]{l} (40)[cyan]{tr} (25)[magenta]{ar}"
 
 ### Colors ###
 main_window_color 					= "cyan"
 state_line_color					= "red"
-current_item_prefix = $(blue)$r
+current_item_prefix = $0$r
 current_item_suffix = $/r$(end)
 current_item_inactive_column_prefix = $(green)$r
 current_item_inactive_column_suffix = $/r$(end)
 
-now_playing_prefix = "● "
-selected_item_prefix = "* "
+#now_playing_prefix = "● "
+#selected_item_prefix = "* "
+#now_playing_prefix = "$b$9▶ "
+#selected_item_prefix = $6
+now_playing_prefix = " $b$7$6$9"
+now_playing_suffix = "$/b$9"
 
 color1 = "white"
 color2 = "red"
@@ -84,6 +89,8 @@ default_place_to_search_in = "database"
 
 display_bitrate = "no"
 enable_window_title = "yes"
+external_editor = "/usr/bin/nvim
+use_console_editor = yes
 follow_now_playing_lyrics = "yes"
 empty_tag_marker = ""
 
@@ -94,3 +101,6 @@ lines_scrolled = "2"
 
 system_encoding = "utf-8"
 regular_expressions = "extended"
+statusbar_color = "green"
+window_border_color = "green" 
+active_window_border = "green"

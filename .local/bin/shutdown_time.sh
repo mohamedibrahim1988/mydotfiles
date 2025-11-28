@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # Prompt for time in minutes using dmenu
-TIME=$(echo -e "1\n2\n3\n5\n10\n15\n30\n60" | dmenu -i -p "Select shutdown timer (in minutes):")
+TIME=$(echo -e "10\n20\n30\n45\n50\n60\n100\n110" | dmenu -i -p "Select shutdown timer (in minutes):")
 
 # Check if a valid time was selected
 if [ -n "$TIME" ]; then
@@ -13,4 +13,3 @@ if [ -n "$TIME" ]; then
 else
     notify-send "No time selected" "Shutdown timer was not set."
 fi
-

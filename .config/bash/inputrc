@@ -4,7 +4,7 @@ set colored-completion-prefix On
 set show-all-if-ambiguous On
 set completion-ignore-case On
 set completion-display-width 0
-set completion-query-items 1000
+set completion-query-items 200
 
 set echo-control-characters Off
 
@@ -17,3 +17,4 @@ set echo-control-characters Off
 
 "\C-f":"cd /home/mohamed/.config/"
 "\C-e":"fzf-nvim \n"
+"\C-_":"fz_tmux.sh \n"
