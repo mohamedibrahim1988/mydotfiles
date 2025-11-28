@@ -1,0 +1,37 @@
+
+.powerbutton {
+  color: $color1;
+  font-size: 1.3em;
+  font-weight: bold;
+  &:hover { color: $color2; }
+}
+.btn_power { 
+  margin-right: 5px;
+}
+.powermenu {
+  background-color: $tr;
+  color: $color12;
+  padding: 20px;
+  font-family: FontAwesome;
+  font-size: 4.2em;
+  border-radius: 6px;
+  button {
+    border-radius: 18px;
+    padding: 0px 8px 0px 8px;
+    transition: all ease .2s;
+    &:hover { background-color: $background; }
+    .content {
+      border-radius: 14px;
+      padding: 0px 8px 0px 8px;
+    }
+  }
+  .shutdown { color: $color8; }
+  .reboot { color: $color2; }
+  .logout { color: $color3; }
+  .lock { color: $color6; }
+  .suspend { color: $color7; }
+}
+.powermenu-clickhandler {
+  background-color: transparent;
+}
+

@@ -1,0 +1,25 @@
+(defvar volum false)
+    (defwidget volume_slider []
+   	(box      :orientation "v" 	  
+			  :space-evenly "false" 
+			  :spacing "2"
+              :class "vol_box"
+    
+      (scale :class "audio_slider"
+      :flipped true
+       :orientation "v"
+       :min 0
+       :max 101
+       :value VOLUME
+       :onchange "volume_dunst set-volume {}"
+      )
+      (label :class "vol_value_slid" :valign "center" :text VOLUME)
+      (button   :onclick "eww close volume" :class "volume-icon" " ")
+     ))
+(defwindow volume
+  :geometry (geometry :x "1870px"
+                      :y "45px"
+                      :width "40px"
+                      :height "200px")
+(volume_slider))
+

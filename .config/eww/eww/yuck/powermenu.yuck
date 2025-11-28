@@ -1,0 +1,54 @@
+(defwidget powermenu []
+  (box :class "powermenu"
+       :orientation "h"
+       :space-evenly true
+       :spacing 20
+    (button :class "shutdown"
+             :onclick "eww close powermenu && systemctl poweroff"
+      (label :text "" :class "content")
+    )
+    (button :class "reboot"
+             :onclick "eww close powermenu && st -c PassW -e sudo reboot"
+      (label :text "" :class "content")
+    )
+    (button :class "logout"
+            :onclick "bspc quit"
+      (label :text "󰍃" :class "content")
+    )
+    (button :class "suspend"
+            :onclick "eww close powermenu && systemctl suspend"
+      (label :text "" :class "content")
+    )
+    (button :class "lock"
+		  :onclick "eww close powermenu powermenu-clickhandler && ~/.config/bspwm/src/ScreenLocker"
+      (label :text "󰍁" :class "content")
+    )
+  )
+)
+
+(defwidget powermenu-clickhandler []
+  (button :class "powermenu-clickhandler"
+          :onclick "eww -c ~/.config/eww close powermenu powermenu-clickhandler"
+    ""
+  )
+)
+
+(defwindow powermenu-clickhandler
+  :geometry (geometry :x "0px"
+                      :y "0px"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "center")
+  :stacking "fg"
+  :wm-ignore true
+(powermenu-clickhandler))
+
+(defwindow powermenu
+  :geometry (geometry :x "0px"
+                      :y "0px"
+                      :width "800px"
+                      :height "350px"
+                      :anchor "center")
+  :wm-ignore true
+(powermenu))
+
