@@ -37,8 +37,8 @@ function parse_git_branch {
     git branch --no-color 2>/dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/ \1$(parse_git_dirty)/"
 }
 #export PS1="\n\[\e[31m\]\@ \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\]\n $ "
-#export PS1="\[$(tput setaf 82)\]\w\[$(tput setaf 184)\]\$(parse_git_branch)\[$(tput bold setaf 9)\] > \[$(tput sgr0)\]"
-export PS1='\[\e[38;5;46m\]\w\[\e[0m\] \[\e[93m\]$(parse_git_branch)\[\e[0m\]\[\e[1;38;1;91m\]>\[\e[0m\] '
+#export PS1="\[$(tput setaf 184)\]\w\[$(tput setaf 184)\]\$(parse_git_branch)\[$(tput bold setaf 9)\] > \[$(tput sgr0)\]"
+export PS1='\[\e[38;5;46m\]\w\[\e[0m\] \[\e[93m\]$(parse_git_branch)\[\e[0m\]\[\e[38;5;160m\]>\[\e[0m\] '
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.config/bash/dircolors && eval "$(dircolors -b ~/.config/bash/dircolors)" || eval "$(dircolors -b)"

@@ -10,6 +10,7 @@ fi
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/sbin"
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.config/bspwm/src"
 export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
 # Start graphical server on user's current tty if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"

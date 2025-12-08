@@ -163,7 +163,7 @@ static unsigned int cursorthickness = 2;
 int hidecursor = 0;
 
 /* Ligatures. 0: off, 1: on */
-int ligatures = 0;
+int ligatures = 1;
 
 /*
  * Permanently disable ligatures so that they won't be compiled in. You also
@@ -425,8 +425,8 @@ static Shortcut shortcuts[] = {
 	//{ TERMMOD,              XK_,           changealphaunfocused, {.f = 0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,       {.i = -1}, S_PRI },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,     {.i = -1}, S_PRI },
-    { MODKEY,               XK_k,           kscrollup,       {.i = 1}, S_PRI },
-    { MODKEY,               XK_j,           kscrolldown,     {.i = 1}, S_PRI },
+    { ControlMask,          XK_Page_Up,     kscrollup,       {.i = 1}, S_PRI },
+    { ControlMask,          XK_Page_Down,   kscrolldown,     {.i = 1}, S_PRI },
 	{ TERMMOD,              XK_Y,           clippaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      clippaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,         {.i =  0} },

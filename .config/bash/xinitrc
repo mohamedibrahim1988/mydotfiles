@@ -4,4 +4,5 @@
 # Activate dbus variables
 dbus-update-activation-environment --all &
 #exec dwm
+#exec mydwm
 exec bspwm

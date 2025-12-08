@@ -1,7 +1,7 @@
 #!/bin/bash
 # edit scripts
 se() {
-    choice="$(find ~/.local/bin -mindepth 1 -printf '%P\n' | fzf)"
+    choice="$(find ~/.local/bin -mindepth 1 -printf '%P\n' | fzy)"
     [ -f "$HOME/.local/bin/$choice" ] && $EDITOR "$HOME/.local/bin/$choice"
 }
 # sudo not required for some system commands
@@ -51,32 +51,14 @@ up() {
     fi
     cd "$d"
 }
-function fzf-man() {
+function fzy-man() {
     MAN="/usr/bin/man"
     if [ -n "$1" ]; then
         $MAN "$@"
         return $?
     else
-        $MAN -k . | fzf --reverse --preview="echo {1,2} | sed 's/ (/./' | sed -E 's/\)\s*$//' | xargs $MAN" | awk '{print $1 "." $2}' | tr -d '()' | xargs -r $MAN
+        $MAN -k . | fzy -p "MAN Pages " | awk '{print $1 "." $2}' | tr -d '()' | xargs -r $MAN
         return $?
-    fi
-}
-function fzf-nvim() {
-    # Set the default command to list directories
-    export FZF_DEFAULT_COMMAND="fd -p -i -H -L -t d --exclude '.git'"
-    # Use fzf to select a directory
-    local dir=$(fzf --height 40% --reverse --preview "tree -C {}" --query="$1")
-    # Change to the selected directory
-    if [[ -n "$dir" ]]; then
-        cd "$dir" || return
-        # Set the default command to list files in the selected directory
-        export FZF_DEFAULT_COMMAND="fd -p -i -H -L -t f --exclude '.git'"
-        # Use fzf to select a file
-        local file=$(fzf --height 40% --reverse --preview "bat --theme=monokai --color=always {}" --query="$2")
-        # Open the selected file with vim
-        if [[ -n "$file" ]]; then
-            vim "$file"
-        fi
     fi
 }
 n() {

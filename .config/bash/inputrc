@@ -16,5 +16,5 @@ set echo-control-characters Off
 "\e[1;5C": forward-word
 
 "\C-f":"cd /home/mohamed/.config/"
-"\C-e":"fzf-nvim \n"
+"\C-e":"fzy-man \n"
 "\C-_":"fz_tmux.sh \n"
