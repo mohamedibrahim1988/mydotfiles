@@ -73,7 +73,7 @@ addaftercurrentandplay() {
 }
 
 case $1 in
--l | --longplayer)
+-l | *)
 
     while true; do
 

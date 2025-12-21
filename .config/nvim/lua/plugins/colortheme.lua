@@ -1,19 +1,3 @@
-local is_transparent = true
-local default_color = 'one'
-
-function ColorMyPencils(color)
-  color = color or default_color
-  vim.cmd.colorscheme(color)
-  if is_transparent then
-    vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-  else
-    vim.api.nvim_set_hl(0, 'Normal', { bg = '#282828' })
-    vim.api.nvim_set_hl(0, 'NormalFloat', { bg = '#282828' })
-  end
-  is_transparent = not is_transparent
-end
-vim.api.nvim_set_keymap('n', '<localLeader>c', ':lua ColorMyPencils()<CR>', { noremap = true, silent = true })
 return {
   {
     'gamunu/vscode.nvim',
@@ -48,7 +32,7 @@ return {
           vim_visual_multi = true,
         },
       }
-      ColorMyPencils()
+      vim.cmd.colorscheme 'vscode'
     end,
   },
   {
@@ -59,7 +43,7 @@ return {
       -- Example config in lua
       vim.g.nord_contrast = true -- Make sidebars and popup menus like nvim-tree and telescope have a different background
       vim.g.nord_borders = false -- Enable the border between verticaly split windows visable
-      vim.g.nord_disable_background = true -- Disable the setting of background color so that NeoVim can use your terminal background
+      vim.g.nord_disable_background = false -- Disable the setting of background color so that NeoVim can use your terminal background
       vim.g.set_cursorline_transparent = true -- Set the cursorline transparent/visible
       vim.g.nord_italic = true -- enables/disables italics
       vim.g.nord_enable_sidebar_background = false -- Re-enables the background of the sidebar if you disabled the background of everything
@@ -73,7 +57,7 @@ return {
     priority = 1000,
     config = function()
       require('onedark').setup {
-        style = 'darker', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
+        style = 'dark', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
         transparent = true, -- Show/hide background
         term_colors = true, -- Change terminal color as per the selected theme style
         ending_tildes = false, -- Show the end-of-buffer tildes. By default they are hidden

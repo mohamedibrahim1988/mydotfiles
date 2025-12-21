@@ -1,7 +1,7 @@
 #!/bin/sh
 
 result="$(
-  ag --nocolor --nogroup "$@" | fzy
+  ag --nocolor --nogroup "$@" | fzy -i
 )"
 
 [ -z "$result" ] && exit

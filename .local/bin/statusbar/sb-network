@@ -5,7 +5,7 @@ case $BLOCK_BUTTON in
 1) notify-send "$wname" ;;
 2) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 3)
-    "$TERMINAL" -n network -e nmtui
+    "$TERMINAL" -n network -e nmtui-connect
     pkill -RTMIN+4 dwmblocks
     ;;
 esac

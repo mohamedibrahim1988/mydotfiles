@@ -2,8 +2,8 @@
 # Display RAM usage.
 
 case "$BLOCK_BUTTON" in
-	1) xdotool key super+a ;;
-	2) setsid -f "$TERMINAL" -e "$EDITOR" "$0";;
+1) xdotool key super+a ;;
+2) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
 free_mib="$(free --mebi | grep '^Mem:' | tr -s ' ' | cut -d' ' -f3)"

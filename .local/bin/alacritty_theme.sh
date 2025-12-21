@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# change theme to Alacritty
 # Directory containing theme files
 THEMES_DIR="$HOME/.config/alacritty/themes"
 
