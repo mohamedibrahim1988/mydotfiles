@@ -1,0 +1,8 @@
+.git
+*.json
+.gitignore
+*.md
+*.toml
+.netrwhist
+colors
+
