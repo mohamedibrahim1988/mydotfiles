@@ -1,7 +1,7 @@
 configuration {
     show-icons:                 false;
     case-smart: true;
-    font: "Courier New Bold 10";
+    font: "JetBrainsMono Nerd Font Bold 9";
 }
 
 @import "../colors/color.rasi"

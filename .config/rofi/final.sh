@@ -2,7 +2,7 @@
 
 # ----Config files-----
 cfgStyle="$HOME/.config/rofi/config/.launcher"
-CFG_COLOR="$HOME/.config/rofi//config/.color_scheme"
+CFG_COLOR="$HOME/.config/rofi/config/.color_scheme"
 COLOR_THEME="$HOME/.config/rofi/styles/ColorSelect.rasi"
 colorDir="$HOME/.config/rofi/colors"
 
@@ -86,7 +86,7 @@ choose_color() {
 launch_launcher() {
     read -r current_style <"$cfgStyle"
     ROFI_THEME="$HOME/.config/rofi/styles/style_$current_style.rasi"
-    rofi -show drun -theme "$ROFI_THEME"
+    rofi -show run -theme "$ROFI_THEME"
 }
 # -- Main executor -- #
 case "$1" in
@@ -100,12 +100,9 @@ case "$1" in
 --styles)
     choose_launcher_style
     ;;
---launchar)
+--launchar | *)
     setxkbmap -layout us,ara -option grp:win_space_toggle
     launch_launcher
     setxkbmap -layout us -option grp:win_space_toggle
-    ;;
---launcher | *)
-    launch_launcher
     ;;
 esac

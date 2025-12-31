@@ -1,18 +1,18 @@
 configuration {
-	modes: "drun,filebrowser,window";
+	modes: "run,drun,filebrowser,window";
     font: "JetBrainsMono Nerd Font 12";
     show-icons: false;
 	terminal: "alacritty";
     sort: true;
-    sorting-method: "fzf";
     disable-history: false;
     case-smart: true;
     matching: "fuzzy";
     window-format: "{c} - {w} - {t:0}";
     drun-display-format: "{name}";
-    display-window: "";
-    display-drun: "";
-    display-filebrowser: "";
+    display-run: "RUN";
+    display-window: " ";
+    display-drun: " ";
+    display-filebrowser: " ";
 	me-select-entry: "MouseDPrimary";
 	me-accept-entry: "MousePrimary";
   filebrowser {
